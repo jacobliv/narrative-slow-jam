@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   character: {fileID: 0}
-  sound: []
+  sounds:
+  - {fileID: 8300000, guid: cc5e4cf8112cd454e9bef4df24d86cc3, type: 3}
+  - {fileID: 8300000, guid: 08fa982f0ec111446987fccf8afa1b4f, type: 3}
+  - {fileID: 8300000, guid: dd6c90db8a02b1c44a3ea31b7ad3a0d9, type: 3}
   line: 
-  next: []
+  next:
+  - trigger: {fileID: 0}
+    narrativeItem: {fileID: 0}
