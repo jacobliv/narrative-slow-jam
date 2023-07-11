@@ -9,23 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 355de7c08bc252d418451cf0e22bc9c0, type: 3}
+  m_Script: {fileID: 0}
   m_Name: Narrative
   m_EditorClassIdentifier: 
-  narrative:
-  - _id: T1
-    _story: If Bad, Why Hot?
-    _section: Tutorial - Museum
-    _triggered: Start the game
-    _character: Yug Dab
-    _line: '"Uhh, we got a few more guards than what you said we would."'
-    _portrait: Surprised
-    _context: 
-  - _id: T2
-    _story: If Bad, Why Hot?
-    _section: Tutorial - Museum
-    _triggered: Next
-    _character: Gertrude
-    _line: '"Keep going, you can still make it just don''t get spotted."'
-    _portrait: Neutral
-    _context: Gertrude isn't present on screen but speaks on an intercom
