@@ -18,7 +18,6 @@
 
 # Cache and meta files
 [Cc]ache/
-[Aa]ssets/**/*.meta
 [Aa]ssets/**/*.tmp
 [Aa]ssets/**/*.bak
 
@@ -73,3 +72,4 @@ Desktop.ini
 !**/*.physicsMaterial
 !**/*.physicMaterial2D
 !**/*.asset
+!**/*.meta
