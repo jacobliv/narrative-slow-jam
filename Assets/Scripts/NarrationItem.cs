@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Narrative", menuName = "Narrative/Narrative Item")]
@@ -18,6 +18,8 @@ public class NarrationItem : ScriptableObject{
     public List<NextNarrative> next;
     [Tooltip("Image to be displayed behind the characters")]
     public Image background;
+    [Tooltip("The time of day this occurs")]
+    public string time;
 
 }
 
