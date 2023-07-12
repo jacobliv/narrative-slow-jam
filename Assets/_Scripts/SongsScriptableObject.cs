@@ -8,7 +8,7 @@ public class SongsScriptableObject : ScriptableObject
 {
     public string songName;
     public string songAuthor;
-   /* AudioClip track;
+    public AudioClip track;
     Time duration;
-    Sprite Icon; */
+    Sprite Icon;
 }

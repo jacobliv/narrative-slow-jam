@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957e0124f9fd6d54198bf9c16b668542, type: 3}
   m_Name: NGGUP
   m_EditorClassIdentifier: 
-  songName: 
-  songAuthor: 
+  songName: Never Gonna Give You Up
+  songAuthor: Rick Astley
+  track: {fileID: 8300000, guid: 2b5cb71880ff80f4eb24c4a9d1969fb2, type: 3}

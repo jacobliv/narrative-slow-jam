@@ -7,7 +7,7 @@ using System;
 public class PhoneManager : MonoBehaviour
 {
     bool phoneVisible;
-    [SerializeField] GameObject phoneScreen, phoneToggle, homePage, musicPage;
+    [SerializeField] GameObject phoneScreen, phoneToggle, homePage, musicPage, settingsPage;
     [SerializeField] TMP_Text clock;
 
     void Start()
@@ -53,15 +53,21 @@ public class PhoneManager : MonoBehaviour
     {
         homePage.SetActive(true);
         musicPage.SetActive(false);
+        settingsPage.SetActive(false);
     }
 
     public void handleMusicButton()
     {
         homePage.SetActive(false);
         musicPage.SetActive(true);
+        settingsPage.SetActive(false);
     }
 
-    // Music App
-    #region Music
-    #endregion
+    public void handleSettingsButton()
+    {
+        homePage.SetActive(false);
+        musicPage.SetActive(false);
+        settingsPage.SetActive(true);
+    }
+
 }
