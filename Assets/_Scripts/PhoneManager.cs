@@ -61,6 +61,7 @@ public class PhoneManager : MonoBehaviour
         musicPage.SetActive(true);
     }
 
-    // Home button
     // Music App
+    #region Music
+    #endregion
 }
