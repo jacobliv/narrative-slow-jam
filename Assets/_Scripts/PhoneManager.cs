@@ -25,7 +25,6 @@ public class PhoneManager : MonoBehaviour
             phoneToggle.SetActive(true);
             phoneScreen.SetActive(false);
         }
-        handleTime();
     }
 
     public void HandleButtonPress()
@@ -42,11 +41,6 @@ public class PhoneManager : MonoBehaviour
             phoneToggle.SetActive(false);
             phoneScreen.SetActive(true);
         }
-    }
-
-    void handleTime()
-    {
-        clock.text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
     }
 
     public void handleHomeButton()
