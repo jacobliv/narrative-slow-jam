@@ -9,8 +9,6 @@ public class TimeManager : MonoBehaviour
     public static int hour { get; private set; }
     public static int dayNumber { get; private set; }
 
-    // How many real-life seconds are = to 1 in-game minutes
-    float gameMinuteToRealTime = 1f;
     float timer;
 
     [SerializeField] TMP_Text phoneTime;
@@ -21,32 +19,20 @@ public class TimeManager : MonoBehaviour
         minute = 0;
         hour = 0;
 
-        timer = gameMinuteToRealTime;
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
-        
-        if (timer <= 0)
-        {
-            minute++;
-            if (minute > 59)
-            {
-                minute = 0;
-                hour++;
-
-                if (hour > 23)
-                {
-                    hour = 0;
-                    dayNumber++;
-                }
-            }
-
-            timer = gameMinuteToRealTime;
-        }
-
         string timeDisplay = $"{hour.ToString("D2")} : {minute.ToString("D2")}";
+        string dateDisplay = $"Day: {dayNumber.ToString("D2")}, {hour.ToString("D2")} : {minute.ToString("D2")}";
         phoneTime.text = timeDisplay;
+    }
+
+    /* Just call this function from your script and just pass the wanted hour and minute.
+    Note that there is no logic to check if the time inputted is a valid time, so make sure the time is correct. */
+    public void SetTime(int hourSet, int minuteSet)
+    {
+        hour = hourSet;
+        minute = minuteSet;
     }
 }
