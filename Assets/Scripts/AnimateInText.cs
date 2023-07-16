@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class AnimateInText : MonoBehaviour {
     public  TMP_Text  textMeshPro;
-    public  float     delayBetweenCharacters = 0.01f;
-    private Coroutine animate;
+    float     delayBetweenCharacters = 0.005f;
+    private Coroutine _animate;
 
     private void OnValidate() {
         if (Application.isPlaying) {
@@ -20,10 +20,10 @@ public class AnimateInText : MonoBehaviour {
     }
 
     public void AnimateText() {
-        if(animate != null) {
-            StopCoroutine(animate);
+        if(_animate != null) {
+            StopCoroutine(_animate);
         }   
-        animate=StartCoroutine(AnimateTextCoroutine());
+        _animate=StartCoroutine(AnimateTextCoroutine());
     }
 
     private IEnumerator AnimateTextCoroutine() {
@@ -31,15 +31,10 @@ public class AnimateInText : MonoBehaviour {
 
         yield return null; // Wait for one frame before starting the animation
 
-        float elapsedTime = 0f;
 
-        while (elapsedTime < delayBetweenCharacters * textMeshPro.text.Length)
-        {
-            elapsedTime += Time.deltaTime;
-            int charactersToShow = Mathf.FloorToInt(elapsedTime / delayBetweenCharacters);
-            textMeshPro.maxVisibleCharacters = charactersToShow;
-
-            yield return null;
+        for (int i = 0; i < textMeshPro.text.Length; i++) {
+            textMeshPro.maxVisibleCharacters += 1;
+            yield return new WaitForSeconds(delayBetweenCharacters);
         }
 
         // Ensure all characters are visible at the end of the animation
