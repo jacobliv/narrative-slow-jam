@@ -26,6 +26,11 @@ public class NarrationItem : ScriptableObject{
 
 [Serializable]
 public class NextNarrative {
+    [SerializeField,Tooltip("Dependent on previous choice")]
+    public bool choiceDependent;
+
+    [SerializeField, Tooltip("The choice that needs to have been made to go this path. Needs to be the same as the shortened line from whichever choice was being made")]
+    public string previousChoice;
     [SerializeField, Tooltip("What triggers the next narration.")]
     public string        button;
     [SerializeField, Tooltip("The next narration to occur")]
@@ -40,4 +45,9 @@ public enum Day {
     Two,
     Three,
     Post
+}
+
+public enum TriggerType {
+    Button,
+    Choice
 }
