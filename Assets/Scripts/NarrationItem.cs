@@ -16,8 +16,9 @@ public class NarrationItem : ScriptableObject{
     public string line;
     [Tooltip("Next Narrative item. 1 or more")]
     public List<NextNarrative> next;
+
     [Tooltip("Image to be displayed behind the characters")]
-    public Image background;
+    public Sprite background;
     [Tooltip("The time of day this occurs")]
     public string time;
 
