@@ -27,7 +27,7 @@ public class NarrationItem : ScriptableObject{
 [Serializable]
 public class NextNarrative {
     [SerializeField, Tooltip("What triggers the next narration.")]
-    public Button        button;
+    public string        button;
     [SerializeField, Tooltip("The next narration to occur")]
     public NarrationItem narrativeItem;
     [SerializeField, Tooltip("The shortened line if needed to be displayed for a choice. Can be empty")]
