@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Maximus Nova
   title: Astroengineer
-  images: []
+  sprites:
+  - {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  - {fileID: 21300000, guid: 678095381d851334fb550c5032ba1a81, type: 3}
