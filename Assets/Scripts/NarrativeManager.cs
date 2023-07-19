@@ -24,6 +24,9 @@ public class NarrativeManager : MonoBehaviour {
     private List<GameObject> multiInteractionButtons = new();
     private NarrativeHistory _narrativeHistory;
 
+
+    public NarrationItem CurrentNarrativeItem => _currentNarrativeItem;
+
     private void Start() {
         _characterTitle = characterTitleText.GetComponent<TMP_Text>();
         _characterName = characterNameText.GetComponent<TMP_Text>();
@@ -53,7 +56,19 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void SaveChoice(int option) {
-        _narrativeHistory.narrativeHistory[_currentNarrativeItem.character.name]=new CharacterHistory().AddHistory(_currentNarrativeItem.next[option].shortenedLine);
+        HistoryItem historyItem = _narrativeHistory.narrativeHistory.Find((item)=>item.name==_currentNarrativeItem.character.name);
+        if (historyItem == null) {
+            _narrativeHistory.narrativeHistory.Add(
+                                                   new HistoryItem(_currentNarrativeItem.character.name,
+                                                                   new CharacterHistory().AddHistory(_currentNarrativeItem.next[option].shortenedLine)));
+            return;
+        }
+
+        int index = _narrativeHistory.narrativeHistory.IndexOf(historyItem);
+
+        historyItem.characterHistory.AddHistory(_currentNarrativeItem.next[option].shortenedLine);
+        _narrativeHistory.narrativeHistory[index] = historyItem;
+
     }
 
     private void ClearNarrativeArea() {

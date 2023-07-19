@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8461664531745674581}
   - component: {fileID: 8461664531745674582}
+  - component: {fileID: 7997787690200813170}
+  - component: {fileID: 9095153286694941859}
   - component: {fileID: 8461664531745674580}
   m_Layer: 0
   m_Name: NarrationManager
@@ -46,8 +48,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textArea: {fileID: 0}
+  characterNameText: {fileID: 0}
+  characterTitleText: {fileID: 0}
+  background: {fileID: 0}
   startingNarrativeItem: {fileID: 11400000, guid: 0becb5f3eaf47694586ae0b63662f7ed, type: 2}
+  multiInteractionButtonPrefab: {fileID: 0}
+  multiInteractionButtonParent: {fileID: 0}
+  textBoxArea: {fileID: 0}
   audioSource: {fileID: 8461664531745674580}
+--- !u!114 &7997787690200813170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461664531745674583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2589abd8c0292b54d896c33f5057ebc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9095153286694941859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461664531745674583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2258660e71a673747baab4fee8d1d938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
 --- !u!82 &8461664531745674580
 AudioSource:
   m_ObjectHideFlags: 0

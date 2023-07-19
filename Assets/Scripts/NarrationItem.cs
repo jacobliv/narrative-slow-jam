@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "Narrative", menuName = "Narrative/Narrative Item")]
+[CreateAssetMenu(fileName = "Narrative", menuName = "Narrative/Narrative Item"),Serializable]
 public class NarrationItem : ScriptableObject{
     [Tooltip("Day the narration occurs")]
     public Day                 day;
