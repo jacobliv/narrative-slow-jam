@@ -5,10 +5,10 @@ using UnityEngine;
 public class NextNarrativeDrawer : PropertyDrawer
 {
     private ButtonManager buttonManager;
-    private string[] buttonNames;
-
+    private string[]      buttonNames;
+    private int           numberOfElements;
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-        return EditorGUIUtility.singleLineHeight * 2f + EditorGUIUtility.standardVerticalSpacing;
+        return EditorGUIUtility.singleLineHeight * (numberOfElements+1) + EditorGUIUtility.standardVerticalSpacing * 3;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -16,10 +16,13 @@ public class NextNarrativeDrawer : PropertyDrawer
 
         // Draw the label
         position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
-
-        Rect buttonPosition = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-        Rect otherPosition = new Rect(position.x, position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing), position.width, EditorGUIUtility.singleLineHeight);
-
+        float xPos = position.x - position.width / 3;
+        float size = position.width + position.width / 3;
+        Rect triggerPosition        = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 0, size, EditorGUIUtility.singleLineHeight);
+        Rect buttonPosition         = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 1, size, EditorGUIUtility.singleLineHeight);
+        Rect narrativeLinePosition  = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 2, size, EditorGUIUtility.singleLineHeight);
+        Rect shortenedLinePosition  = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 3, size, EditorGUIUtility.singleLineHeight);
+        numberOfElements = 4;
         buttonManager = Object.FindObjectOfType<ButtonManager>();
 
         if (buttonManager == null) {
@@ -28,26 +31,36 @@ public class NextNarrativeDrawer : PropertyDrawer
             return;
         }
 
+        // Get SerializedProperty for each field
+        SerializedProperty choiceDependentProperty = property.FindPropertyRelative("choiceDependent");
+        SerializedProperty previousChoiceProperty = property.FindPropertyRelative("previousChoice");
+
         SerializedProperty buttonProperty = property.FindPropertyRelative("button");
+        SerializedProperty narrativeItemProperty = property.FindPropertyRelative("narrativeItem");
+        SerializedProperty shortenedLineProperty = property.FindPropertyRelative("shortenedLine");
+
+        // Display the trigger type field
+        EditorGUI.PropertyField(triggerPosition, choiceDependentProperty);
+        if (choiceDependentProperty.boolValue) {
+            EditorGUI.PropertyField(buttonPosition, previousChoiceProperty);
+            buttonPosition.y += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
+            narrativeLinePosition.y  += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
+            shortenedLinePosition.y  += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
+            numberOfElements += 1;
+        }
+        // Display the button field
         int selectedIndex = GetSelectedButtonIndex(buttonProperty.stringValue);
-
-        // Create an array of button names to display in the popup
         buttonNames = GetButtonNames();
-
-        // Display the button name in the folded-up dropdown
         string selectedButtonName = selectedIndex >= 0 && selectedIndex < buttonNames.Length ? buttonNames[selectedIndex] : "None";
         var pos = EditorGUI.PrefixLabel(buttonPosition, GUIUtility.GetControlID(FocusType.Passive), new GUIContent("Button: "));
-        pos.x -= pos.width/2;
         selectedIndex = EditorGUI.Popup(EditorGUI.IndentedRect(pos), selectedIndex, buttonNames);
-
-        // Update the serialized property with the selected button
         if (selectedIndex >= 0 && selectedIndex < buttonNames.Length) {
             buttonProperty.stringValue = buttonNames[selectedIndex];
         }
-        
 
-        // Draw the other field
-        EditorGUI.PropertyField(otherPosition, property.FindPropertyRelative("narrativeItem"), GUIContent.none);
+        // Draw the other fields
+        EditorGUI.PropertyField(narrativeLinePosition, narrativeItemProperty);
+        EditorGUI.PropertyField(shortenedLinePosition, shortenedLineProperty);
 
         EditorGUI.EndProperty();
     }
