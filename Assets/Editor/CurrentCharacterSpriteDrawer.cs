@@ -19,14 +19,31 @@ public class CurrentCharacterSpriteDrawer : PropertyDrawer {
             // Get the selected character from the CharacterScriptableObject property
             Character character = (Character)characterProperty.objectReferenceValue;
 
+            EditorGUI.BeginChangeCheck();
+
             // If the character is valid and has sprites, show a dropdown with the available sprites
             if (character != null && character.sprites != null && character.sprites.Count > 0) {
                 int spriteIndex = GetSpriteIndex(character, spriteProperty);
-                int newSpriteIndex = EditorGUI.Popup(position, "Sprite", spriteIndex, GetSpriteNames(character));
-                spriteProperty.objectReferenceValue = character.sprites[newSpriteIndex];
+
+                // Add "None" option at the beginning of the sprite names array
+                string[] spriteNames = GetSpriteNames(character);
+                ArrayUtility.Insert(ref spriteNames, 0, "None");
+
+                int newSpriteIndex = EditorGUI.Popup(position, "Sprite", spriteIndex + 1, spriteNames);
+
+                // Set the spriteProperty.objectReferenceValue to null if "None" is selected
+                if (newSpriteIndex == 0) {
+                    spriteProperty.objectReferenceValue = null;
+                } else {
+                    spriteProperty.objectReferenceValue = character.sprites[newSpriteIndex - 1];
+                }
             }
             else {
                 EditorGUI.LabelField(position, "No character or sprites available.");
+            }
+
+            if (EditorGUI.EndChangeCheck()) {
+                parentObject.ApplyModifiedProperties();
             }
         }
 
@@ -36,10 +53,10 @@ public class CurrentCharacterSpriteDrawer : PropertyDrawer {
     // Get the index of the current sprite in the character's sprite list
     private int GetSpriteIndex(Character character, SerializedProperty spriteProperty) {
         if (character == null || character.sprites == null || character.sprites.Count == 0)
-            return 0;
+            return -1;
 
         Sprite sprite = (Sprite)spriteProperty.objectReferenceValue;
-        return Mathf.Max(character.sprites.IndexOf(sprite), 0);
+        return Mathf.Max(character.sprites.IndexOf(sprite), -1);
     }
 
     // Get the names of the sprites in the character's sprite list

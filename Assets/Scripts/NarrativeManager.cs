@@ -79,6 +79,7 @@ public class NarrativeManager : MonoBehaviour {
 
         textBoxArea.sizeDelta = new Vector2(textBoxArea.sizeDelta.x,
                                             textBoxArea.sizeDelta.y + sizeDeltaChange(_currentNarrativeItem.next.Count) );
+        characterImage.sprite = null;
 
     }
 
@@ -103,8 +104,11 @@ public class NarrativeManager : MonoBehaviour {
         _characterName.text = _currentNarrativeItem.character.name+":";
         _characterTitle.text = _currentNarrativeItem.character.title;
         background.sprite = _currentNarrativeItem.background;
-        characterImage.rectTransform.sizeDelta = _currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
-        characterImage.sprite = _currentNarrativeItem.currentCharacterSprite.sprite;
+        if (_currentNarrativeItem.currentCharacterSprite.sprite != null) {
+            characterImage.rectTransform.sizeDelta = _currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
+            characterImage.sprite = _currentNarrativeItem.currentCharacterSprite.sprite;
+        }
+        
 
         // update background
         // update characters
