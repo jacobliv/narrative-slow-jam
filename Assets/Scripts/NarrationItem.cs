@@ -10,6 +10,9 @@ public class NarrationItem : ScriptableObject{
     public Day                 day;
     [Tooltip("Character who is speaking")]
     public Character character;
+
+    [Tooltip("Current Image of the character")]
+    public CurrentCharacterSprite currentCharacterSprite;
     [Tooltip("Sounds that play in order from the beginning of the narration")]
     public List<AudioClip> sounds;
     [TextArea,Tooltip("Text that is spoken by the character")]
@@ -22,6 +25,11 @@ public class NarrationItem : ScriptableObject{
     [Tooltip("The time of day this occurs")]
     public string time;
 
+}
+
+[Serializable]
+public class CurrentCharacterSprite {
+    [SerializeField] public Sprite sprite;
 }
 
 [Serializable]

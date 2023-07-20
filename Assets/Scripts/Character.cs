@@ -10,8 +10,8 @@ public class Character : ScriptableObject {
     public new string      name;
     [Tooltip("Title of the character")]
     public string      title;
-    [Tooltip("All the images associated with the character")]
-    public List<Image> images;
+    [Tooltip("All the sprites associated with the character")]
+    public List<Sprite> sprites;
     
 
 }
