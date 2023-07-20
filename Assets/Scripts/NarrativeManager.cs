@@ -9,7 +9,8 @@ public class NarrativeManager : MonoBehaviour {
     public  GameObject       textArea;
     public  GameObject       characterNameText;
     public  GameObject       characterTitleText;
-    public  Image            background; 
+    public  Image            background;
+    public  Image            characterImage;
     public  NarrationItem    startingNarrativeItem;
     public  GameObject       multiInteractionButtonPrefab;
     public  GameObject       multiInteractionButtonParent;
@@ -102,6 +103,9 @@ public class NarrativeManager : MonoBehaviour {
         _characterName.text = _currentNarrativeItem.character.name+":";
         _characterTitle.text = _currentNarrativeItem.character.title;
         background.sprite = _currentNarrativeItem.background;
+        characterImage.rectTransform.sizeDelta = _currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
+        characterImage.sprite = _currentNarrativeItem.currentCharacterSprite.sprite;
+
         // update background
         // update characters
         _audioCoroutine=StartCoroutine(PlayAudioClips());

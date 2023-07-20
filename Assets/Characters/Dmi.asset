@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 642761121b396534db36f8cbd6a754c4, type: 3}
-  m_Name: Cass
+  m_Name: Dmi
   m_EditorClassIdentifier: 
-  name: Maximus Nova
+  name: Dmi
   title: Astroengineer
   sprites:
-  - {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
-  - {fileID: 21300000, guid: 678095381d851334fb550c5032ba1a81, type: 3}
+  - {fileID: 21300000, guid: a44a89fe1d9838a448011e526da546b7, type: 3}
