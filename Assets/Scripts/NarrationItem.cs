@@ -10,7 +10,8 @@ public class NarrationItem : ScriptableObject{
     public Day                 day;
     [Tooltip("Character who is speaking")]
     public Character character;
-
+    [Tooltip("Choose if this narrative line takes place on your phone")]
+    public bool phone;
     [Tooltip("Current Image of the character")]
     public CurrentCharacterSprite currentCharacterSprite;
     [Tooltip("Sounds that play in order from the beginning of the narration")]
