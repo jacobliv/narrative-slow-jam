@@ -7,7 +7,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler {
-    public  Color           hover;
+    public Color textHoverColor;
+    public Color imageHoverColor;
+
     public  TextMeshProUGUI text;
     public  Image           image;
     private Color           _textDefaultColor;
@@ -34,19 +36,19 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / lerpDuration); // Clamp t between 0 and 1
             if (image != null) {
-                Color imageLerpColor = Color.Lerp(imageColor, hover, t);
+                Color imageLerpColor = Color.Lerp(imageColor, imageHoverColor, t);
                 image.color = imageLerpColor;
             }
-            Color textLerpColor = Color.Lerp(textColor, hover, t);
+            Color textLerpColor = Color.Lerp(textColor, textHoverColor, t);
             text.color = textLerpColor;
             yield return null;
         }
 
         // Ensure the color is set to the final hover color after the lerp is completed
         if (image != null) {
-            image.color = hover;
+            image.color = imageHoverColor;
         }
-        text.color = hover;
+        text.color = textHoverColor;
     }
 
     public void OnPointerExit(PointerEventData eventData) {
