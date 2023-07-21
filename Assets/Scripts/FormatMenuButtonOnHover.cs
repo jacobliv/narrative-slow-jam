@@ -4,15 +4,19 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler {
     public  Color           hover;
     public  TextMeshProUGUI text;
-    private Color           defaultColor;
+    public  Image           image;
+    private Color           _textDefaultColor;
+    private Color           _imageDefaultColor;
 
 
     private void Start() {
-        defaultColor = text.color;
+        _textDefaultColor = text.color;
+        _imageDefaultColor = image != null ? image.color : Color.black;
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
@@ -21,19 +25,27 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
     
     private IEnumerator FormatOn() {
-        Color color = text.color;
+        Color textColor = text.color;
+        Color imageColor = image!=null?image.color:Color.black;
         float elapsedTime = 0f;
         float lerpDuration = 0.1f; // Total time in seconds for lerping (3 iterations * 0.1 seconds per iteration)
 
         while (elapsedTime < lerpDuration) {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / lerpDuration); // Clamp t between 0 and 1
-            Color lerpColor = Color.Lerp(color, hover, t);
-            text.color = lerpColor;
+            if (image != null) {
+                Color imageLerpColor = Color.Lerp(imageColor, hover, t);
+                image.color = imageLerpColor;
+            }
+            Color textLerpColor = Color.Lerp(textColor, hover, t);
+            text.color = textLerpColor;
             yield return null;
         }
 
         // Ensure the color is set to the final hover color after the lerp is completed
+        if (image != null) {
+            image.color = hover;
+        }
         text.color = hover;
     }
 
@@ -44,19 +56,28 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
     
     private IEnumerator FormatOff() {
-        Color color = text.color;
+        Color textColor = text.color;
+        Color imageColor = image!=null?image.color:Color.black;
+
         float elapsedTime = 0f;
         float lerpDuration = 0.1f; // Total time in seconds for lerping (3 iterations * 0.1 seconds per iteration)
 
         while (elapsedTime < lerpDuration) {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / lerpDuration); // Clamp t between 0 and 1
-            Color lerpColor = Color.Lerp(color, defaultColor, t);
+            if (image != null) {
+                Color imageLerpColor = Color.Lerp(imageColor, _imageDefaultColor, t);
+                image.color = imageLerpColor;
+            }
+            Color lerpColor = Color.Lerp(textColor, _textDefaultColor, t);
             text.color = lerpColor;
             yield return null;
         }
 
         // Ensure the color is set to the final default color after the lerp is completed
-        text.color = defaultColor;
+        if (image != null) {
+            image.color = _imageDefaultColor;
+        }
+        text.color = _textDefaultColor;
     }
 }
