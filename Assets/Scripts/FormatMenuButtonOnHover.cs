@@ -17,7 +17,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
 
 
     private void Start() {
-        _textDefaultColor = text.color;
+        _textDefaultColor = text != null ? text.color:Color.black;
         _imageDefaultColor = image != null ? image.color : Color.black;
     }
 
@@ -27,7 +27,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
     
     private IEnumerator FormatOn() {
-        Color textColor = text.color;
+        Color textColor = text!=null ? text.color:Color.black;
         Color imageColor = image!=null?image.color:Color.black;
         float elapsedTime = 0f;
         float lerpDuration = 0.1f; // Total time in seconds for lerping (3 iterations * 0.1 seconds per iteration)
@@ -39,8 +39,11 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
                 Color imageLerpColor = Color.Lerp(imageColor, imageHoverColor, t);
                 image.color = imageLerpColor;
             }
-            Color textLerpColor = Color.Lerp(textColor, textHoverColor, t);
-            text.color = textLerpColor;
+            if (text != null) {
+                Color textLerpColor = Color.Lerp(textColor, textHoverColor, t);
+                text.color = textLerpColor;
+            }
+            
             yield return null;
         }
 
@@ -48,7 +51,10 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         if (image != null) {
             image.color = imageHoverColor;
         }
-        text.color = textHoverColor;
+
+        if (text != null) {
+            text.color = textHoverColor;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData) {
@@ -58,7 +64,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
     
     private IEnumerator FormatOff() {
-        Color textColor = text.color;
+        Color textColor = text!=null?text.color:Color.black;
         Color imageColor = image!=null?image.color:Color.black;
 
         float elapsedTime = 0f;
@@ -71,8 +77,11 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
                 Color imageLerpColor = Color.Lerp(imageColor, _imageDefaultColor, t);
                 image.color = imageLerpColor;
             }
-            Color lerpColor = Color.Lerp(textColor, _textDefaultColor, t);
-            text.color = lerpColor;
+            if (text != null) {
+                Color lerpColor = Color.Lerp(textColor, _textDefaultColor, t);
+                text.color = lerpColor;
+            }
+            
             yield return null;
         }
 
@@ -80,6 +89,9 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         if (image != null) {
             image.color = _imageDefaultColor;
         }
-        text.color = _textDefaultColor;
+        if (text != null) {
+            text.color = _textDefaultColor;
+            
+        }
     }
 }
