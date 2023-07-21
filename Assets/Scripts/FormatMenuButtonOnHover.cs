@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler {
     public Color textHoverColor;
     public Color imageHoverColor;
+    public bool  underline;
 
     public  TextMeshProUGUI text;
     public  Image           image;
@@ -54,6 +55,9 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
 
         if (text != null) {
             text.color = textHoverColor;
+            if (underline) {
+                text.fontStyle = FontStyles.Underline;
+            }
         }
     }
 
@@ -91,7 +95,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         }
         if (text != null) {
             text.color = _textDefaultColor;
-            
+            text.fontStyle = FontStyles.Normal;
+
         }
     }
 }
