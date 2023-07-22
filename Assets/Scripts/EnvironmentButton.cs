@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EnvironmentButton : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class EnvironmentButton : MonoBehaviour {
+    [SerializeField] private List<AudioClip> sounds;
+    [SerializeField] private AudioSource     audioSource;
+    [SerializeField] private Button          button;
+    void Start() {
+        button.onClick.AddListener(PlaySfx);
+        Debug.Log("Added listener: " + transform.parent.name);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PlaySfx() {
+        Debug.Log("Attempting to play sound");
+        audioSource.Stop();
+        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+        Debug.Log(audioSource.clip.name);
+        audioSource.Play();
     }
 }
