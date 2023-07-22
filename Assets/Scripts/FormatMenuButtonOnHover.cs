@@ -9,10 +9,13 @@ using UnityEngine.UI;
 public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler {
     public Color textHoverColor;
     public Color imageHoverColor;
+    
     public bool  underline;
 
-    public  TextMeshProUGUI text;
-    public  Image           image;
+    public TextMeshProUGUI text;
+    public Image           image;
+    public Image           secondImage;
+
     private Color           _textDefaultColor;
     private Color           _imageDefaultColor;
 
@@ -43,6 +46,12 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
             if (text != null) {
                 Color textLerpColor = Color.Lerp(textColor, textHoverColor, t);
                 text.color = textLerpColor;
+                
+            }
+
+            if (secondImage != null) {
+                Color textLerpColor = Color.Lerp(textColor, textHoverColor, t);
+                secondImage.color = textLerpColor;
             }
             
             yield return null;
@@ -55,6 +64,10 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
 
         if (text != null) {
             text.color = textHoverColor;
+            if (secondImage != null) {
+                
+                secondImage.color = textHoverColor;
+            }
             if (underline) {
                 text.fontStyle = FontStyles.Underline;
             }
@@ -85,7 +98,10 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
                 Color lerpColor = Color.Lerp(textColor, _textDefaultColor, t);
                 text.color = lerpColor;
             }
-            
+            if (secondImage != null) {
+                Color textLerpColor = Color.Lerp(textColor, _textDefaultColor, t);
+                secondImage.color = textLerpColor;
+            }
             yield return null;
         }
 
@@ -96,7 +112,10 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         if (text != null) {
             text.color = _textDefaultColor;
             text.fontStyle = FontStyles.Normal;
-
+            if (secondImage != null) {
+                
+                secondImage.color = textHoverColor;
+            }
         }
     }
 }
