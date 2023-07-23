@@ -343,6 +343,54 @@ PrefabInstance:
       propertyPath: nextMenu
       value: 
       objectReference: {fileID: 2044248415}
+    - target: {fileID: 108171086, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108171086, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.b
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 108171086, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.g
+      value: 0.13725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 108171086, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.r
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 396637830, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 396637830, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.b
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 396637830, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.g
+      value: 0.13725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 396637830, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.r
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 899208519, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 899208519, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.b
+      value: 0.9137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 899208519, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.g
+      value: 0.13725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 899208519, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: textHoverColor.r
+      value: 0.4745098
+      objectReference: {fileID: 0}
     - target: {fileID: 330453738031401824, guid: db93371c797d736498b26504ee3df1f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -12,6 +12,11 @@ public class NarrationItem : ScriptableObject{
     public Character character;
     [Tooltip("Choose if this narrative line takes place on your phone")]
     public bool phone;
+
+    public bool shopSelection;
+    public bool internalThought;
+    public bool physicalInteraction;
+
     [Tooltip("Current Image of the character")]
     public CurrentCharacterSprite currentCharacterSprite;
     [Tooltip("Sounds that play in order from the beginning of the narration")]
@@ -54,9 +59,4 @@ public enum Day {
     Two,
     Three,
     Post
-}
-
-public enum TriggerType {
-    Button,
-    Choice
 }

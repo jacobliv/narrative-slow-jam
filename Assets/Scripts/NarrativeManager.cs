@@ -6,36 +6,60 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class NarrativeManager : MonoBehaviour {
-    public  GameObject    textArea;
-    public  GameObject    characterNameText;
-    public  GameObject    characterTitleText;
+    #region Dialogue
+    [Header("Dialogue")]
+    public  GameObject      dialogueArea;
+    public  TextMeshProUGUI dialogueCharacterNameText;
+    public  GameObject      dialogueUI;
+    private TextMeshProUGUI _dialogueLineText;
+    private AnimateInText   _dialogueAnimateInText;
+    #endregion
+
+    #region Phone
+    [Header("Phone")]
+    public GameObject      phoneUi;
+    public TextMeshProUGUI phoneSenderName;
+    public TextMeshProUGUI phoneSenderText;
+    public TextMeshProUGUI phoneChoice1Text;
+    public TextMeshProUGUI phoneChoice2Text;
+    public GameObject      phoneChoiceUI;
+    public GameObject      phoneResponseUI;
+    public TextMeshProUGUI responseText;
+    public GameObject      phoneSingleBack;
+    public GameObject      phoneNavigation;
+    public TextMeshProUGUI phoneYouName;
+    public TextMeshProUGUI phoneYouTime;
+    #endregion
+    
+    #region General
+    [Header("General")]
     public  Image         background; 
     public  Image         characterImage;
-
     public  NarrationItem startingNarrativeItem;
-    public  GameObject    phoneUi;
-    public  GameObject    spokenTextUi;
-    public  TMP_Text      phoneName;
-    public  TMP_Text      phoneText;
     private NarrationItem _currentNarrativeItem;
-    public  AudioSource   audioSource;
-    private Coroutine     _audioCoroutine;
-    private TMP_Text      _narrativeLineText;
-    private AnimateInText _animateInText;
-    private TMP_Text      _characterName;
-    private List<GameObject> multiInteractionButtons = new();
+    public  ButtonManager buttonManager;
+    #endregion
 
-    private TMP_Text      _characterTitle;
-    public  GameObject       multiInteractionButtonPrefab;
-    public  GameObject       multiInteractionButtonParent;
-    public  RectTransform    textBoxArea;
+    #region Audio
+    [Header("Audio")]
+    public  AudioSource audioSource;
+    private Coroutine   _audioCoroutine;
+    #endregion
+    
+    #region Multi Choice Dialogue
+    [Header("Multiple Choice Dialogue")]
+
+    public GameObject      multiDialogueChoicePanel;
+    public TextMeshProUGUI multiDialogueChoice1;
+    public TextMeshProUGUI multiDialogueChoice2;
+    #endregion
+    
+
     private NarrativeHistory _narrativeHistory;
 
     private void Start() {
-        _characterTitle = characterTitleText.GetComponent<TMP_Text>();
-        _characterName = characterNameText.GetComponent<TMP_Text>();
-        _animateInText = textArea.GetComponent<AnimateInText>();
-        _narrativeLineText = textArea.GetComponent<TMP_Text>();
+        _dialogueAnimateInText = dialogueArea.GetComponent<AnimateInText>();
+        _dialogueLineText = dialogueArea.GetComponent<TextMeshProUGUI>();
         _narrativeHistory = GetComponent<NarrativeHistory>();
         _currentNarrativeItem = startingNarrativeItem;
         PrepareNarrativeArea();
@@ -43,75 +67,43 @@ public class NarrativeManager : MonoBehaviour {
         RunNarrativeItem();
     }
 
-    private void Update() {
-
-        if (Input.GetMouseButtonUp(0) && /*_currentNarrativeItem.next.Count == 1 &&*/ _currentNarrativeItem.next[0].button == null) {
-            AdvanceNarrative(0);
-        }
-    }
-
     public void AdvanceNarrative(int option = 0) {
         StopPreviousItem();
-        spokenTextUi.SetActive(true);
+        dialogueUI.SetActive(true);
+        phoneUi.SetActive(false);
 
-        OpenPhone(option);
+        print("Advancing Narrative");
         
-        _currentNarrativeItem = _currentNarrativeItem.next[option].narrativeItem;
-        RunNarrativeItem();
-        ClearNarrativeArea();
-        SaveChoice(option);
+        // SaveChoice(option);
         // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
-        _currentNarrativeItem = _currentNarrativeItem.next[0].narrativeItem;
+        _currentNarrativeItem = _currentNarrativeItem.next[option].narrativeItem;
+        OpenPhone(option);
+
         PrepareNarrativeArea();
         RunNarrativeItem();
     }
 
     private void OpenPhone(int option) {
-        if (!_currentNarrativeItem.next[option].narrativeItem.phone || _currentNarrativeItem.phone) {
-            phoneUi.SetActive(false);
-            return;
-        }
-        StartCoroutine(PhoneOpeningSequence());
+        if(!_currentNarrativeItem.phone) return;
+        dialogueUI.SetActive(false);
+        phoneUi.SetActive(true);
     }
 
     private IEnumerator PhoneOpeningSequence() {
-        spokenTextUi.SetActive(false);
-        //Play phone ding and display notification icon on screen
-        //wait
-        //Open phone and play sfx sound
+        dialogueUI.SetActive(false);
         phoneUi.SetActive(true);
-
         yield break;
     }
 
     private void SaveChoice(int option) {
         _narrativeHistory.narrativeHistory[_currentNarrativeItem.character.name]=new CharacterHistory().AddHistory(_currentNarrativeItem.next[option].shortenedLine);
     }
-
-    private void ClearNarrativeArea() {
-        textBoxArea.sizeDelta = new Vector2(textBoxArea.sizeDelta.x,
-                                            textBoxArea.sizeDelta.y - sizeDeltaChange(multiInteractionButtons.Count) );
-        foreach (GameObject multiInteractionButton in multiInteractionButtons) {
-            Destroy(multiInteractionButton);
-        }
-        multiInteractionButtons.Clear();
-    }
+    
 
     private void PrepareNarrativeArea() {
-        if(_currentNarrativeItem.next.Count <=1) return;
-        int i = 0;
-        foreach (NextNarrative nextNarrative in _currentNarrativeItem.next) {
-            GameObject button = Instantiate(multiInteractionButtonPrefab, multiInteractionButtonParent.transform);
-            button.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = nextNarrative.shortenedLine;
-            button.GetComponent<Button>().onClick.AddListener(()=>AdvanceNarrative(i));
-            multiInteractionButtons.Add(button);
-            i++;
-        }
-
-        textBoxArea.sizeDelta = new Vector2(textBoxArea.sizeDelta.x,
-                                            textBoxArea.sizeDelta.y + sizeDeltaChange(_currentNarrativeItem.next.Count) );
+        if(_currentNarrativeItem.next.Count <1) return;
         characterImage.sprite = null;
-
+        
     }
 
     public float sizeDeltaChange(int count) {
@@ -129,7 +121,6 @@ public class NarrativeManager : MonoBehaviour {
 
     private void RunNarrativeItem() {
         if (_currentNarrativeItem == null) return;
-
         // update text area
         UpdateSpokenText();
         UpdatePhoneText();
@@ -146,21 +137,64 @@ public class NarrativeManager : MonoBehaviour {
 
     private void UpdatePhoneText() {
         if(!_currentNarrativeItem.phone) return;
-        phoneText.text = _currentNarrativeItem.line;
-        phoneName.text = _currentNarrativeItem.character.name;
 
+        if (!_currentNarrativeItem.character.name.Equals("Dmi")) {
+            phoneSenderText.text = _currentNarrativeItem.line;
+            phoneSenderName.text = _currentNarrativeItem.character.name;
+            responseText.text = "";
+            phoneYouName.text = "";
+            phoneYouTime.text = "";
+        }
+
+        if (_currentNarrativeItem.character.name.Equals("Dmi")) {
+            phoneChoiceUI.SetActive(false);
+            phoneResponseUI.SetActive(true);
+            responseText.text = _currentNarrativeItem.line;
+            phoneYouName.text = $"{_currentNarrativeItem.character.name}: {_currentNarrativeItem.character.title}" ;
+            phoneYouTime.text = "now";
+        }
+
+        if (_currentNarrativeItem.next.Count <2) {
+            phoneNavigation.SetActive(true);
+            phoneSingleBack.SetActive(false);
+        }
+        else {
+            phoneNavigation.SetActive(false);
+            phoneSingleBack.SetActive(true);
+            phoneChoice1Text.text = _currentNarrativeItem.next[0].shortenedLine;
+            phoneChoice2Text.text = _currentNarrativeItem.next[1].shortenedLine;
+
+        }
+        
+        
+        
     }
 
     private void UpdateSpokenText() {
         if(_currentNarrativeItem.phone) return;
-        _narrativeLineText.text = _currentNarrativeItem.line;
-        _animateInText.AnimateText();
-        _characterName.text = _currentNarrativeItem.character.name+":";
-        _characterTitle.text = _currentNarrativeItem.character.title;
+        multiDialogueChoicePanel.SetActive(false);
+
+        _dialogueLineText.fontStyle = FontStyles.Normal;
+        if (_currentNarrativeItem.internalThought) {
+            _dialogueLineText.fontStyle = FontStyles.Italic;
+        }
+        if (_currentNarrativeItem.physicalInteraction) {
+            _dialogueLineText.fontStyle = FontStyles.Bold;
+        }
+        _dialogueLineText.text = _currentNarrativeItem.line;
+        _dialogueAnimateInText.AnimateText();
+        dialogueCharacterNameText.text = _currentNarrativeItem.character!=null? $"{_currentNarrativeItem.character.name}: {_currentNarrativeItem.character.title}":"";
         background.sprite = _currentNarrativeItem.background;
         if (_currentNarrativeItem.currentCharacterSprite.sprite != null) {
             characterImage.rectTransform.sizeDelta = _currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
             characterImage.sprite = _currentNarrativeItem.currentCharacterSprite.sprite;
+        }
+
+        if (_currentNarrativeItem.next.Count > 1) {
+            multiDialogueChoicePanel.SetActive(true);
+            multiDialogueChoice1.text = _currentNarrativeItem.next[0].shortenedLine;
+            multiDialogueChoice2.text = _currentNarrativeItem.next[1].shortenedLine;
+
         }
     }
 
