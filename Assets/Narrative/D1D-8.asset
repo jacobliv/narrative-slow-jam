@@ -15,8 +15,9 @@ MonoBehaviour:
   day: 1
   character: {fileID: 0}
   phone: 0
+  shopSelection: 0
   internalThought: 0
-  physicalInteraction: 0
+  physicalInteraction: 1
   currentCharacterSprite:
     sprite: {fileID: 0}
   sounds: []

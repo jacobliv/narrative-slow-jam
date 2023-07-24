@@ -14,4 +14,5 @@ public class CreateNarrativeItems : Editor
             myCustomObject.Create();
         }
     }
+    
 }

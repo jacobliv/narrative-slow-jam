@@ -15,12 +15,18 @@ MonoBehaviour:
   day: 1
   character: {fileID: 0}
   phone: 0
+  shopSelection: 0
   internalThought: 0
-  physicalInteraction: 0
+  physicalInteraction: 1
   currentCharacterSprite:
     sprite: {fileID: 0}
   sounds: []
   line: Her smile fades.
-  next: []
+  next:
+  - choiceDependent: 0
+    previousChoice: 
+    button: Dialogue Next
+    narrativeItem: {fileID: 11400000, guid: a49636ec11de5eb4abe80544da22c6de, type: 2}
+    shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

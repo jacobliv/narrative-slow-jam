@@ -15,6 +15,7 @@ MonoBehaviour:
   day: 1
   character: {fileID: 11400000, guid: c6f0923116ed25a4db895fc2abf6fc6d, type: 2}
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
   currentCharacterSprite:
@@ -22,6 +23,11 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 15aa63b1456773b4582c8677b35b0834, type: 3}
   line: Really? I can just take it?
-  next: []
+  next:
+  - choiceDependent: 0
+    previousChoice: 
+    button: Dialogue Next
+    narrativeItem: {fileID: 11400000, guid: 3ae4520f1ed424d409e6fb68a283b59a, type: 2}
+    shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

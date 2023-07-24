@@ -15,6 +15,7 @@ MonoBehaviour:
   day: 0
   character: {fileID: 0}
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
   currentCharacterSprite:

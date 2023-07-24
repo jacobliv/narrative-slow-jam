@@ -13,6 +13,7 @@ public class NarrativeManager : MonoBehaviour {
     public  GameObject      dialogueUI;
     private TextMeshProUGUI _dialogueLineText;
     private AnimateInText   _dialogueAnimateInText;
+    public Button nextButton;
     #endregion
 
     #region Phone
@@ -36,7 +37,7 @@ public class NarrativeManager : MonoBehaviour {
     public  Image         background; 
     public  Image         characterImage;
     public  NarrationItem startingNarrativeItem;
-    private NarrationItem _currentNarrativeItem;
+    public NarrationItem currentNarrativeItem;
     public  ButtonManager buttonManager;
     #endregion
 
@@ -61,7 +62,7 @@ public class NarrativeManager : MonoBehaviour {
         _dialogueAnimateInText = dialogueArea.GetComponent<AnimateInText>();
         _dialogueLineText = dialogueArea.GetComponent<TextMeshProUGUI>();
         _narrativeHistory = GetComponent<NarrativeHistory>();
-        _currentNarrativeItem = startingNarrativeItem;
+        currentNarrativeItem = startingNarrativeItem;
         PrepareNarrativeArea();
 
         RunNarrativeItem();
@@ -76,7 +77,11 @@ public class NarrativeManager : MonoBehaviour {
         
         // SaveChoice(option);
         // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
-        _currentNarrativeItem = _currentNarrativeItem.next[option].narrativeItem;
+        if (currentNarrativeItem.next.Count - 1 < option) {
+            Debug.LogWarning($"Current narrative doesn't have a next at index {option}");
+            return;
+        }
+        currentNarrativeItem = currentNarrativeItem.next[option].narrativeItem;
         OpenPhone(option);
 
         PrepareNarrativeArea();
@@ -84,7 +89,7 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void OpenPhone(int option) {
-        if(!_currentNarrativeItem.phone) return;
+        if(!currentNarrativeItem.phone) return;
         dialogueUI.SetActive(false);
         phoneUi.SetActive(true);
     }
@@ -96,12 +101,12 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void SaveChoice(int option) {
-        _narrativeHistory.narrativeHistory[_currentNarrativeItem.character.name]=new CharacterHistory().AddHistory(_currentNarrativeItem.next[option].shortenedLine);
+        _narrativeHistory.narrativeHistory[currentNarrativeItem.character.name]=new CharacterHistory().AddHistory(currentNarrativeItem.next[option].shortenedLine);
     }
     
 
     private void PrepareNarrativeArea() {
-        if(_currentNarrativeItem.next.Count <1) return;
+        if(currentNarrativeItem.next.Count <1) return;
         characterImage.sprite = null;
         
     }
@@ -120,14 +125,14 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void RunNarrativeItem() {
-        if (_currentNarrativeItem == null) return;
+        if (currentNarrativeItem == null) return;
         // update text area
         UpdateSpokenText();
         UpdatePhoneText();
 
 
         // update background
-        background.sprite = _currentNarrativeItem.background;
+        background.sprite = currentNarrativeItem.background;
 
         // update characters
         _audioCoroutine=StartCoroutine(PlayAudioClips());
@@ -136,33 +141,33 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void UpdatePhoneText() {
-        if(!_currentNarrativeItem.phone) return;
+        if(!currentNarrativeItem.phone) return;
 
-        if (!_currentNarrativeItem.character.name.Equals("Dmi")) {
-            phoneSenderText.text = _currentNarrativeItem.line;
-            phoneSenderName.text = _currentNarrativeItem.character.name;
+        if (!currentNarrativeItem.character.name.Equals("Dmi")) {
+            phoneSenderText.text = currentNarrativeItem.line;
+            phoneSenderName.text = currentNarrativeItem.character.name;
             responseText.text = "";
             phoneYouName.text = "";
             phoneYouTime.text = "";
         }
 
-        if (_currentNarrativeItem.character.name.Equals("Dmi")) {
+        if (currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneChoiceUI.SetActive(false);
             phoneResponseUI.SetActive(true);
-            responseText.text = _currentNarrativeItem.line;
-            phoneYouName.text = $"{_currentNarrativeItem.character.name}: {_currentNarrativeItem.character.title}" ;
+            responseText.text = currentNarrativeItem.line;
+            phoneYouName.text = $"{currentNarrativeItem.character.name}: {currentNarrativeItem.character.title}" ;
             phoneYouTime.text = "now";
         }
 
-        if (_currentNarrativeItem.next.Count <2) {
+        if (currentNarrativeItem.next.Count <2) {
             phoneNavigation.SetActive(true);
             phoneSingleBack.SetActive(false);
         }
         else {
             phoneNavigation.SetActive(false);
             phoneSingleBack.SetActive(true);
-            phoneChoice1Text.text = _currentNarrativeItem.next[0].shortenedLine;
-            phoneChoice2Text.text = _currentNarrativeItem.next[1].shortenedLine;
+            phoneChoice1Text.text = currentNarrativeItem.next[0].shortenedLine;
+            phoneChoice2Text.text = currentNarrativeItem.next[1].shortenedLine;
 
         }
         
@@ -171,39 +176,49 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void UpdateSpokenText() {
-        if(_currentNarrativeItem.phone) return;
+        if(currentNarrativeItem.phone) return;
         multiDialogueChoicePanel.SetActive(false);
-
+        nextButton.enabled = true;
         _dialogueLineText.fontStyle = FontStyles.Normal;
-        if (_currentNarrativeItem.internalThought) {
+        if (currentNarrativeItem.internalThought) {
             _dialogueLineText.fontStyle = FontStyles.Italic;
         }
-        if (_currentNarrativeItem.physicalInteraction) {
+        if (currentNarrativeItem.physicalInteraction) {
             _dialogueLineText.fontStyle = FontStyles.Bold;
         }
-        _dialogueLineText.text = _currentNarrativeItem.line;
+        _dialogueLineText.text = currentNarrativeItem.line;
         _dialogueAnimateInText.AnimateText();
-        dialogueCharacterNameText.text = _currentNarrativeItem.character!=null? $"{_currentNarrativeItem.character.name}: {_currentNarrativeItem.character.title}":"";
-        background.sprite = _currentNarrativeItem.background;
-        if (_currentNarrativeItem.currentCharacterSprite.sprite != null) {
-            characterImage.rectTransform.sizeDelta = _currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
-            characterImage.sprite = _currentNarrativeItem.currentCharacterSprite.sprite;
+        dialogueCharacterNameText.text = currentNarrativeItem.character!=null? $"{currentNarrativeItem.character.name}: {currentNarrativeItem.character.title}":"";
+        background.sprite = currentNarrativeItem.background;
+        if (currentNarrativeItem.currentCharacterSprite.sprite != null) {
+            characterImage.rectTransform.sizeDelta = currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
+            characterImage.sprite = currentNarrativeItem.currentCharacterSprite.sprite;
         }
 
-        if (_currentNarrativeItem.next.Count > 1) {
+        if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.next[0].button.Equals("Dialogue Choice 1")) {
             multiDialogueChoicePanel.SetActive(true);
-            multiDialogueChoice1.text = _currentNarrativeItem.next[0].shortenedLine;
-            multiDialogueChoice2.text = _currentNarrativeItem.next[1].shortenedLine;
-
+            multiDialogueChoice1.text = currentNarrativeItem.next[0].shortenedLine;
+            multiDialogueChoice2.text = currentNarrativeItem.next[1].shortenedLine;
+        } 
+        else if (currentNarrativeItem.next.Count > 1) {
+            nextButton.enabled = false;
         }
     }
 
     private IEnumerator PlayAudioClips() {
-        foreach (AudioClip clip in _currentNarrativeItem.sounds) {
+        foreach (AudioClip clip in currentNarrativeItem.sounds) {
             audioSource.clip = clip;
             audioSource.Play();
             yield return new WaitWhile(() => audioSource.isPlaying);
         }
+    }
+
+    public void ShopButtonAdvance(string buttonName) {
+        if (currentNarrativeItem.next[0].button.Equals(buttonName)) {
+            AdvanceNarrative(0);
+            return;
+        }
+        AdvanceNarrative(1);
     }
     
 }

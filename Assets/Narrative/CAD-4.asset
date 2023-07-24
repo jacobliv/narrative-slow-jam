@@ -15,6 +15,7 @@ MonoBehaviour:
   day: 1
   character: {fileID: 11400000, guid: c6f0923116ed25a4db895fc2abf6fc6d, type: 2}
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
   currentCharacterSprite:

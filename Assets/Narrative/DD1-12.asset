@@ -15,12 +15,18 @@ MonoBehaviour:
   day: 1
   character: {fileID: 11400000, guid: 0719a1f04fb06c2458b1975e5fa7f7b4, type: 2}
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
   currentCharacterSprite:
     sprite: {fileID: 0}
   sounds: []
   line: No.
-  next: []
+  next:
+  - choiceDependent: 0
+    previousChoice: 
+    button: Dialogue Next
+    narrativeItem: {fileID: 11400000, guid: 878ebaaa8e83d4048aab17de597f6a94, type: 2}
+    shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 
