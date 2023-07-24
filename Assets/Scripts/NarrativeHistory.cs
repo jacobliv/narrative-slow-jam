@@ -5,12 +5,14 @@ using UnityEngine;
 [Serializable]
 public class NarrativeHistory : MonoBehaviour {
     [SerializeField]
-    public Dictionary<string, CharacterHistory> narrativeHistory = new() {
-        { "bob", new CharacterHistory().AddHistory("My Choice")},
-        { "stella", new CharacterHistory().AddHistory("My a")},
+    public Dictionary<string, CharacterHistory> narrativeHistory = new();
+    public List<NarrationItem> linearHistory = new();
 
-    };
-    
+    public void AddNarrativeHistory(NarrationItem currentNarrativeItem,int option) {
+        Character character = currentNarrativeItem.character;
+        narrativeHistory[character!=null ?character.name: "Narrator"]=new CharacterHistory().AddHistory(currentNarrativeItem.next[option].shortenedLine);
+
+    }
 }
 
 [Serializable]

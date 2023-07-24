@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rob
   m_EditorClassIdentifier: 
   name: Rob
-  title: Manager
+  title: Cosmic Fuel Manager
   sprites:
   - {fileID: 21300000, guid: dcddc2283128b594b8d5cc605fcdfddf, type: 3}

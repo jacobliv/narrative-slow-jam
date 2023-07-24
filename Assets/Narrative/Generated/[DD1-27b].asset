@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0d660e242497d48bc6388b7e902f10, type: 3}
-  m_Name: '[TDN5-3]'
+  m_Name: '[DD1-27b]'
   m_EditorClassIdentifier: 
   day: 1
-  character: {fileID: 11400000, guid: 0719a1f04fb06c2458b1975e5fa7f7b4, type: 2}
+  character: {fileID: 0}
   phone: 0
   shopSelection: 0
   internalThought: 0
@@ -21,12 +21,17 @@ MonoBehaviour:
   currentCharacterSprite:
     sprite: {fileID: 0}
   sounds: []
-  line: "We\u2019re still just a gas station, sir."
+  line: Please choose an item from the store
   next:
   - choiceDependent: 0
     previousChoice: 
+    button: Space Alpaca Jerky
+    narrativeItem: {fileID: 11400000, guid: c941e055bfe9fcf44ad0c6eca4565097, type: 2}
+    shortenedLine: 
+  - choiceDependent: 0
+    previousChoice: 
     button: Dialogue Next
-    narrativeItem: {fileID: 11400000, guid: 77417694b8adeef4d8503af7724badb3, type: 2}
+    narrativeItem: {fileID: 11400000, guid: 2d2a12fae7b758a4faee58aed6ebe559, type: 2}
     shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

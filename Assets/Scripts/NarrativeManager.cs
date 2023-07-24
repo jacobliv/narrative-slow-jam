@@ -74,15 +74,17 @@ public class NarrativeManager : MonoBehaviour {
         phoneUi.SetActive(false);
 
         print("Advancing Narrative");
-        
-        // SaveChoice(option);
-        // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
-        if (currentNarrativeItem.next.Count - 1 < option) {
-            Debug.LogWarning($"Current narrative doesn't have a next at index {option}");
-            return;
+        if (option != -1) {
+            SaveChoice(option);
+            // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
+            if (currentNarrativeItem.next.Count - 1 < option || currentNarrativeItem.next[option].narrativeItem == null) {
+                Debug.LogWarning($"Current narrative doesn't have a next at index {option}");
+                return;
+            }
+            currentNarrativeItem = currentNarrativeItem.next[option].narrativeItem;
+            OpenPhone(option);
         }
-        currentNarrativeItem = currentNarrativeItem.next[option].narrativeItem;
-        OpenPhone(option);
+        
 
         PrepareNarrativeArea();
         RunNarrativeItem();
@@ -101,7 +103,14 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void SaveChoice(int option) {
-        _narrativeHistory.narrativeHistory[currentNarrativeItem.character.name]=new CharacterHistory().AddHistory(currentNarrativeItem.next[option].shortenedLine);
+        _narrativeHistory.AddNarrativeHistory(currentNarrativeItem,option);
+        _narrativeHistory.linearHistory.Add(currentNarrativeItem);
+    }
+
+    public void GoBack() {
+        currentNarrativeItem = _narrativeHistory.linearHistory[^1];
+        _narrativeHistory.linearHistory.RemoveAt(_narrativeHistory.linearHistory.Count-1);
+        AdvanceNarrative(-1);
     }
     
 
@@ -178,7 +187,7 @@ public class NarrativeManager : MonoBehaviour {
     private void UpdateSpokenText() {
         if(currentNarrativeItem.phone) return;
         multiDialogueChoicePanel.SetActive(false);
-        nextButton.enabled = true;
+        nextButton.transform.gameObject.SetActive(true);
         _dialogueLineText.fontStyle = FontStyles.Normal;
         if (currentNarrativeItem.internalThought) {
             _dialogueLineText.fontStyle = FontStyles.Italic;
@@ -201,7 +210,7 @@ public class NarrativeManager : MonoBehaviour {
             multiDialogueChoice2.text = currentNarrativeItem.next[1].shortenedLine;
         } 
         else if (currentNarrativeItem.next.Count > 1) {
-            nextButton.enabled = false;
+            nextButton.transform.gameObject.SetActive(false);
         }
     }
 

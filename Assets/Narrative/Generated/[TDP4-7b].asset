@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: '[TDP4-7b]'
   m_EditorClassIdentifier: 
   day: 1
-  character: {fileID: 11400000, guid: 88f3b8ee2e901794a8a10d77fa7784da, type: 2}
+  character: {fileID: 0}
   phone: 0
   shopSelection: 0
   internalThought: 0
@@ -21,14 +21,14 @@ MonoBehaviour:
   currentCharacterSprite:
     sprite: {fileID: 0}
   sounds:
-  - {fileID: 8300000, guid: 124e80fdc89d3ad4f853bfb12086f7a6, type: 3}
-  line: " You just don\u2019t understand the intricacies of something like this!
-    Anything she endorses is a godsend!"
+  - {fileID: 8300000, guid: c570049d02659d249a22d4864f6c36fb, type: 3}
+  - {fileID: 8300000, guid: 83899e73b79a1e544b19b61e27668e07, type: 3}
+  line: -door closes and chimes-
   next:
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Next
-    narrativeItem: {fileID: 0}
+    narrativeItem: {fileID: 11400000, guid: de8d40d3102876e418281e46c6a8ca6c, type: 2}
     shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 
