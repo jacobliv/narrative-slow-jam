@@ -22,8 +22,8 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 124e80fdc89d3ad4f853bfb12086f7a6, type: 3}
   - {fileID: 8300000, guid: 5096ab16229666b48a2744172fa66dbf, type: 3}
-  line: " You just don\u2019t understand the intricacies of something like this!
-    Anything she endorses is a godsend!"
+  line: "You just don\u2019t understand the intricacies of something like this! Anything
+    she endorses is a godsend!"
   next:
   - choiceDependent: 0
     previousChoice: 

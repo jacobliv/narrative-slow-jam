@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: " How about this Crust? I can help you get something that can help you out
+  line: "How about this Crust? I can help you get something that can help you out
     in your\u2026"
   next:
   - choiceDependent: 0

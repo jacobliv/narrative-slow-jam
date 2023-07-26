@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: ' Do you need something?'
+  line: Do you need something?
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: ' I hope you have a great time on your first day.'
+  line: I hope you have a great time on your first day.
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: d7257d6b52a36a240b8e04f7c7b3eb13, type: 3}
-  line: " Yes! Arinator\u2019s limited edition Mint choco paste? I thought this was
+  line: "Yes! Arinator\u2019s limited edition Mint choco paste? I thought this was
     sold out everywhere!"
   next:
   - choiceDependent: 0

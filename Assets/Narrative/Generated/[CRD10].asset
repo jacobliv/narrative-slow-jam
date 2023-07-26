@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 9c3c17c0479528a499639172938507d2, type: 3}
-  line: ' My supernova bunker.'
+  line: My supernova bunker.
   next:
   - choiceDependent: 0
     previousChoice: 

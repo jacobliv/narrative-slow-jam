@@ -21,8 +21,8 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 9c3c17c0479528a499639172938507d2, type: 3}
-  line: " Doomsday is in just three days! While you\u2019re in here wasting away
-    working MINIMUM wage!"
+  line: "Doomsday is in just three days! While you\u2019re in here wasting away working
+    MINIMUM wage!"
   next:
   - choiceDependent: 0
     previousChoice: 

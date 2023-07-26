@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 31076e029f6d99342aca0c43b8ebe3b0, type: 3}
-  line: " Yes! I\u2019m starting a new job architecting artificial clouds! I\u2019ve
+  line: "Yes! I\u2019m starting a new job architecting artificial clouds! I\u2019ve
     been looking for a job forever."
   next:
   - choiceDependent: 0

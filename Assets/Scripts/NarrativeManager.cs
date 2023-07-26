@@ -54,6 +54,7 @@ public class NarrativeManager : MonoBehaviour {
     
     #region Multi Choice Dialogue
     [Header("Multiple Choice Dialogue")]
+    public GameObject dialogueNavigationButtonPanel;
 
     public GameObject      multiDialogueChoicePanel;
     public TextMeshProUGUI multiDialogueChoice1;
@@ -216,6 +217,7 @@ public class NarrativeManager : MonoBehaviour {
     private void UpdateSpokenText() {
         if(currentNarrativeItem.phone) return;
         multiDialogueChoicePanel.SetActive(false);
+        dialogueNavigationButtonPanel.SetActive(true);
         nextButton.transform.gameObject.SetActive(true);
         _dialogueLineText.fontStyle = FontStyles.Normal;
         if (currentNarrativeItem.internalThought) {
@@ -278,6 +280,7 @@ public class NarrativeManager : MonoBehaviour {
         }
         if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.next[0].button.Equals("Dialogue Choice 1")) {
             multiDialogueChoicePanel.SetActive(true);
+            dialogueNavigationButtonPanel.SetActive(false);
             multiDialogueChoice1.text = currentNarrativeItem.next[0].shortenedLine;
             multiDialogueChoice2.text = currentNarrativeItem.next[1].shortenedLine;
         } 

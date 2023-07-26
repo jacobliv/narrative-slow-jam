@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 15aa63b1456773b4582c8677b35b0834, type: 3}
   line: "Uh, this isn\u2019t what I was really looking for."
   next:
   - choiceDependent: 0

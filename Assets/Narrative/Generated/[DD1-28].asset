@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: " We had a good day didn\u2019t we?"
+  line: "We had a good day didn\u2019t we?"
   next:
   - choiceDependent: 0
     previousChoice: 

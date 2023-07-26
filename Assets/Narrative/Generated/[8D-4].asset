@@ -21,8 +21,8 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: d7257d6b52a36a240b8e04f7c7b3eb13, type: 3}
-  line: ' You sell any Arinator brand stuff here? That one made by that smoking cyborg
-    from outta the solar system?'
+  line: You sell any Arinator brand stuff here? That one made by that smoking cyborg
+    from outta the solar system?
   next:
   - choiceDependent: 0
     previousChoice: 

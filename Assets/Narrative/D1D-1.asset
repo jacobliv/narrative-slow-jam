@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 8e4946a4197b6d840bb95ff772252fa8, type: 3}
   line: I jump from my seat and slam my phone onto the side of the counter.
   next:
   - choiceDependent: 0

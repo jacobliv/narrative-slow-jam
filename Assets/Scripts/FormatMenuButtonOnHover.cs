@@ -19,12 +19,30 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     private Color _textDefaultColor;
     private Color _imageDefaultColor;
     private Color _secondImageDefaultColor;
+    private bool  started;
 
+
+
+    private void OnDisable() {
+        if (text != null && started) {
+            text.color = _textDefaultColor;
+
+        }
+        if (image != null && started) {
+            image.color = _imageDefaultColor;
+
+        }
+        if (secondImage != null&& started) {
+            secondImage.color =_secondImageDefaultColor;
+
+        }
+    }
 
     private void Start() {
-        _textDefaultColor = text != null ? text.color:Color.black;
-        _imageDefaultColor = image != null ? image.color : Color.black;
-        _secondImageDefaultColor=secondImage != null ? secondImage.color : Color.black;
+        started = true;
+        _textDefaultColor = text != null ? text.color:Color.red;
+        _imageDefaultColor = image != null ? image.color : Color.red;
+        _secondImageDefaultColor=secondImage != null ? secondImage.color : Color.red;
 
     }
 

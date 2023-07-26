@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: " I don\u2019t think anyone is in a rush to buy that."
+  line: "I don\u2019t think anyone is in a rush to buy that."
   next:
   - choiceDependent: 0
     previousChoice: 

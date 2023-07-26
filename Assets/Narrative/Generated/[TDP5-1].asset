@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: de41f71760a698445b7cafb72d8e1f85, type: 3}
-  line: " Jerky! You\u2019re thinking like a true survivor kid! This is great!"
+  line: "Jerky! You\u2019re thinking like a true survivor kid! This is great!"
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 124e80fdc89d3ad4f853bfb12086f7a6, type: 3}
-  line: ' What was what?'
+  line: What was what?
   next:
   - choiceDependent: 0
     previousChoice: 

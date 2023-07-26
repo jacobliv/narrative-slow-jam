@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: ' The-- okay.'
+  line: The-- okay.
   next:
   - choiceDependent: 0
     previousChoice: 

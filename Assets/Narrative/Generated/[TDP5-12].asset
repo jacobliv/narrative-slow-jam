@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 1b8dbe7f2e6e9f44e9900c97a9563231, type: 3}
-  line: " Don\u2019t be too sure about that kid. Don\u2019t choose for others how
+  line: "Don\u2019t be too sure about that kid. Don\u2019t choose for others how
     important you are to them."
   next:
   - choiceDependent: 0

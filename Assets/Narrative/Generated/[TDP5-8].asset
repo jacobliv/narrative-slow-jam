@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 1b8dbe7f2e6e9f44e9900c97a9563231, type: 3}
-  line: " I\u2019d expect you young\u2019uns to hightail it outta here."
+  line: "I\u2019d expect you young\u2019uns to hightail it outta here."
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: ' Your supernova bunker.'
+  line: Your supernova bunker.
   next:
   - choiceDependent: 0
     previousChoice: 

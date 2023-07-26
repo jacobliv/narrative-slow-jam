@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 9c3c17c0479528a499639172938507d2, type: 3}
-  line: " Why? Don\u2019t you got someone special to go home to?"
+  line: "Why? Don\u2019t you got someone special to go home to?"
   next:
   - choiceDependent: 0
     previousChoice: 

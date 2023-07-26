@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: " Are you a clouditech? I think I\u2019ve seen a badge like that before."
+  line: "Are you a clouditech? I think I\u2019ve seen a badge like that before."
   next:
   - choiceDependent: 0
     previousChoice: 

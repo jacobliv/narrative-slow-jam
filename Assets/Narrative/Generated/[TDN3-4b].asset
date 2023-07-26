@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
-  characterArt: 9
+  characterArt: 11
   phone: 0
   shopSelection: 0
   internalThought: 0

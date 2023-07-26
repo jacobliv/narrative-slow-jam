@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 5e3a3572ffccf3f4b87c639c0ecad0a2, type: 3}
-  line: ' What boom?'
+  line: What boom?
   next:
   - choiceDependent: 0
     previousChoice: 

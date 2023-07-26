@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: fbd3f7a7aac513c4aa95d22c6be33df6, type: 3}
   line: "I\u2019ve gotta go! I almost forgot there is a sale on 5D glasses on Uranus!"
   next:
   - choiceDependent: 0
