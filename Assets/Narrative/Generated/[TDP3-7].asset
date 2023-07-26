@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: 9f8f0f5be5b10d44cbb7b82a7965ddf5, type: 2}
+  characterArt: 9
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 31076e029f6d99342aca0c43b8ebe3b0, type: 3}
   line: " Yes! I\u2019m starting a new job architecting artificial clouds! I\u2019ve

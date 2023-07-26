@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dmi
   title: Dead Inside Employee (You)
-  sprites:
-  - {fileID: 21300000, guid: a44a89fe1d9838a448011e526da546b7, type: 3}
+  sprite: {fileID: 21300000, guid: 16ce49ae8ed4a824989bebeb04693f4a, type: 3}

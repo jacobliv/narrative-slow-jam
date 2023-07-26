@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 0
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: b36a42e5ba2911542a30e82ff2c1e225, type: 3}
   line: -Flubber meows-

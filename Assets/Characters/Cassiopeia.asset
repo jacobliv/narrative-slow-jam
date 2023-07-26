@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cassiopeia
   title: The Only One Who Matters
-  sprites: []
+  sprite: {fileID: 21300000, guid: 2951e8deefb7ea44095c22acd97b099e, type: 3}

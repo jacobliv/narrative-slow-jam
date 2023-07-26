@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 3
   phone: 0
   shopSelection: 0
   internalThought: 1
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "I\u2019ve heard of Arinator probably. Cassiopeia\u2019s a big fan of singers.
     Though something was kind of funny about this guy\u2019s desperation. "

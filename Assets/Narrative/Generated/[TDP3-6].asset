@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 9
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "She lets out a big smile. It's as if she\u2019s been waiting for you to
     ask."

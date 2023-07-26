@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "The candle-headed alien makes her way out of the gas station. I catch a
     glimpse of a pretty snazzy ship outside. She\u2019s got good taste."
@@ -27,7 +26,7 @@ MonoBehaviour:
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Next
-    narrativeItem: {fileID: 11400000, guid: 3bb9d73cf510cf146b887cc31bf8e33d, type: 2}
+    narrativeItem: {fileID: 11400000, guid: 3f2df7a00e1c33f4ab9f3d3f2c31a978, type: 2}
     shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

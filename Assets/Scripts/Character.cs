@@ -11,7 +11,7 @@ public class Character : ScriptableObject {
     [Tooltip("Title of the character")]
     public string      title;
     [Tooltip("All the sprites associated with the character")]
-    public List<Sprite> sprites;
+    public Sprite sprite;
     
 
 }

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "That doesn\u2019t matter much anymore. The Solar System is reaching its
     end and our Sun is reaching the end of its days. From Mercury to Uranus (Justice

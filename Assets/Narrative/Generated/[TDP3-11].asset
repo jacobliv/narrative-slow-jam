@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: 9f8f0f5be5b10d44cbb7b82a7965ddf5, type: 2}
+  characterArt: 9
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 1ff91638982222d469644a15d48f1770, type: 3}
   - {fileID: 8300000, guid: 5096ab16229666b48a2744172fa66dbf, type: 3}

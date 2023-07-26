@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 10
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: An old man enters the gas station. He seems to have some kind of air of caution
     around him. The way he whips his head around makes him look like he is expecting

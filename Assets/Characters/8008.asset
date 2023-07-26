@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 8008
   title: Arinator Stan
-  sprites: []
+  sprite: {fileID: 21300000, guid: d353bf1b236673947aabfeee55a600fe, type: 3}

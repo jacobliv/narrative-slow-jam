@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: 0719a1f04fb06c2458b1975e5fa7f7b4, type: 2}
+  characterArt: 5
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "We\u2019re supposed to have one?"
   next:

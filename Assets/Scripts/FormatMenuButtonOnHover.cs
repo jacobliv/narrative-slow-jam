@@ -16,13 +16,16 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     public Image           image;
     public Image           secondImage;
 
-    private Color           _textDefaultColor;
-    private Color           _imageDefaultColor;
+    private Color _textDefaultColor;
+    private Color _imageDefaultColor;
+    private Color _secondImageDefaultColor;
 
 
     private void Start() {
         _textDefaultColor = text != null ? text.color:Color.black;
         _imageDefaultColor = image != null ? image.color : Color.black;
+        _secondImageDefaultColor=secondImage != null ? secondImage.color : Color.black;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
@@ -114,7 +117,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
             text.fontStyle = FontStyles.Normal;
             if (secondImage != null) {
                 
-                secondImage.color = textHoverColor;
+                secondImage.color = _secondImageDefaultColor;
             }
         }
     }

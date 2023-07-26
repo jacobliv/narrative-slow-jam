@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Calder
   title: Frugal R&B Enthusiast
-  sprites: []
+  sprite: {fileID: 21300000, guid: 9eb1777f972604744bf41cbc7cde9967, type: 3}

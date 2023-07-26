@@ -14,16 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
-  - {fileID: 8300000, guid: c570049d02659d249a22d4864f6c36fb, type: 3}
   - {fileID: 8300000, guid: 83899e73b79a1e544b19b61e27668e07, type: 3}
-  line: -door closes and chimes-
+  - {fileID: 8300000, guid: c570049d02659d249a22d4864f6c36fb, type: 3}
+  line: -door chimes and closes-
   next:
   - choiceDependent: 0
     previousChoice: 

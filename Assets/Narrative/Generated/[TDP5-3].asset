@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 10
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: Before you could even ring it up the man opens the bag and starts eating
     the jerky.

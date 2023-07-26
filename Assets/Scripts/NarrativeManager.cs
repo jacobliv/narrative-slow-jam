@@ -35,10 +35,15 @@ public class NarrativeManager : MonoBehaviour {
     #region General
     [Header("General")]
     public  Image         background; 
-    public  Image         characterImage;
-    public  NarrationItem startingNarrativeItem;
-    public NarrationItem currentNarrativeItem;
-    public  ButtonManager buttonManager;
+    public Image            characterImage;
+    public GameObject       characterCanvas;
+    public GameObject       mainBackgroundCanvas;
+    public List<GameObject> otherCanvases;
+    public NarrationItem    startingNarrativeItem;
+    public NarrationItem    currentNarrativeItem;
+    public ButtonManager    buttonManager;
+    public GameObject       frontShopInteractionParent;
+    public GameObject       flubberCanvas;
     #endregion
 
     #region Audio
@@ -53,6 +58,11 @@ public class NarrativeManager : MonoBehaviour {
     public GameObject      multiDialogueChoicePanel;
     public TextMeshProUGUI multiDialogueChoice1;
     public TextMeshProUGUI multiDialogueChoice2;
+    #endregion
+
+    #region Characters
+
+    [Header("Characters")] public List<Character> characters;
     #endregion
     
 
@@ -75,22 +85,23 @@ public class NarrativeManager : MonoBehaviour {
 
         print("Advancing Narrative");
         if (option != -1) {
-            SaveChoice(option);
             // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
             if (currentNarrativeItem.next.Count - 1 < option || currentNarrativeItem.next[option].narrativeItem == null) {
                 Debug.LogWarning($"Current narrative doesn't have a next at index {option}");
                 return;
             }
+            SaveChoice(option);
+
             currentNarrativeItem = currentNarrativeItem.next[option].narrativeItem;
-            OpenPhone(option);
         }
         
+        OpenPhone();
 
         PrepareNarrativeArea();
         RunNarrativeItem();
     }
 
-    private void OpenPhone(int option) {
+    private void OpenPhone() {
         if(!currentNarrativeItem.phone) return;
         dialogueUI.SetActive(false);
         phoneUi.SetActive(true);
@@ -117,6 +128,9 @@ public class NarrativeManager : MonoBehaviour {
     private void PrepareNarrativeArea() {
         if(currentNarrativeItem.next.Count <1) return;
         characterImage.sprite = null;
+        characterImage.color=Color.clear;
+        otherCanvases.ForEach((c)=>c.SetActive(false));
+        mainBackgroundCanvas.SetActive(true);
         
     }
 
@@ -142,16 +156,29 @@ public class NarrativeManager : MonoBehaviour {
 
         // update background
         background.sprite = currentNarrativeItem.background;
+        if (currentNarrativeItem.shopSelection) {
+            frontShopInteractionParent.SetActive(true);
+        }
+        else {
+            frontShopInteractionParent.SetActive(false);
+        }
 
         // update characters
         _audioCoroutine=StartCoroutine(PlayAudioClips());
+        if (background.sprite.name.Contains("Shop")) {
+            flubberCanvas.SetActive(true);
+        }
+        else {
+            flubberCanvas.SetActive(false);
 
+        }
         
     }
 
     private void UpdatePhoneText() {
         if(!currentNarrativeItem.phone) return;
-
+        phoneChoiceUI.SetActive(false);
+        phoneResponseUI.SetActive(true);
         if (!currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneSenderText.text = currentNarrativeItem.line;
             phoneSenderName.text = currentNarrativeItem.character.name;
@@ -164,7 +191,7 @@ public class NarrativeManager : MonoBehaviour {
             phoneChoiceUI.SetActive(false);
             phoneResponseUI.SetActive(true);
             responseText.text = currentNarrativeItem.line;
-            phoneYouName.text = $"{currentNarrativeItem.character.name}: {currentNarrativeItem.character.title}" ;
+            phoneYouName.text = $"{currentNarrativeItem.character.name}" ;
             phoneYouTime.text = "now";
         }
 
@@ -175,6 +202,8 @@ public class NarrativeManager : MonoBehaviour {
         else {
             phoneNavigation.SetActive(false);
             phoneSingleBack.SetActive(true);
+            phoneChoiceUI.SetActive(true);
+            phoneResponseUI.SetActive(false);
             phoneChoice1Text.text = currentNarrativeItem.next[0].shortenedLine;
             phoneChoice2Text.text = currentNarrativeItem.next[1].shortenedLine;
 
@@ -199,11 +228,54 @@ public class NarrativeManager : MonoBehaviour {
         _dialogueAnimateInText.AnimateText();
         dialogueCharacterNameText.text = currentNarrativeItem.character!=null? $"{currentNarrativeItem.character.name}: {currentNarrativeItem.character.title}":"";
         background.sprite = currentNarrativeItem.background;
-        if (currentNarrativeItem.currentCharacterSprite.sprite != null) {
-            characterImage.rectTransform.sizeDelta = currentNarrativeItem.currentCharacterSprite.sprite.bounds.size*90;
-            characterImage.sprite = currentNarrativeItem.currentCharacterSprite.sprite;
-        }
+        if (currentNarrativeItem.characterArt != CharacterEnum.None) {
+            var sprite = characters.Find((c)=>c.name.Equals("Rob")).sprite;
+            switch (currentNarrativeItem.characterArt) {
+                case CharacterEnum.Rob:
+                    sprite = characters.Find((c)=>c.name.Equals("Rob")).sprite;
+                    break;
+                case CharacterEnum.Dmi:
+                    sprite = characters.Find((c)=>c.name.Equals("Dmi")).sprite;
+                    break;
+                case CharacterEnum.Cassiopeia:
+                    sprite = characters.Find((c)=>c.name.Equals("Cassiopeia")).sprite;
+                    break;
+                case CharacterEnum.BOO8:
+                    sprite = characters.Find((c)=>c.name.Equals("8008")).sprite;
+                    break;
+                case CharacterEnum.Aiyana:
+                    sprite = characters.Find((c)=>c.name.Equals("Aiyana")).sprite;
+                    break;
+                case CharacterEnum.Calder:
+                    sprite = characters.Find((c)=>c.name.Equals("Calder")).sprite;
+                    break;
+                case CharacterEnum.Flubber:
+                    sprite = characters.Find((c)=>c.name.Equals("Flubber")).sprite;
+                    break;
+                case CharacterEnum.Kkili:
+                    sprite = characters.Find((c)=>c.name.Equals("K'Kili the Destroyer")).sprite;
+                    break;
+                case CharacterEnum.RemRom:
+                    sprite = characters.Find((c)=>c.name.Equals("Remus")).sprite;
+                    break;
+                case CharacterEnum.Zerua:
+                    sprite = characters.Find((c)=>c.name.Equals("Zerua")).sprite;
+                    break;
+                case CharacterEnum.Crust:
+                    sprite = characters.Find((c)=>c.name.Equals("Crust")).sprite;
 
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            characterCanvas.SetActive(true);
+            characterImage.rectTransform.sizeDelta = sprite.bounds.size*20;
+            characterImage.sprite = sprite;
+            characterImage.color=Color.white;
+        }
+        else{
+            characterCanvas.SetActive(false);
+        }
         if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.next[0].button.Equals("Dialogue Choice 1")) {
             multiDialogueChoicePanel.SetActive(true);
             multiDialogueChoice1.text = currentNarrativeItem.next[0].shortenedLine;

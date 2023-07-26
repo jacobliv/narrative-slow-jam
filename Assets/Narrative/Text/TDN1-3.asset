@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   character: {fileID: 11400000, guid: 0719a1f04fb06c2458b1975e5fa7f7b4, type: 2}
+  characterArt: 11
   phone: 1
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "No, its fine. I\u2019m at work. The grind doesn\u2019t stop."
   next:

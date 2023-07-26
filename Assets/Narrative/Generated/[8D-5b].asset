@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
-  shopSelection: 0
+  shopSelection: 1
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 0}
   line: Select an Item in the shop

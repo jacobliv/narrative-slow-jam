@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   character: {fileID: 11400000, guid: fd5912c99907eff468b452aa03a5dcb8, type: 2}
+  characterArt: 11
   phone: 1
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 49532f99a7b36f448a6a551a3e03801e, type: 3}
   line: Are you home? I can swing by your place to help.

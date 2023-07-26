@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Romulus
   title: Sharp-Eyed Brother
-  sprites: []
+  sprite: {fileID: 21300000, guid: d9250926b67854449a49345e368fcd9e, type: 3}

@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: e553221001e9ea44d8d9d704db0f58ed, type: 2}
+  characterArt: 10
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 1b8dbe7f2e6e9f44e9900c97a9563231, type: 3}
   line: Salutations, Martian.

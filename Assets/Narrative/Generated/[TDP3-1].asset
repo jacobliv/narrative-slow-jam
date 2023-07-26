@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: 9f8f0f5be5b10d44cbb7b82a7965ddf5, type: 2}
+  characterArt: 9
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: b193fc9e6a4aed0469dc8ddb72608442, type: 3}
   line: Oh, my stars! Thank you!

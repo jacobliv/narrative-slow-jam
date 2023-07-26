@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Zerua
   title: Entry-level Clouditech
-  sprites: []
+  sprite: {fileID: 21300000, guid: cf4a03484b95d0f459aac48427a88696, type: 3}

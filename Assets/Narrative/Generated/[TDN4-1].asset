@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 11400000, guid: 88f3b8ee2e901794a8a10d77fa7784da, type: 2}
+  characterArt: 3
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 124e80fdc89d3ad4f853bfb12086f7a6, type: 3}
   line: Bro.

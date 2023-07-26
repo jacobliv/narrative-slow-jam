@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 83899e73b79a1e544b19b61e27668e07, type: 3}
   - {fileID: 8300000, guid: c570049d02659d249a22d4864f6c36fb, type: 3}
@@ -28,7 +27,7 @@ MonoBehaviour:
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Next
-    narrativeItem: {fileID: 11400000, guid: 069587949254f6c469d19ac11a8ea55d, type: 2}
+    narrativeItem: {fileID: 11400000, guid: b692db2d5f61eb14c8977fe780154221, type: 2}
     shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

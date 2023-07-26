@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: K'Kili the Destroyer
   title: Ex-Con Turned Housewife
-  sprites: []
+  sprite: {fileID: 21300000, guid: e9515ef6d41f58e4ebdefbd602ff29b4, type: 3}

@@ -14,19 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
   shopSelection: 0
   internalThought: 1
   physicalInteraction: 0
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds: []
   line: "It's almost closing time\u2026"
   next:
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Next
-    narrativeItem: {fileID: 0}
+    narrativeItem: {fileID: 11400000, guid: 8d89b9e9428bd204da2a8c09edf35fb8, type: 2}
     shortenedLine: 
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

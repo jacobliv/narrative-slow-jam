@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   character: {fileID: 0}
+  characterArt: 11
   phone: 0
+  shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  currentCharacterSprite:
-    sprite: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 66ddfb5b630de8d4a8da3ba0228f80e9, type: 3}
   line: -phone chimes-
