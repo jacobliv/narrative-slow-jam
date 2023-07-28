@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds:
-  - {fileID: 8300000, guid: 1b8dbe7f2e6e9f44e9900c97a9563231, type: 3}
+  - {fileID: 8300000, guid: a811b26e55face743aee6e794a2d9fe7, type: 3}
   line: Salutations, Martian.
   next:
   - choiceDependent: 0

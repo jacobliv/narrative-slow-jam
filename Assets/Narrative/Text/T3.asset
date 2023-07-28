@@ -28,10 +28,12 @@ MonoBehaviour:
     button: Dialogue Choice 1
     narrativeItem: {fileID: 11400000, guid: 4edca191c5c294b488021c12c753fefb, type: 2}
     shortenedLine: Sorry, got caught up.
+    positive: 2
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Next
     narrativeItem: {fileID: 11400000, guid: 766a4f5090d88ab49bf477f2de345478, type: 2}
     shortenedLine: "You don\u2019t need to keep messaging."
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

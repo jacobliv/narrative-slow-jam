@@ -28,10 +28,12 @@ MonoBehaviour:
     button: Dialogue Choice 1
     narrativeItem: {fileID: 11400000, guid: aa9218cb298217645847f75823c71588, type: 2}
     shortenedLine: Doomsday Sale?
+    positive: 1
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Choice 2
     narrativeItem: {fileID: 11400000, guid: 8651ae02557bc16499265e2e0ad12fd2, type: 2}
     shortenedLine: Sure, if you just take it.
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

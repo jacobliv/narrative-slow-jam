@@ -27,10 +27,12 @@ MonoBehaviour:
     button: Saturn Dogs
     narrativeItem: {fileID: 11400000, guid: a145aaef6a2aae9488497c6ebbbd23b8, type: 2}
     shortenedLine: 
+    positive: 1
   - choiceDependent: 0
     previousChoice: 
     button: 
     narrativeItem: {fileID: 11400000, guid: e461c0559bf99b5429687f2d89ec2cdd, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

@@ -28,10 +28,12 @@ MonoBehaviour:
     button: Zolkan Coffee
     narrativeItem: {fileID: 11400000, guid: e05730980e5b0474697a0bc4111623db, type: 2}
     shortenedLine: 
+    positive: 1
   - choiceDependent: 0
     previousChoice: 
     button: Deia Deia Soda
     narrativeItem: {fileID: 11400000, guid: 54af636a35c9e7b47b4d2cde688d471d, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

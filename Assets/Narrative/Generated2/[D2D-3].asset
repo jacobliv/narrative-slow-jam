@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 4195cc164f31f9e40ad73f9f70ed6e3d, type: 3}
   line: Rob bursts into laughter.
   next:
   - choiceDependent: 0

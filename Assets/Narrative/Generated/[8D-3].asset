@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds:
-  - {fileID: 8300000, guid: 5e3a3572ffccf3f4b87c639c0ecad0a2, type: 3}
+  - {fileID: 8300000, guid: af918cf7692f5644a9cf849335bc8cfa, type: 3}
   line: What boom?
   next:
   - choiceDependent: 0

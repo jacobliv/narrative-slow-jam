@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.UI;
 
-public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler {
+public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerMoveHandler {
     public Color textHoverColor;
     public Color imageHoverColor;
     
@@ -16,11 +17,13 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     public Image           image;
     public Image           secondImage;
 
-    private Color _textDefaultColor;
-    private Color _imageDefaultColor;
-    private Color _secondImageDefaultColor;
-    private bool  started;
-
+    private Color     _textDefaultColor;
+    private Color     _imageDefaultColor;
+    private Color     _secondImageDefaultColor;
+    private bool      started;
+    public  Texture2D pointer;
+    public  Texture2D arrow;
+    private bool      inside;
 
 
     private void OnDisable() {
@@ -34,9 +37,18 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         }
         if (secondImage != null&& started) {
             secondImage.color =_secondImageDefaultColor;
+        }
+
+        if (!inside) {
+            Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
 
         }
+        Debug.Log($"Reset {name} -- {transform.parent.name}" );
+
+        // Cursor.SetCursor(CursorType.Hand, Vector2.zero, CursorMode.Auto); // Changes the cursor to the Hand cursor
     }
+    
+    
 
     private void Start() {
         started = true;
@@ -47,7 +59,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        
+        inside = true;
+        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
         StartCoroutine(FormatOn());
     }
     
@@ -96,7 +109,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-
+        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
+        inside = false;
         StartCoroutine(FormatOff());
 
     }
@@ -138,5 +152,9 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
                 secondImage.color = _secondImageDefaultColor;
             }
         }
+    }
+
+    public void OnPointerMove(PointerEventData eventData) {
+        inside = true;
     }
 }

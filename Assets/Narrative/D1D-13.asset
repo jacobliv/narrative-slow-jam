@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: c9585459b4657c64a98b31705c5f7db9, type: 3}
   line: She huffs.
   next:
   - choiceDependent: 0

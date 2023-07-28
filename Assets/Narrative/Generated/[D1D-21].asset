@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: da4f0b46bdc6f694496e7beac50db7af, type: 3}
   line: "A low hum comes from his circuits. He\u2019s thinking."
   next:
   - choiceDependent: 0

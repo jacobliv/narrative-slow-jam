@@ -30,6 +30,7 @@ public class NarrativeManager : MonoBehaviour {
     public GameObject      phoneNavigation;
     public TextMeshProUGUI phoneYouName;
     public TextMeshProUGUI phoneYouTime;
+    public GameObject      alert;
     #endregion
     
     #region General
@@ -44,6 +45,7 @@ public class NarrativeManager : MonoBehaviour {
     public ButtonManager    buttonManager;
     public GameObject       frontShopInteractionParent;
     public GameObject       flubberCanvas;
+    public GameObject       creditsCanvas;
     #endregion
 
     #region Audio
@@ -64,8 +66,14 @@ public class NarrativeManager : MonoBehaviour {
     #region Characters
 
     [Header("Characters")] public List<Character> characters;
+    public                        bool            flubberGone;
     #endregion
-    
+
+    [Header("Supernova")] public GameObject             twoCharacterCanvas;
+    public                       GameObject             supernovaCanvas;
+    public                       ControlBackgroundMusic ControlBackgroundMusic;
+    public                       FadeIn                 fadeIn;
+
 
     private NarrativeHistory _narrativeHistory;
 
@@ -81,11 +89,21 @@ public class NarrativeManager : MonoBehaviour {
 
     public void AdvanceNarrative(int option = 0) {
         StopPreviousItem();
+        if (currentNarrativeItem.next.Count == 0) {
+            creditsCanvas.SetActive(true);
+            return;
+        }
         dialogueUI.SetActive(true);
-        phoneUi.SetActive(false);
+        if (currentNarrativeItem.name.Contains("D2D-52")) {
+            flubberGone = true;
+        }
 
+        
         print("Advancing Narrative");
         if (option != -1) {
+            if (currentNarrativeItem.name.Equals("[D3D-16b]")) {
+                option = _narrativeHistory.positiveActions >= .75f * _narrativeHistory.choices ? 1 : 0;
+            }
             // TODO  IMPORTANT when the current narrative item has next options that are dependent on previous choices, we need to enable and disable them based on previous choices
             if (currentNarrativeItem.next.Count - 1 < option || currentNarrativeItem.next[option].narrativeItem == null) {
                 Debug.LogWarning($"Current narrative doesn't have a next at index {option}");
@@ -103,23 +121,29 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     private void OpenPhone() {
-        if(!currentNarrativeItem.phone) return;
+        if (!currentNarrativeItem.phone) {
+            phoneUi.SetActive(false);
+
+            return;
+        }
         dialogueUI.SetActive(false);
         phoneUi.SetActive(true);
     }
 
-    private IEnumerator PhoneOpeningSequence() {
-        dialogueUI.SetActive(false);
-        phoneUi.SetActive(true);
-        yield break;
-    }
+
 
     private void SaveChoice(int option) {
-        _narrativeHistory.AddNarrativeHistory(currentNarrativeItem,option);
         _narrativeHistory.linearHistory.Add(currentNarrativeItem);
+
+        _narrativeHistory.AddNarrativeHistory(currentNarrativeItem,option);
     }
 
     public void GoBack() {
+        if( _narrativeHistory.positiveValue.ContainsKey(currentNarrativeItem.name)) {
+            _narrativeHistory.positiveActions -= _narrativeHistory.positiveValue[currentNarrativeItem.name];
+            _narrativeHistory.choices--;
+        }
+
         currentNarrativeItem = _narrativeHistory.linearHistory[^1];
         _narrativeHistory.linearHistory.RemoveAt(_narrativeHistory.linearHistory.Count-1);
         AdvanceNarrative(-1);
@@ -150,6 +174,23 @@ public class NarrativeManager : MonoBehaviour {
 
     private void RunNarrativeItem() {
         if (currentNarrativeItem == null) return;
+        if (currentNarrativeItem.name.Equals("[PON-12]") || currentNarrativeItem.name.Equals("[POP-71]")) {
+            supernovaCanvas.SetActive(true);
+            fadeIn.FadeInFunc();
+        }
+        
+        if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeToEndSong();
+        }
+        if (currentNarrativeItem.name.Equals("[POP-19]")) {
+            twoCharacterCanvas.SetActive(true);
+        }
+        if (currentNarrativeItem.name.Equals("[TPOP-1]")) {
+            alert.SetActive(true);
+            phoneSingleBack.SetActive(false);
+            phoneNavigation.SetActive(true);
+            return;
+        }
         // update text area
         UpdateSpokenText();
         UpdatePhoneText();
@@ -166,12 +207,19 @@ public class NarrativeManager : MonoBehaviour {
 
         // update characters
         _audioCoroutine=StartCoroutine(PlayAudioClips());
-        if (background.sprite.name.Contains("Shop")) {
+        if (background.sprite.name.Contains("Shop") && currentNarrativeItem.day is not (Day.Three or Day.Post) && !flubberGone) {
             flubberCanvas.SetActive(true);
         }
         else {
             flubberCanvas.SetActive(false);
 
+        }
+
+        if (currentNarrativeItem.day == Day.Post) {
+            creditsCanvas.SetActive(true);
+        }
+        else {
+            creditsCanvas.SetActive(false);
         }
         
     }
@@ -284,7 +332,7 @@ public class NarrativeManager : MonoBehaviour {
             multiDialogueChoice1.text = currentNarrativeItem.next[0].shortenedLine;
             multiDialogueChoice2.text = currentNarrativeItem.next[1].shortenedLine;
         } 
-        else if (currentNarrativeItem.next.Count > 1) {
+        else if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.shopSelection) {
             nextButton.transform.gameObject.SetActive(false);
         }
     }
@@ -298,7 +346,7 @@ public class NarrativeManager : MonoBehaviour {
     }
 
     public void ShopButtonAdvance(string buttonName) {
-        if (currentNarrativeItem.next[0].button.Equals(buttonName)) {
+        if (currentNarrativeItem.next[0].button.Equals(buttonName) || currentNarrativeItem.next[0].button.Equals("")) {
             AdvanceNarrative(0);
             return;
         }

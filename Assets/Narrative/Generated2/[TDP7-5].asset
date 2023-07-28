@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds:
-  - {fileID: 8300000, guid: f22bb198e8345f0499482c0dc74c71bf, type: 3}
+  - {fileID: 8300000, guid: 02385e5a227ca3d40b3cc92641a805a8, type: 3}
   line: To steal?
   next:
   - choiceDependent: 0

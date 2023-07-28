@@ -27,10 +27,12 @@ MonoBehaviour:
     button: Deia Deia Soda
     narrativeItem: {fileID: 11400000, guid: c0268de59126df749a0d369cf95781e9, type: 2}
     shortenedLine: 
+    positive: 1
   - choiceDependent: 0
     previousChoice: 
     button: 
     narrativeItem: {fileID: 11400000, guid: 794bd3956b1e127449b46df8f213ab62, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

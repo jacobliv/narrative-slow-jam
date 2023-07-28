@@ -19,7 +19,8 @@ MonoBehaviour:
   shopSelection: 0
   internalThought: 0
   physicalInteraction: 1
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: e3951ca4df1631144a4c473688e12ada, type: 3}
   line: I jump up from my seat as I hear a boom come from outside.
   next:
   - choiceDependent: 0

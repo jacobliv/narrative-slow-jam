@@ -33,6 +33,7 @@ public class AutoNarrativeItem : MonoBehaviour {
         // for (int i = 0; i < number; i++) {
         //     CreateNarrationItem(i+offset);
         // }
+        Debug.Log("Loading");
         LoadDataFromCSV();
     }
     
@@ -73,10 +74,12 @@ public class AutoNarrativeItem : MonoBehaviour {
             
             NarrationItem instance = ScriptableObject.CreateInstance<NarrationItem>();
             Debug.Log(String.Join(",", fields.ToList()));
-            instance.shopSelection = bool.Parse(fields[3]);
-            instance.internalThought = bool.Parse(fields[4]);
-            instance.physicalInteraction = bool.Parse(fields[5]);
-            var nextSounds = fields[6].Split("-");
+            instance.phone = bool.Parse(fields[3]);
+
+            instance.shopSelection = bool.Parse(fields[4]);
+            instance.internalThought = bool.Parse(fields[5]);
+            instance.physicalInteraction = bool.Parse(fields[6]);
+            var nextSounds = fields[7].Split("-");
             string one = nextSounds[0];
             if (!one.Equals("")) {
                 instance.sounds = new List<AudioClip>() { sounds.First((a) => a.name.Equals(one)) };
@@ -86,17 +89,17 @@ public class AutoNarrativeItem : MonoBehaviour {
                 instance.sounds.Add(sounds.First((a) => a.name.Equals(nextSounds[1])));
             }
             instance.day =Day.Two;
-            if (fields[7] != "" && fields[7]!="None") {
-                Character c = characters.Find((c) => c.name == fields[7]);
+            if (fields[8] != "" && fields[8]!="None") {
+                Character c = characters.Find((c) => c.name == fields[8]);
                 if (c == null) {
-                    Debug.Log("Unable to find " + fields[7]);
+                    Debug.Log("Unable to find " + fields[8]);
                 }
     
                 instance.character = c;
             }
 
             CharacterEnum d = CharacterEnum.None;
-            string fieldValue = fields[8].Trim();
+            string fieldValue = fields[9].Trim();
             Debug.Log($"--{fieldValue}--");
 
             if (!string.IsNullOrEmpty(fieldValue))
@@ -117,14 +120,14 @@ public class AutoNarrativeItem : MonoBehaviour {
                 d = CharacterEnum.None;
             }
             instance.characterArt = d;
-            List<string> lastNStrings = fields.ToList().GetRange(9,fields.Length -9);
+            List<string> lastNStrings = fields.ToList().GetRange(10,fields.Length -10);
 
             // Join the last n strings using String.Joins
             string result = String.Join("", lastNStrings);
             instance.line = result.Replace("\"","");
             Debug.Log("Adding "+fields[0] + "---");
             _narrationItems[fields[0]] = instance;
-            AssetDatabase.CreateAsset(instance, "Assets/Narrative/Generated2/" + fields[0] + ".asset");
+            AssetDatabase.CreateAsset(instance, "Assets/Narrative/Generated4/" + fields[0] + ".asset");
         }
         
         for (int i = 0; i < lines.Length; i++) {

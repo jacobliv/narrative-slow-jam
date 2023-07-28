@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0d660e242497d48bc6388b7e902f10, type: 3}
   m_Name: TDP6-5
   m_EditorClassIdentifier: 
-  day: 0
+  day: 1
   character: {fileID: 11400000, guid: 0719a1f04fb06c2458b1975e5fa7f7b4, type: 2}
   characterArt: 11
   phone: 1

@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds:
-  - {fileID: 8300000, guid: 2b28708ea96eb4d4a8a3d839f0482782, type: 3}
+  - {fileID: 8300000, guid: 6170efa595a69e3489dede10636901ca, type: 3}
   line: I--
   next:
   - choiceDependent: 0

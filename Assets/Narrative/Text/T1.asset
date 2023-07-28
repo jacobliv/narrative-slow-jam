@@ -28,10 +28,12 @@ MonoBehaviour:
     button: Dialogue Choice 1
     narrativeItem: {fileID: 11400000, guid: e1a28389b9eeedf40b9b248505930825, type: 2}
     shortenedLine: Yeah. (Lie)
+    positive: 0
   - choiceDependent: 0
     previousChoice: 
     button: Dialogue Choice 2
     narrativeItem: {fileID: 11400000, guid: 27f6cdc950c68ce4084aaef0dc3c004a, type: 2}
     shortenedLine: "No, I\u2019m at work right now."
+    positive: 2
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 
