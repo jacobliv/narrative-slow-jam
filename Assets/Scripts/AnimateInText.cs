@@ -23,7 +23,9 @@ public class AnimateInText : MonoBehaviour {
         if(_animate != null) {
             StopCoroutine(_animate);
         }   
-        _animate=StartCoroutine(AnimateTextCoroutine());
+        // _animate=StartCoroutine(AnimateTextCoroutine());
+        textMeshPro.maxVisibleCharacters = textMeshPro.text.Length;
+
     }
 
     private IEnumerator AnimateTextCoroutine() {
