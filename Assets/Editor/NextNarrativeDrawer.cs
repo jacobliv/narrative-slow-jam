@@ -8,7 +8,7 @@ public class NextNarrativeDrawer : PropertyDrawer
     private string[]      buttonNames;
     private int           numberOfElements;
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-        return EditorGUIUtility.singleLineHeight * (numberOfElements+1) + EditorGUIUtility.standardVerticalSpacing * 3;
+        return EditorGUIUtility.singleLineHeight * (numberOfElements+1) + EditorGUIUtility.standardVerticalSpacing * 4;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -22,6 +22,8 @@ public class NextNarrativeDrawer : PropertyDrawer
         Rect buttonPosition         = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 1, size, EditorGUIUtility.singleLineHeight);
         Rect narrativeLinePosition  = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 2, size, EditorGUIUtility.singleLineHeight);
         Rect shortenedLinePosition  = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 3, size, EditorGUIUtility.singleLineHeight);
+        Rect positivePosition  = new Rect(xPos,position.y + (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 4, size, EditorGUIUtility.singleLineHeight);
+
         numberOfElements = 4;
         buttonManager = Object.FindObjectOfType<ButtonManager>();
 
@@ -38,6 +40,7 @@ public class NextNarrativeDrawer : PropertyDrawer
         SerializedProperty buttonProperty = property.FindPropertyRelative("button");
         SerializedProperty narrativeItemProperty = property.FindPropertyRelative("narrativeItem");
         SerializedProperty shortenedLineProperty = property.FindPropertyRelative("shortenedLine");
+        SerializedProperty positiveProperty = property.FindPropertyRelative("positive");
 
         // Display the trigger type field
         EditorGUI.PropertyField(triggerPosition, choiceDependentProperty);
@@ -61,6 +64,7 @@ public class NextNarrativeDrawer : PropertyDrawer
         // Draw the other fields
         EditorGUI.PropertyField(narrativeLinePosition, narrativeItemProperty);
         EditorGUI.PropertyField(shortenedLinePosition, shortenedLineProperty);
+        EditorGUI.PropertyField( positivePosition,positiveProperty);
 
         EditorGUI.EndProperty();
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "Narrative", menuName = "Narrative/Character")]
+[CreateAssetMenu(fileName = "Character", menuName = "Narrative/Character")]
 
 public class Character : ScriptableObject {
     [Tooltip("Name of character")]
@@ -11,7 +11,7 @@ public class Character : ScriptableObject {
     [Tooltip("Title of the character")]
     public string      title;
     [Tooltip("All the sprites associated with the character")]
-    public List<Sprite> sprites;
+    public Sprite sprite;
     
 
 }

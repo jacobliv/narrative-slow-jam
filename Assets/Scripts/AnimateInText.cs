@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AnimateInText : MonoBehaviour {
     public  TMP_Text  textMeshPro;
-    float     delayBetweenCharacters = 0.005f;
+    public float     delayBetweenCharacters = 0.001f;
     private Coroutine _animate;
 
     private void OnValidate() {
