@@ -12,10 +12,15 @@ public class ControlAudioLevel : MonoBehaviour {
     private float  multiplier;
     [SerializeField] private string parameterName;
 
+    private void Awake() {
+        mixer.GetFloat(parameterName, out var val);
+        slider.value=Mathf.Pow(10, val / 76.8f) / 1.2f;
+        
+    }
 
     void Start() {
+        
         slider.onValueChanged.AddListener(ChangeVolume);
-        ChangeVolume(slider.value);
     }
 
     // Update is called once per frame
