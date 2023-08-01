@@ -76,6 +76,7 @@ public class NarrativeManager : MonoBehaviour {
 
 
     private NarrativeHistory _narrativeHistory;
+    private bool             isFlubberDisabled;
 
     private void Start() {
         _dialogueAnimateInText = dialogueArea.GetComponent<AnimateInText>();
@@ -98,8 +99,6 @@ public class NarrativeManager : MonoBehaviour {
             flubberGone = true;
         }
 
-        
-        print("Advancing Narrative");
         if (option != -1) {
             if (currentNarrativeItem.name.Equals("[D3D-16b]")) {
                 option = _narrativeHistory.positiveActions >= .75f * _narrativeHistory.choices ? 1 : 0;
@@ -127,7 +126,10 @@ public class NarrativeManager : MonoBehaviour {
             return;
         }
         dialogueUI.SetActive(false);
-        phoneUi.SetActive(true);
+        if (currentNarrativeItem.phone && !phoneUi.activeSelf) {
+            phoneUi.SetActive(true);
+
+        } 
     }
 
 
@@ -154,8 +156,11 @@ public class NarrativeManager : MonoBehaviour {
         if(currentNarrativeItem.next.Count <1) return;
         characterImage.sprite = null;
         characterImage.color=Color.clear;
-        otherCanvases.ForEach((c)=>c.SetActive(false));
-        mainBackgroundCanvas.SetActive(true);
+        if (!currentNarrativeItem.phone) {
+            otherCanvases.ForEach((c)=>c.SetActive(false));
+            mainBackgroundCanvas.SetActive(true);
+        }
+        
         
     }
 
@@ -226,8 +231,7 @@ public class NarrativeManager : MonoBehaviour {
 
     private void UpdatePhoneText() {
         if(!currentNarrativeItem.phone) return;
-        phoneChoiceUI.SetActive(false);
-        phoneResponseUI.SetActive(true);
+        
         if (!currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneSenderText.text = currentNarrativeItem.line;
             phoneSenderName.text = currentNarrativeItem.character.name;
@@ -351,6 +355,10 @@ public class NarrativeManager : MonoBehaviour {
             return;
         }
         AdvanceNarrative(1);
+    }
+
+    public bool FlubberCanvasDisabled() {
+        return flubberGone;
     }
     
 }

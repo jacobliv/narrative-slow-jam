@@ -21,8 +21,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     private Color     _imageDefaultColor;
     private Color     _secondImageDefaultColor;
     private bool      started;
-    public  Texture2D pointer;
-    public  Texture2D arrow;
+
     private bool      inside;
 
 
@@ -38,14 +37,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         if (secondImage != null&& started) {
             secondImage.color =_secondImageDefaultColor;
         }
-
-        if (!inside) {
-            Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
-
-        }
-        Debug.Log($"Reset {name} -- {transform.parent.name}" );
-
-        // Cursor.SetCursor(CursorType.Hand, Vector2.zero, CursorMode.Auto); // Changes the cursor to the Hand cursor
+        
     }
     
     
@@ -60,7 +52,6 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
 
     public void OnPointerEnter(PointerEventData eventData) {
         inside = true;
-        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
         StartCoroutine(FormatOn());
     }
     
@@ -109,7 +100,6 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
         inside = false;
         StartCoroutine(FormatOff());
 
