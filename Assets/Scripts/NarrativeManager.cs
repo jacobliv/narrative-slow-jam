@@ -13,7 +13,8 @@ public class NarrativeManager : MonoBehaviour {
     public  GameObject      dialogueUI;
     private TextMeshProUGUI _dialogueLineText;
     private AnimateInText   _dialogueAnimateInText;
-    public Button nextButton;
+    public  Button          nextButton;
+    public  Button          backButton;
     #endregion
 
     #region Phone
@@ -57,7 +58,7 @@ public class NarrativeManager : MonoBehaviour {
     #region Multi Choice Dialogue
     [Header("Multiple Choice Dialogue")]
     public GameObject dialogueNavigationButtonPanel;
-
+    
     public GameObject      multiDialogueChoicePanel;
     public TextMeshProUGUI multiDialogueChoice1;
     public TextMeshProUGUI multiDialogueChoice2;
@@ -82,6 +83,7 @@ public class NarrativeManager : MonoBehaviour {
         _dialogueAnimateInText = dialogueArea.GetComponent<AnimateInText>();
         _dialogueLineText = dialogueArea.GetComponent<TextMeshProUGUI>();
         _narrativeHistory = GetComponent<NarrativeHistory>();
+        _narrativeHistory.Reset();
         currentNarrativeItem = startingNarrativeItem;
         PrepareNarrativeArea();
 
@@ -145,7 +147,9 @@ public class NarrativeManager : MonoBehaviour {
             _narrativeHistory.positiveActions -= _narrativeHistory.positiveValue[currentNarrativeItem.name];
             _narrativeHistory.choices--;
         }
-
+        if (currentNarrativeItem.name.Equals("[POP-19]")) {
+            twoCharacterCanvas.SetActive(false);
+        }
         currentNarrativeItem = _narrativeHistory.linearHistory[^1];
         _narrativeHistory.linearHistory.RemoveAt(_narrativeHistory.linearHistory.Count-1);
         AdvanceNarrative(-1);
@@ -179,6 +183,11 @@ public class NarrativeManager : MonoBehaviour {
 
     private void RunNarrativeItem() {
         if (currentNarrativeItem == null) return;
+        if(currentNarrativeItem.name.Equals("O1")) {
+            backButton.gameObject.SetActive(false);
+        } else if (!backButton.gameObject.activeSelf) {
+            backButton.gameObject.SetActive(true);
+        }
         if (currentNarrativeItem.name.Equals("[PON-12]") || currentNarrativeItem.name.Equals("[POP-71]")) {
             supernovaCanvas.SetActive(true);
             fadeIn.FadeInFunc();

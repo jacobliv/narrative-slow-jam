@@ -8,46 +8,42 @@ public class CursorChangeOnHover : MonoBehaviour , IPointerEnterHandler,IPointer
     public  Texture2D     pointer;
     public  Texture2D     arrow;
     private RectTransform rectTransform;
+    private static bool          isPointer;
 
     private void Start() {
         rectTransform = GetComponent<RectTransform>();
     }
-
-    private void Update() {
-        if (IsCursorInsideRectTransform()) {
-            Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
-
-        }
-    }
     
-    private bool IsCursorInsideRectTransform() {
-        // Check if the cursor is over any UI element
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            // Convert the cursor position to a screen point
-            Vector2 screenPoint = Input.mousePosition;
-
-            // Check if the screen point is inside the RectTransform
-            return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, screenPoint, Camera.main);
-        }
-
-        return false;
-    }
+    
+    // private bool IsCursorInsideRectTransform() {
+    //     // Check if the cursor is over any UI element
+    //     if (EventSystem.current.IsPointerOverGameObject())
+    //     {
+    //         // Convert the cursor position to a screen point
+    //         Vector2 screenPoint = Input.mousePosition;
+    //
+    //         // Check if the screen point is inside the RectTransform
+    //         return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, screenPoint, Camera.main);
+    //     }
+    //
+    //     return false;
+    // }
     private void OnDisable() {
-        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
+        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.ForceSoftware);
+        isPointer = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
-
+        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.ForceSoftware);
+        isPointer = true;
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
+        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.ForceSoftware);
 
     }
 
     public void OnPointerMove(PointerEventData eventData) {
-        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
+        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.ForceSoftware);
     }
 }

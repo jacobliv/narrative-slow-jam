@@ -22,6 +22,14 @@ public class NarrativeHistory : MonoBehaviour {
         narrativeHistory[character!=null ?character.name: "Narrator"]=new CharacterHistory().AddHistory(currentNarrativeItem.next[option].shortenedLine);
 
     }
+
+    public void Reset() {
+        narrativeHistory = new Dictionary<string, CharacterHistory>();
+        positiveValue = new Dictionary<string, int>();
+        choices = 0;
+        linearHistory = new List<NarrationItem>();
+        positiveActions = 0;
+    }
 }
 
 [Serializable]
