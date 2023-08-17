@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: " \u2026"
+  line: "\u2026"
   next:
   - choiceDependent: 0
     previousChoice: 

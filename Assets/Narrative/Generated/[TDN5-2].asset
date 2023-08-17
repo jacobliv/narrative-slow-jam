@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 1b8dbe7f2e6e9f44e9900c97a9563231, type: 3}
-  line: " You sure you don\u2019t have blasters in the back?"
+  line: "You sure you don\u2019t have blasters in the back?"
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 1
   physicalInteraction: 0
   sounds: []
-  line: 'They are ways outta here without one but the trip is pretty grueling. '
+  line: 'They are ways outta here without one but the trip is pretty grueling.'
   next:
   - choiceDependent: 0
     previousChoice: 

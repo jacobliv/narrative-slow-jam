@@ -17,8 +17,8 @@ MonoBehaviour:
   characterArt: 11
   phone: 0
   shopSelection: 0
-  internalThought: 0
-  physicalInteraction: 1
+  internalThought: 1
+  physicalInteraction: 0
   sounds: []
   line: "The candle-headed alien makes her way out of the gas station. I catch a
     glimpse of a pretty snazzy ship outside. She\u2019s got good taste."

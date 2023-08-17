@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: d82aeef26d52a6641b57554e2b6c6652, type: 3}
-  line: " I\u2019m starting a new job outside of the solar system. Do you have Zolkan
+  line: "I\u2019m starting a new job outside of the solar system. Do you have Zolkan
     Coffee perchance?"
   next:
   - choiceDependent: 0

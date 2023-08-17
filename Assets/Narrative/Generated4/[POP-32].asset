@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0d660e242497d48bc6388b7e902f10, type: 3}
   m_Name: '[POP-32]'
   m_EditorClassIdentifier: 
-  day: 2
+  day: 4
   character: {fileID: 0}
   characterArt: 11
   phone: 0
   shopSelection: 0
-  internalThought: 0
-  physicalInteraction: 1
+  internalThought: 1
+  physicalInteraction: 0
   sounds: []
   line: "Chai has always been Cassiopeia\u2019s choice for an end-of-the-world drink.
     We\u2019ve had too many late-night \u201CWhat-if?\u201D conversations for me

@@ -5,19 +5,58 @@ using UnityEngine;
 
 public class ControlBackgroundMusic : MonoBehaviour {
     public AudioSource source;
-    public AudioClip   beginning;
-    public AudioClip   ending;
-    public void ChangeToStartSong() {
-        source.Stop();
-        source.clip = beginning;
-        source.Play();
-    }
+    public AudioClip   supernova;
+    public AudioClip   supernovaAlt;
+    public AudioClip   bracingForImpact;
 
-    public void ChangeToEndSong() {
-        source.Stop();
-        source.clip = ending;
-        source.Play();
-    }
+    public void ChangeSong(string song) {
+        switch (song) {
+            case "SupernovaAlt":
+                ChangeSong(Songs.SupernovaAlt);
+                break;
+            case "Supernova":
+                ChangeSong(Songs.Supernova);
 
+                break;
+            case "BracingForImpact":
+                ChangeSong(Songs.BracingForImpact);
+
+                break;
+        }
+    }
     
+    public void ChangeSong(Songs song) {
+        AudioClip currentClip;
+        switch (song) {
+            case Songs.SupernovaAlt:
+                currentClip = supernovaAlt;
+
+                break;
+            case Songs.Supernova:
+                currentClip = supernova;
+
+                break;
+            case Songs.BracingForImpact:
+                currentClip = bracingForImpact;
+
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(song), song, null);
+        }
+        if(source.clip.name.Equals(currentClip.name)) return;
+
+        source.Stop();
+        source.clip = currentClip;
+        source.Play();
+    }
+    
+    
+}
+
+
+public enum Songs{
+    SupernovaAlt,
+    Supernova,
+    BracingForImpact
+
 }

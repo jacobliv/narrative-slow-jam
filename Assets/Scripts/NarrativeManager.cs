@@ -98,8 +98,9 @@ public class NarrativeManager : MonoBehaviour {
         }
         dialogueUI.SetActive(true);
         if (currentNarrativeItem.name.Contains("D2D-52")) {
-            flubberGone = true;
+            flubberGone = !flubberGone;
         }
+     
 
         if (option != -1) {
             if (currentNarrativeItem.name.Equals("[D3D-16b]")) {
@@ -183,6 +184,16 @@ public class NarrativeManager : MonoBehaviour {
 
     private void RunNarrativeItem() {
         if (currentNarrativeItem == null) return;
+        if (currentNarrativeItem.day is Day.Pre or Day.One) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.SupernovaAlt);
+        } else if (currentNarrativeItem.day is Day.Two or Day.Three) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.Supernova);
+        } else if (currentNarrativeItem.day == Day.Post) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.BracingForImpact);
+
+        }
+        
+        
         if(currentNarrativeItem.name.Equals("O1")) {
             backButton.gameObject.SetActive(false);
         } else if (!backButton.gameObject.activeSelf) {
@@ -192,10 +203,9 @@ public class NarrativeManager : MonoBehaviour {
             supernovaCanvas.SetActive(true);
             fadeIn.FadeInFunc();
         }
-        
-        if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
-            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeToEndSong();
-        }
+        //
+        // if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
+        // }
         if (currentNarrativeItem.name.Equals("[POP-19]")) {
             twoCharacterCanvas.SetActive(true);
         }
@@ -228,13 +238,7 @@ public class NarrativeManager : MonoBehaviour {
             flubberCanvas.SetActive(false);
 
         }
-
-        if (currentNarrativeItem.day == Day.Post) {
-            creditsCanvas.SetActive(true);
-        }
-        else {
-            creditsCanvas.SetActive(false);
-        }
+        
         
     }
 

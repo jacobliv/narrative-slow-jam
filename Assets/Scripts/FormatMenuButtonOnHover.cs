@@ -11,7 +11,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     public Color textHoverColor;
     public Color imageHoverColor;
     
-    public bool  underline;
+    public bool underline;
+    public bool bold;
 
     public TextMeshProUGUI text;
     public Image           image;
@@ -95,6 +96,10 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
             }
             if (underline) {
                 text.fontStyle = FontStyles.Underline;
+            }
+
+            if (bold) {
+                text.fontStyle = FontStyles.Bold;
             }
         }
     }

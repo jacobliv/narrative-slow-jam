@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: d7257d6b52a36a240b8e04f7c7b3eb13, type: 3}
-  line: " See? You don\u2019t recognize her?"
+  line: "See? You don\u2019t recognize her?"
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -18,7 +18,7 @@ MonoBehaviour:
   phone: 0
   shopSelection: 0
   internalThought: 0
-  physicalInteraction: 1
+  physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: a504129f3b59f32429cd3d1f40deee66, type: 3}
   line: Meow
@@ -28,5 +28,6 @@ MonoBehaviour:
     button: Dialogue Next
     narrativeItem: {fileID: 11400000, guid: c482e6c177cb478489b4e9be05be5ab5, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

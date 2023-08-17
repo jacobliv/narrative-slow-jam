@@ -437,6 +437,7 @@ MonoBehaviour:
   textHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   imageHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   underline: 1
+  bold: 0
   text: {fileID: 6631585723286409682}
   image: {fileID: 0}
   secondImage: {fileID: 0}
@@ -669,6 +670,7 @@ MonoBehaviour:
   textHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   imageHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   underline: 1
+  bold: 0
   text: {fileID: 5466790501653314628}
   image: {fileID: 0}
   secondImage: {fileID: 0}
@@ -2398,6 +2400,7 @@ MonoBehaviour:
   textHoverColor: {r: 1, g: 1, b: 1, a: 1}
   imageHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   underline: 0
+  bold: 0
   text: {fileID: 5199367139404435528}
   image: {fileID: 7056384367894627877}
   secondImage: {fileID: 0}

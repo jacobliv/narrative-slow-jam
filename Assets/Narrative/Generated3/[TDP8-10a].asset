@@ -22,7 +22,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 83899e73b79a1e544b19b61e27668e07, type: 3}
   - {fileID: 8300000, guid: febb5edb812e18945966cebcb8c0f285, type: 3}
-  line: -door opens and chimes -
+  line: -door opens and chimes-
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -186,6 +186,22 @@ PrefabInstance:
       propertyPath: beginning
       value: 
       objectReference: {fileID: 8300000, guid: a1bb950b2d059614aa3fa647ae35aa6f, type: 3}
+    - target: {fileID: 5499931872729587269, guid: d5570edf0b5a86d4484f52ca2f48c455, type: 3}
+      propertyPath: supernova
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d3514587d01e4740972f31d4ff41579, type: 3}
+    - target: {fileID: 5499931872729587269, guid: d5570edf0b5a86d4484f52ca2f48c455, type: 3}
+      propertyPath: supernovaAlt
+      value: 
+      objectReference: {fileID: 8300000, guid: d7ac5f0448738c64ebbf3ec8ad18427d, type: 3}
+    - target: {fileID: 5499931872729587269, guid: d5570edf0b5a86d4484f52ca2f48c455, type: 3}
+      propertyPath: bracingForImpact
+      value: 
+      objectReference: {fileID: 8300000, guid: c40361620f7b9eb4a8cb040451c796b7, type: 3}
+    - target: {fileID: 5499931872729587270, guid: d5570edf0b5a86d4484f52ca2f48c455, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d7ac5f0448738c64ebbf3ec8ad18427d, type: 3}
     - target: {fileID: 5499931872729587271, guid: d5570edf0b5a86d4484f52ca2f48c455, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic
@@ -905,6 +921,10 @@ PrefabInstance:
     - target: {fileID: 5940167886933328148, guid: 3cbf79c67de4acf4d8f8b9a7ed196a58, type: 3}
       propertyPath: m_Name
       value: Options Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175528341243176119, guid: 3cbf79c67de4acf4d8f8b9a7ed196a58, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655516077598088939, guid: 3cbf79c67de4acf4d8f8b9a7ed196a58, type: 3}
       propertyPath: m_Pivot.x
