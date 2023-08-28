@@ -52,6 +52,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
+        if(tag.Equals("ShopButtonChild")) return;
         inside = true;
         StartCoroutine(FormatOn());
     }
