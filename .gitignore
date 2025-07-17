@@ -73,3 +73,5 @@ Desktop.ini
 !**/*.physicMaterial2D
 !**/*.asset
 !**/*.meta
+
+*.zip
