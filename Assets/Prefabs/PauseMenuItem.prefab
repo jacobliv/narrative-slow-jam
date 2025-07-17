@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 5351377476152724122}
   - component: {fileID: 3219605918187897919}
   - component: {fileID: 1280528412674166687}
+  - component: {fileID: 1901071801558480668}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -308,8 +309,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
   imageHoverColor: {r: 0.54901963, g: 0.27450982, b: 0.9137255, a: 1}
+  underline: 0
   text: {fileID: 8528767958708335762}
   image: {fileID: 1681171042954970731}
+  secondImage: {fileID: 0}
 --- !u!114 &1280528412674166687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +327,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 8646930328177076411}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1901071801558480668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974181908783484164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebdf4755fba0d943bc0f2b372a79c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 2800000, guid: 1418adf2537c71045995077553e46b1a, type: 3}
+  arrow: {fileID: 2800000, guid: bf8ff2630fe46ba41af0088462d9fcee, type: 3}
 --- !u!1 &7679464775486747505
 GameObject:
   m_ObjectHideFlags: 0

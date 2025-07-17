@@ -544,6 +544,7 @@ MonoBehaviour:
   textHoverColor: {r: 0, g: 0, b: 0, a: 0}
   imageHoverColor: {r: 0.45882353, g: 0.98039216, b: 0.6156863, a: 1}
   underline: 0
+  bold: 0
   text: {fileID: 0}
   image: {fileID: 0}
   secondImage: {fileID: 0}
@@ -630,7 +631,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3894006212231502377
 MonoBehaviour:
   m_ObjectHideFlags: 0

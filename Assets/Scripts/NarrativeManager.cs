@@ -13,7 +13,8 @@ public class NarrativeManager : MonoBehaviour {
     public  GameObject      dialogueUI;
     private TextMeshProUGUI _dialogueLineText;
     private AnimateInText   _dialogueAnimateInText;
-    public Button nextButton;
+    public  Button          nextButton;
+    public  Button          backButton;
     #endregion
 
     #region Phone
@@ -57,7 +58,7 @@ public class NarrativeManager : MonoBehaviour {
     #region Multi Choice Dialogue
     [Header("Multiple Choice Dialogue")]
     public GameObject dialogueNavigationButtonPanel;
-
+    
     public GameObject      multiDialogueChoicePanel;
     public TextMeshProUGUI multiDialogueChoice1;
     public TextMeshProUGUI multiDialogueChoice2;
@@ -76,11 +77,13 @@ public class NarrativeManager : MonoBehaviour {
 
 
     private NarrativeHistory _narrativeHistory;
+    private bool             isFlubberDisabled;
 
     private void Start() {
         _dialogueAnimateInText = dialogueArea.GetComponent<AnimateInText>();
         _dialogueLineText = dialogueArea.GetComponent<TextMeshProUGUI>();
         _narrativeHistory = GetComponent<NarrativeHistory>();
+        _narrativeHistory.Reset();
         currentNarrativeItem = startingNarrativeItem;
         PrepareNarrativeArea();
 
@@ -95,11 +98,10 @@ public class NarrativeManager : MonoBehaviour {
         }
         dialogueUI.SetActive(true);
         if (currentNarrativeItem.name.Contains("D2D-52")) {
-            flubberGone = true;
+            flubberGone = !flubberGone;
         }
+     
 
-        
-        print("Advancing Narrative");
         if (option != -1) {
             if (currentNarrativeItem.name.Equals("[D3D-16b]")) {
                 option = _narrativeHistory.positiveActions >= .75f * _narrativeHistory.choices ? 1 : 0;
@@ -127,7 +129,10 @@ public class NarrativeManager : MonoBehaviour {
             return;
         }
         dialogueUI.SetActive(false);
-        phoneUi.SetActive(true);
+        if (currentNarrativeItem.phone && !phoneUi.activeSelf) {
+            phoneUi.SetActive(true);
+
+        } 
     }
 
 
@@ -143,7 +148,9 @@ public class NarrativeManager : MonoBehaviour {
             _narrativeHistory.positiveActions -= _narrativeHistory.positiveValue[currentNarrativeItem.name];
             _narrativeHistory.choices--;
         }
-
+        if (currentNarrativeItem.name.Equals("[POP-19]")) {
+            twoCharacterCanvas.SetActive(false);
+        }
         currentNarrativeItem = _narrativeHistory.linearHistory[^1];
         _narrativeHistory.linearHistory.RemoveAt(_narrativeHistory.linearHistory.Count-1);
         AdvanceNarrative(-1);
@@ -154,8 +161,11 @@ public class NarrativeManager : MonoBehaviour {
         if(currentNarrativeItem.next.Count <1) return;
         characterImage.sprite = null;
         characterImage.color=Color.clear;
-        otherCanvases.ForEach((c)=>c.SetActive(false));
-        mainBackgroundCanvas.SetActive(true);
+        if (!currentNarrativeItem.phone) {
+            otherCanvases.ForEach((c)=>c.SetActive(false));
+            mainBackgroundCanvas.SetActive(true);
+        }
+        
         
     }
 
@@ -174,14 +184,28 @@ public class NarrativeManager : MonoBehaviour {
 
     private void RunNarrativeItem() {
         if (currentNarrativeItem == null) return;
+        if (currentNarrativeItem.day is Day.Pre or Day.One) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.SupernovaAlt);
+        } else if (currentNarrativeItem.day is Day.Two or Day.Three) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.Supernova);
+        } else if (currentNarrativeItem.day == Day.Post) {
+            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.BracingForImpact);
+
+        }
+        
+        
+        if(currentNarrativeItem.name.Equals("O1")) {
+            backButton.gameObject.SetActive(false);
+        } else if (!backButton.gameObject.activeSelf) {
+            backButton.gameObject.SetActive(true);
+        }
         if (currentNarrativeItem.name.Equals("[PON-12]") || currentNarrativeItem.name.Equals("[POP-71]")) {
             supernovaCanvas.SetActive(true);
             fadeIn.FadeInFunc();
         }
-        
-        if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
-            PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeToEndSong();
-        }
+        //
+        // if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
+        // }
         if (currentNarrativeItem.name.Equals("[POP-19]")) {
             twoCharacterCanvas.SetActive(true);
         }
@@ -214,20 +238,13 @@ public class NarrativeManager : MonoBehaviour {
             flubberCanvas.SetActive(false);
 
         }
-
-        if (currentNarrativeItem.day == Day.Post) {
-            creditsCanvas.SetActive(true);
-        }
-        else {
-            creditsCanvas.SetActive(false);
-        }
+        
         
     }
 
     private void UpdatePhoneText() {
         if(!currentNarrativeItem.phone) return;
-        phoneChoiceUI.SetActive(false);
-        phoneResponseUI.SetActive(true);
+        
         if (!currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneSenderText.text = currentNarrativeItem.line;
             phoneSenderName.text = currentNarrativeItem.character.name;
@@ -351,6 +368,10 @@ public class NarrativeManager : MonoBehaviour {
             return;
         }
         AdvanceNarrative(1);
+    }
+
+    public bool FlubberCanvasDisabled() {
+        return flubberGone;
     }
     
 }

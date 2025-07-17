@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 1
   sounds:
   - {fileID: 8300000, guid: a504129f3b59f32429cd3d1f40deee66, type: 3}
-  line: -Flubber meows-
+  line: Flubber meows
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0d660e242497d48bc6388b7e902f10, type: 3}
   m_Name: '[POP-63]'
   m_EditorClassIdentifier: 
-  day: 2
+  day: 4
   character: {fileID: 0}
   characterArt: 11
   phone: 0
