@@ -17,8 +17,8 @@ MonoBehaviour:
   characterArt: 11
   phone: 0
   shopSelection: 0
-  internalThought: 0
-  physicalInteraction: 1
+  internalThought: 1
+  physicalInteraction: 0
   sounds: []
   line: "I reach for my phone. Cassiopeia\u2019s not going to believe this."
   next:

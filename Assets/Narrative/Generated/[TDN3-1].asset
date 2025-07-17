@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: d82aeef26d52a6641b57554e2b6c6652, type: 3}
-  line: " This isn\u2019t quite what I\u2019m looking for\u2026"
+  line: "This isn\u2019t quite what I\u2019m looking for\u2026"
   next:
   - choiceDependent: 0
     previousChoice: 

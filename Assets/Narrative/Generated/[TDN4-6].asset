@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 124e80fdc89d3ad4f853bfb12086f7a6, type: 3}
-  line: " Fine...I\u2019ll just get gas."
+  line: "Fine...I\u2019ll just get gas."
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 0}
-  line: Select an Item in the shop
+  line: Select an item in the shop
   next:
   - choiceDependent: 0
     previousChoice: 

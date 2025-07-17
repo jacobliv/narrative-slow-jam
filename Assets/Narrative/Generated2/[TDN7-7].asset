@@ -21,7 +21,7 @@ MonoBehaviour:
   physicalInteraction: 0
   sounds:
   - {fileID: 8300000, guid: 9bcbfab46bff8034bb3cb552a5575679, type: 3}
-  line: " Aww\u2026I think they\u2019re mad at us Rom. "
+  line: "Aww\u2026I think they\u2019re mad at us Rom. "
   next:
   - choiceDependent: 0
     previousChoice: 

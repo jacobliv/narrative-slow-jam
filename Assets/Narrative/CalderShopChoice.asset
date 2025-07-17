@@ -20,7 +20,7 @@ MonoBehaviour:
   internalThought: 0
   physicalInteraction: 0
   sounds: []
-  line: Select an Item in the shop
+  line: Select an item in the shop
   next:
   - choiceDependent: 0
     previousChoice: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0d660e242497d48bc6388b7e902f10, type: 3}
   m_Name: '[D3D-1]'
   m_EditorClassIdentifier: 
-  day: 2
+  day: 3
   character: {fileID: 0}
   characterArt: 11
   phone: 0
@@ -27,5 +27,6 @@ MonoBehaviour:
     button: 
     narrativeItem: {fileID: 11400000, guid: bebf239138a535443b8bb5de831c9a42, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 

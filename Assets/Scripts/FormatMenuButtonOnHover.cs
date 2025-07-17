@@ -11,7 +11,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     public Color textHoverColor;
     public Color imageHoverColor;
     
-    public bool  underline;
+    public bool underline;
+    public bool bold;
 
     public TextMeshProUGUI text;
     public Image           image;
@@ -21,8 +22,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     private Color     _imageDefaultColor;
     private Color     _secondImageDefaultColor;
     private bool      started;
-    public  Texture2D pointer;
-    public  Texture2D arrow;
+
     private bool      inside;
 
 
@@ -38,14 +38,7 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
         if (secondImage != null&& started) {
             secondImage.color =_secondImageDefaultColor;
         }
-
-        if (!inside) {
-            Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
-
-        }
-        Debug.Log($"Reset {name} -- {transform.parent.name}" );
-
-        // Cursor.SetCursor(CursorType.Hand, Vector2.zero, CursorMode.Auto); // Changes the cursor to the Hand cursor
+        
     }
     
     
@@ -59,8 +52,8 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
+        if(tag.Equals("ShopButtonChild")) return;
         inside = true;
-        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.Auto);
         StartCoroutine(FormatOn());
     }
     
@@ -105,11 +98,14 @@ public class FormatMenuButtonOnHover : MonoBehaviour,IPointerEnterHandler,IPoint
             if (underline) {
                 text.fontStyle = FontStyles.Underline;
             }
+
+            if (bold) {
+                text.fontStyle = FontStyles.Bold;
+            }
         }
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-        Cursor.SetCursor(arrow,Vector2.zero,CursorMode.Auto);
         inside = false;
         StartCoroutine(FormatOff());
 

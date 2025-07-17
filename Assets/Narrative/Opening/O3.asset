@@ -17,7 +17,7 @@ MonoBehaviour:
   characterArt: 11
   phone: 0
   shopSelection: 0
-  internalThought: 0
+  internalThought: 1
   physicalInteraction: 0
   sounds: []
   line: "and I\u2019m clocking in."
@@ -27,5 +27,6 @@ MonoBehaviour:
     button: Dialogue Next
     narrativeItem: {fileID: 11400000, guid: 703888dc022690c4e82d2608d81ca59f, type: 2}
     shortenedLine: 
+    positive: 0
   background: {fileID: 21300000, guid: 221d49fa40882ae4fafcc1a89af4a447, type: 3}
   time: 
