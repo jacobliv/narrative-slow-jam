@@ -12,7 +12,9 @@ public class Character : ScriptableObject {
     public string      title;
     [Tooltip("All the sprites associated with the character")]
     public Sprite sprite;
-    
 
+    public override string ToString() {
+        return $"{name}: {title}";
+    }
 }
 
