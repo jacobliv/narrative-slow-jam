@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class NarrativeManager : MonoBehaviour {
     #region Dialogue
     [Header("Dialogue")]
+    public LocalizationRetriever retriever;
     public  GameObject      dialogueArea;
     public  TextMeshProUGUI dialogueCharacterNameText;
     public  GameObject      dialogueUI;
@@ -190,7 +191,6 @@ public class NarrativeManager : MonoBehaviour {
             PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.Supernova);
         } else if (currentNarrativeItem.day == Day.Post) {
             PersistentObject.instance.GetComponent<ControlBackgroundMusic>().ChangeSong(Songs.BracingForImpact);
-
         }
         
         
@@ -246,8 +246,10 @@ public class NarrativeManager : MonoBehaviour {
         if(!currentNarrativeItem.phone) return;
         
         if (!currentNarrativeItem.character.name.Equals("Dmi")) {
-            phoneSenderText.text = currentNarrativeItem.line;
-            phoneSenderName.text = currentNarrativeItem.character.name;
+            phoneSenderText.text = retriever.GetLocalization(LocalizationType.Script, 
+                                                             currentNarrativeItem.name,
+                                                             currentNarrativeItem.line);
+            phoneSenderName.text = retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name);
             responseText.text = "";
             phoneYouName.text = "";
             phoneYouTime.text = "";
@@ -256,9 +258,9 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneChoiceUI.SetActive(false);
             phoneResponseUI.SetActive(true);
-            responseText.text = currentNarrativeItem.line;
-            phoneYouName.text = $"{currentNarrativeItem.character.name}" ;
-            phoneYouTime.text = "now";
+            responseText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line);
+            phoneYouName.text = retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name);
+            // phoneYouTime.text = "now";
         }
 
         if (currentNarrativeItem.next.Count <2) {
@@ -270,8 +272,8 @@ public class NarrativeManager : MonoBehaviour {
             phoneSingleBack.SetActive(true);
             phoneChoiceUI.SetActive(true);
             phoneResponseUI.SetActive(false);
-            phoneChoice1Text.text = currentNarrativeItem.next[0].shortenedLine;
-            phoneChoice2Text.text = currentNarrativeItem.next[1].shortenedLine;
+            phoneChoice1Text.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-1",currentNarrativeItem.next[0].shortenedLine);
+            phoneChoice2Text.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-2",currentNarrativeItem.next[1].shortenedLine);
 
         }
         
@@ -291,9 +293,12 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.physicalInteraction) {
             _dialogueLineText.fontStyle = FontStyles.Bold;
         }
-        _dialogueLineText.text = currentNarrativeItem.line;
+        _dialogueLineText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line);;
         _dialogueAnimateInText.AnimateText();
-        dialogueCharacterNameText.text = currentNarrativeItem.character!=null? $"{currentNarrativeItem.character.name}: {currentNarrativeItem.character.title}":"";
+        dialogueCharacterNameText.text = currentNarrativeItem.character? 
+            retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name)
+            + retriever.GetLocalization(LocalizationType.CharacterTitle, currentNarrativeItem.character.name,currentNarrativeItem.character.title):
+            "";
         background.sprite = currentNarrativeItem.background;
         if (currentNarrativeItem.characterArt != CharacterEnum.None) {
             var sprite = characters.Find((c)=>c.name.Equals("Rob")).sprite;
@@ -346,8 +351,8 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.next[0].button.Equals("Dialogue Choice 1")) {
             multiDialogueChoicePanel.SetActive(true);
             dialogueNavigationButtonPanel.SetActive(false);
-            multiDialogueChoice1.text = currentNarrativeItem.next[0].shortenedLine;
-            multiDialogueChoice2.text = currentNarrativeItem.next[1].shortenedLine;
+            multiDialogueChoice1.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-1",currentNarrativeItem.next[0].shortenedLine);
+            multiDialogueChoice2.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-2",currentNarrativeItem.next[1].shortenedLine);
         } 
         else if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.shopSelection) {
             nextButton.transform.gameObject.SetActive(false);
