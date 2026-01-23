@@ -7,7 +7,7 @@ public class ResizeTextBox : MonoBehaviour{
     public RectTransform rect;
     public float         large;
     public float         small;
-    private void Awake() {
+    private void OnEnable() {
         rect.sizeDelta = new Vector2(rect.sizeDelta.x, large);
     }
 

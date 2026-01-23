@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CursorChangeOnHover : MonoBehaviour , IPointerEnterHandler,IPointerExitHandler, IPointerMoveHandler{
+public class CursorChangeOnHover : MonoBehaviour , IPointerEnterHandler,IPointerExitHandler{
     public  Texture2D     pointer;
     public  Texture2D     arrow;
     private RectTransform rectTransform;
@@ -43,7 +43,7 @@ public class CursorChangeOnHover : MonoBehaviour , IPointerEnterHandler,IPointer
 
     }
 
-    public void OnPointerMove(PointerEventData eventData) {
-        Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.ForceSoftware);
-    }
+    // public void OnPointerMove(PointerEventData eventData) {
+    //     Cursor.SetCursor(pointer,new Vector2(pointer.width/3f,0),CursorMode.ForceSoftware);
+    // }
 }

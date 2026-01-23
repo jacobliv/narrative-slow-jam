@@ -4,33 +4,25 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using CsvHelper;
+using TMPro;
 using UnityEngine;
 
 public class LocalizationManager : MonoBehaviour {
-    public Dictionary<string,string>  scriptLocalization;
-    public Dictionary<string, string> menusAndExtras;
-    public Dictionary<string, string> characterNames;
-    public Dictionary<string, string> characterTitles;
-    public string                     currentKey; // For debugging
-    public LocalizationType           currentType; // For debugging  
-    public List<Language> languages = new() {
-        new Language("Arabic", "ar"),
-        new Language("Czech", "cs"),
-        new Language("English", "en"),
-        new Language("French", "fr"),
-        new Language("Hungarian", "hu"),
-        new Language("Japanese", "ja"),
-        new Language("Korean", "ko"),
-        new Language("Romanian", "ro"),
-        new Language("Russian", "ru"),
-        new Language("Thai", "th"),
-        new Language("Ukrainian", "ua"), // Using "ua" as requested
-        new Language("Vietnamese", "vi")
-    };
-    public int      currentLanguageIndex = 0;
-    public Language CurrentLanguage;
+    public        Dictionary<string,string>  scriptLocalization;
+    public        Dictionary<string, string> menusAndExtras;
+    public        Dictionary<string, string> characterNames;
+    public        Dictionary<string, string> characterTitles;
+    public        string                     currentKey; // For debugging
+    public        LocalizationType           currentType; // For debugging  
+    public        FontMappingDatabase        fontMappingDatabase;
+    public        LanguageDatabase           languageDatabase;
+    public        int                        currentLanguageIndex = 0;
+    public        Language                   CurrentLanguage;
+    public static Language                   StaticLanguage;
 
     public void Awake() {
+        if (StaticLanguage == null) StaticLanguage = CurrentLanguage;
+        CurrentLanguage = StaticLanguage;
         LoadLocalization(CurrentLanguage);
     }
 
@@ -57,6 +49,13 @@ public class LocalizationManager : MonoBehaviour {
             default:
                 return "";
         }
+    }
+    
+    public TMP_FontAsset GetFont(bool bold) {
+        FontLanguageMapping mapping = fontMappingDatabase.mappings.Find(m => m.languageCode == CurrentLanguage.Code);
+        if (mapping == null) mapping = fontMappingDatabase.mappings.Find(m => m.languageCode == "en");
+        if (bold) return mapping.bold;
+        return mapping.normal;
     }
 
 
@@ -97,6 +96,7 @@ public class LocalizationManager : MonoBehaviour {
     }
 
     public void LoadLocalization(Language language) {
+        StaticLanguage = language;
         CurrentLanguage = language;
 
         characterNames = new Dictionary<string, string>();
@@ -129,6 +129,19 @@ public enum LocalizationType {
     Menu,
     CharacterName,
     CharacterTitle,
+}
+
+[Serializable]
+public class FontLanguageMapping {
+	[SerializeField]
+	public string languageCode;	
+    [SerializeField]
+	public TMP_FontAsset normal;
+    [SerializeField]
+    public TMP_FontAsset bold;
+    [SerializeField]
+    public TMP_FontAsset medium;
+    
 }
 
 [System.Serializable]

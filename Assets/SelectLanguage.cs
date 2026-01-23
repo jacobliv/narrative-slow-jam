@@ -1,16 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectLanguage : MonoBehaviour {
     public LocalizationManager localizationManager;
-    // TextMeshPro Dropdown
-    public TMPro.TMP_Dropdown dropdown;
-    public void ChangeLanguage(int index) {
-        Debug.Log("Changing language to: " + index);
-        Debug.Log("Language: " + dropdown.options[index].text);
-        string code = dropdown.options[index].text;
-        Language language = localizationManager.languages.Find(l => l.Code == code);
+
+    private void OnEnable() {
+        string code = gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        Debug.Log("Language: " + code);
+        Debug.Log("Current Language: " + localizationManager);
+        if (localizationManager.CurrentLanguage.Code.Equals(code)) {
+            gameObject.GetComponent<Button>().Select();
+        }
+    }
+
+    public void ChangeLanguage() {
+        string code = gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        Debug.Log("Language: " + code);
+        Language language = localizationManager.languageDatabase.languages.Find(l => l.Code == code);
         localizationManager.LoadLocalization(language);
     }
 }

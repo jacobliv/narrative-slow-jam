@@ -10,14 +10,17 @@ public class StaticTextLocalization : MonoBehaviour {
     public LocalizationType      type;
     public string                key;
     public string                englishLine;
+    public bool                  bold;
 
     public void Start() {
         Debug.Log("Getting Localization for: " +gameObject.name +" -- " + transform.parent.name);
         text.text = retriever.GetLocalization(type, key, englishLine);
+        text.font = retriever.GetFont(bold);
     }
     
     public void Update() {
         text.text = retriever.GetLocalization(type, key, englishLine);
+        text.font = retriever.GetFont(bold);
 
     }
 }

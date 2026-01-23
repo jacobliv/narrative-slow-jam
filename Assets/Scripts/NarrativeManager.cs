@@ -89,6 +89,25 @@ public class NarrativeManager : MonoBehaviour {
         PrepareNarrativeArea();
 
         RunNarrativeItem();
+        SetFonts();
+    }
+
+    private void Update() {
+        SetFonts();
+    }
+
+    public void SetFonts() {
+        phoneSenderName.font = retriever.GetFont(true);
+        phoneSenderText.font = retriever.GetFont(false);
+        phoneChoice1Text.font = retriever.GetFont(false);
+        phoneChoice2Text.font = retriever.GetFont(false);
+        responseText.font = retriever.GetFont(false);
+        phoneYouName.font = retriever.GetFont(true);
+        phoneYouTime.font = retriever.GetFont(true);
+        dialogueCharacterNameText.font = retriever.GetFont(false);
+        _dialogueLineText.font = retriever.GetFont(false);
+        multiDialogueChoice1.font = retriever.GetFont(false);
+        multiDialogueChoice2.font = retriever.GetFont(false);
     }
 
     public void AdvanceNarrative(int option = 0) {

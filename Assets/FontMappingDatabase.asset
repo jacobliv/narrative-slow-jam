@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b414a3d3e147e41a47f8345960a542, type: 3}
+  m_Name: FontMappingDatabase
+  m_EditorClassIdentifier: 
+  mappings:
+  - languageCode: ko
+    normal: {fileID: 11400000, guid: d7df11ca07e415440843c0a5b61c9fdf, type: 2}
+    bold: {fileID: 11400000, guid: da7f5d2fbc4046f4284359c10d14ef67, type: 2}
+    medium: {fileID: 0}
+  - languageCode: ja
+    normal: {fileID: 11400000, guid: 1650ccef2ce135040b6f45de63f97456, type: 2}
+    bold: {fileID: 11400000, guid: 82b93af8e7dc7484ea68a711fd832af0, type: 2}
+    medium: {fileID: 0}
+  - languageCode: ua
+    normal: {fileID: 11400000, guid: 2fd922f5db0193e4981190d7e203f4c6, type: 2}
+    bold: {fileID: 11400000, guid: 506f2a87c1849994fb9ee7b3a8d0c737, type: 2}
+    medium: {fileID: 0}
+  - languageCode: en
+    normal: {fileID: 11400000, guid: 967935f90b9b6fa4593955961899ef2f, type: 2}
+    bold: {fileID: 11400000, guid: 33d76810acd74374aacae92ae52f7bda, type: 2}
+    medium: {fileID: 0}
