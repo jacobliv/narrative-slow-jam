@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &242355291 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3771967162499950194, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-  m_PrefabInstance: {fileID: 3771967162939059747}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &417761424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -602,6 +591,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 38
       objectReference: {fileID: 0}
+    - target: {fileID: 7281516085721313891, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281516085721313891, guid: db93371c797d736498b26504ee3df1f7, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7423797541867573197, guid: db93371c797d736498b26504ee3df1f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -987,12 +984,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 1
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1397,38 +1394,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 242355291}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: TMPro.TMP_Text, Unity.TextMeshPro
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Close Languages
-      objectReference: {fileID: 0}
-    - target: {fileID: 3771967161418073950, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3771967162394860890, guid: d94a750fd29eb6f4fb0ac95c6ed0a9a8, type: 3}
       propertyPath: localizationManager
       value: 
