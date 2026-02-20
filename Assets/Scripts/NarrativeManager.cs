@@ -116,6 +116,8 @@ public class NarrativeManager : MonoBehaviour {
             creditsCanvas.SetActive(true);
             return;
         }
+        phoneChoiceUI.SetActive(false);
+        phoneResponseUI.SetActive(true);
         dialogueUI.SetActive(true);
         if (currentNarrativeItem.name.Contains("D2D-52")) {
             flubberGone = !flubberGone;
@@ -222,6 +224,9 @@ public class NarrativeManager : MonoBehaviour {
             supernovaCanvas.SetActive(true);
             fadeIn.FadeInFunc();
         }
+        else {
+            supernovaCanvas.SetActive(false);
+        }
         //
         // if (currentNarrativeItem.name.Equals("[POP-18]") || currentNarrativeItem.name.Equals("[PON-1]")) {
         // }
@@ -312,11 +317,11 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.physicalInteraction) {
             _dialogueLineText.fontStyle = FontStyles.Bold;
         }
-        _dialogueLineText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line);;
+        _dialogueLineText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line).Trim();
         _dialogueAnimateInText.AnimateText();
         dialogueCharacterNameText.text = currentNarrativeItem.character? 
             retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name)
-            + retriever.GetLocalization(LocalizationType.CharacterTitle, currentNarrativeItem.character.name,currentNarrativeItem.character.title):
+            +": "+ retriever.GetLocalization(LocalizationType.CharacterTitle, currentNarrativeItem.character.name,currentNarrativeItem.character.title):
             "";
         background.sprite = currentNarrativeItem.background;
         if (currentNarrativeItem.characterArt != CharacterEnum.None) {

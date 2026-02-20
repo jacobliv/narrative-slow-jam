@@ -11,7 +11,7 @@ public class SelectLanguage : MonoBehaviour {
     private void OnEnable() {
         string code = gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
         Debug.Log("Language: " + code);
-        Debug.Log("Current Language: " + localizationManager);
+        Debug.Log("Current Language: " + localizationManager.CurrentLanguage);
         if (localizationManager.CurrentLanguage.Code.Equals(code)) {
             gameObject.GetComponent<Button>().Select();
         }

@@ -116,6 +116,7 @@ public class LocalizationManager : MonoBehaviour {
         }
 
         var menuFile = FindLocalizationFile(language, menuSuffix);
+        Debug.Log("Menu File: " + menuFile);
         if (menuFile != null) menusAndExtras = ParseCsvWithHelper(menuFile, "location", "target");
 
         var scriptFile = FindLocalizationFile(language, scriptSuffix);
