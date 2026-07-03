@@ -1,0 +1,70 @@
+location,context,source,target
+SAJ1,I just wanted to make a weird food. I kind of just imagined weird blue alpacas with something unsettling about them in some way. (Maybe they destroy planets? Who knows?),Space Alpaca Jerky,Dendeng Alpaca Angkasa
+SAJ2,I just wanted to make a weird food. I kind of just imagined weird blue alpacas with something unsettling about them in some way. (Maybe they destroy planets? Who knows?),Don’t read the warning label. It’ll taste better.,Jangan baca label peringatan agar terasa lebih enak.
+DDS1,"I’m (Britney) Haitian-American, and I hate American sodas with a passion. Mainly wrote this flavor text since I will always run to grab a Caribbean soda any chance I get. So this was born from that thought pattern!",Deia Deia Soda,Soda Deia Deia
+DDS2,"I’m (Britney) Haitian-American, and I hate American sodas with a passion. Mainly wrote this flavor text since I will always run to grab a Caribbean soda any chance I get. So this was born from that thought pattern!",Andromeda soda brands always taste WAYYY better compared to Milkyway brands.,Soda produk Andromeda rasanya LEBIH enak daripada produk Bimasakti.
+AP1,"I noticed lots of people hate the mint chocolate flavor pairing. Thought I’d poke fun at that! On top of that, I thought this would be fun to make references to really weird celebrity product collabs. Mint chocolate toothpaste felt weird enough.",Arinator Paste (Mint Choco Flavor),Pasta Arinator (Rasa Choco Mint)
+AP2,"I noticed lots of people hate the mint chocolate flavor pairing. Thought I’d poke fun at that! On top of that, I thought this would be fun to make references to really weird celebrity product collabs. Mint chocolate toothpaste felt weird enough.",The mint choco lovers never should have evolved with us…,Pecinta choco mint seharusnya tidak pernah berevolusi bersama kita…
+MGN1,Nachos feel like such a late-night staple for me and some friends back in college. I imagine Cosmic Fuel’s nachos are just good enough to pass as something someone would like to eat on the go!,M’Ghooni Nachos,Nachos M’Ghooni
+MGN2,Nachos feel like such a late-night staple for me and some friends back in college. I imagine Cosmic Fuel’s nachos are just good enough to pass as something someone would like to eat on the go!,Perfect for the night time munchies no matter which planet you’re on!,"Cocok untuk ngemil malam, tidak peduli asal planetmu!"
+SD1,Weird hot dogs!!!! They’re a weird color!!!,Saturn Dogs,Saturn Dogs
+SD2,Weird hot dogs!!!! They’re a weird color!!!,"One of the most iconic ways to eat a hot dog in the solar system. Soon, iconic nowhere!",Cara makan hotdog paling terkenal di tata surya. Sebentar lagi musnah!
+ZC1,Silly numbers!,Zolkan Coffee,Kopi Zolkan
+ZC2,Silly numbers!,Made with 500% Zolkan coffee beans! How'd they figure out the 400%?,Terbuat dari 500% biji kopi Zolkan! 400% nya dari mana?
+MM1,Main Menu,Start,Mulai
+MM2,Main Menu,Options,Opsi
+MM3,Main Menu,Exit,Keluar
+OPT1,Options Menu,Sound Options,Opsi Suara
+OPT2,Options Menu,Background Music Volume,Volume Musik Latar
+OPT3,Options Menu,Character Speech Volume,Volume Dialog Karakter
+OPT4,Options Menu,Sound Effects Volume,Volume Efek Suara
+OPT5,Options Menu,Cancel,Batalkan
+OPT6,Options Menu,Save,Simpan
+NUM,"This is the values for the slider bar, for localizing numbers. We need all the numbers between 0 and 100",0-100,0-100
+PM1,Pause Menu,Game Paused,Gim Dijeda
+PM2,Pause Menu,Save,Simpan
+PM3,Pause Menu,Load,Muat
+PM4,Pause Menu,Options,Opsi
+PM5,Pause Menu,Quit,Keluar
+NAV1,phone and narrative navigation,now,sekarang
+NAV2,phone and narrative navigation,back,kembali
+NAV3,phone and narrative navigation,next,lanjut
+CS1,Credit Screen,Credits,Kredit
+CS2,Credit Screen,writer,penulis
+CS3,Credit Screen,Character Designer/Artist,Perancang/Seniman Karakter
+CS4,Credit Screen,Background and Item Artist,Seniman Latar dan Item
+CS5,Credit Screen,Composer/Sound Designer,Komposer/Perancang Suara
+CS6,Credit Screen,Additional Voice-Over,Voice-Over Tambahan
+CS7,Credit Screen,UX/UI Designer,Perancang UX/UI
+CS8,Credit Screen,Programmer,Programmer
+S1,In the shop,Turn Around,Putar Balik
+S2,In the shop,Alpaca Jerky,Dendeng Alpaca
+S3,In the shop,Deia Deia,Deia Deia
+S4,In the shop,Arinator,Arinator
+S5,In the shop,Food,Makanan
+IGD1,Itch Game Description,Supernova is a hybrid between a point-and-click and a visual novel with inspiration from games like Coffee Talk.  ,Supernova adalah gabungan tunjuk-tekan dan visual novel yang terinspirasi oleh gim Coffee Talk.
+IGD2,Itch Game Description,"You are playing as Dmi, a gas station employee on Mars’ moon. ","Kamu akan bermain sebagai Dmi, seorang pekerja pom bensin di bulan yang ada di Mars"
+IGD3,Itch Game Description,"The solar system is reaching its end, and a supernova will wipe out everything in three days.",Tata Surya akan mencapai batas umur dan supernova akan melenyapkan semuanya dalam tiga hari.
+IGD4,Itch Game Description,You’re clocking in. ,Kamu mulai bekerja.
+IGD5,Itch Game Description,"Most people have relocated already, but a few people are still around.","Kebanyakan orang sudah evakuasi, tapi masih ada sedikit yang belum pergi."
+IGD6,Itch Game Description,Who will you meet in those last three days?,Siapa yang akan kamu temui dalam tiga hari itu?
+IGD7,Itch Game Description,Notes from the creators:,Catatan dari pencipta:
+IGD8,Itch Game Description,"A significant amount of work went into making this game accessible, thanks to our UX designer Susan.","Sebagian besar gim ini bisa terakses berkat perancang UX kami, Susan."
+IGD9,Itch Game Description,Features:,Fitur:
+IGD10,Itch Game Description,"Roughly 7,000 words of dialogue and narration",Sekitar 7.000 kata dalam dialog dan narasi
+IGD11,Itch Game Description,Two Endings!,Dua ending!
+IGD12,Itch Game Description,You can pet the cat(?)!,Bisa elus kucingnya(?)!
+IGD13,Itch Game Description,One playthrough should be around 25 minutes,Sekali main hanya sekitar 25 menit
+IGD14,Itch Game Description,A Special thanks to Trey and Brandon for keeping Britney sane while organizing dialogue!,Ucapan terima kasih kepada Trey dan Brandon yang membuat Britney tetap waras selama membereskan dialog!
+IGD15,Itch Game Description,Contributors:,Kontributor:
+IGD16,Itch Game Description,Attribution:,Atribusi:
+IGD17,Not sure if some of the non-latin alphabets need to translate this,Twitter,Twitter
+IGD18,Not sure if some of the non-latin alphabets need to translate this,Instagram,Instagram
+IGD19,Not sure if some of the non-latin alphabets need to translate this,Linktree,Linktree
+IGD20,Itch Game Description,Portfolio,Portofolio
+INSTALL1,Installation details,Mac users - you may have to use the itch app to play this game,Pengguna mac mungkin harus menggunakan aplikasi itch untuk memainkan gim ini
+NAV4,On the phone missing string,How do you want to respond?,Bagaimana balasnya?
+S6,Front of shop shelves,Go Back,Kembali
+PM6,Pause menu,Lanjut,
+OPT7,Options Menu,Language Options,Opsi Bahasa
+

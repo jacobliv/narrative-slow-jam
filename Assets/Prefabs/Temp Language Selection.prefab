@@ -1513,6 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localizationManager: {fileID: 0}
+  languageName: {fileID: 0}
 --- !u!1 &3771967162488901795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1612,10 @@ MonoBehaviour:
   - ja
   - hu
   - en
+  - el
+  - esLATAM
+  - ptBR
+  - vi
   languageList: {fileID: 3771967161287084292}
   languageItemPrefab: {fileID: 3801748051008832459, guid: 11cb815a7be0c1941affb10e3a88aecc, type: 3}
   localizationManager: {fileID: 0}

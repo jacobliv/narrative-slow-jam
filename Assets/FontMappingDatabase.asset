@@ -18,8 +18,8 @@ MonoBehaviour:
     bold: {fileID: 11400000, guid: da7f5d2fbc4046f4284359c10d14ef67, type: 2}
     medium: {fileID: 0}
   - languageCode: ja
-    normal: {fileID: 11400000, guid: 1650ccef2ce135040b6f45de63f97456, type: 2}
-    bold: {fileID: 11400000, guid: 82b93af8e7dc7484ea68a711fd832af0, type: 2}
+    normal: {fileID: 11400000, guid: da23dedb5b0071947bb8b0529be03297, type: 2}
+    bold: {fileID: 11400000, guid: bf82842924cab0d47bfda18752009d5a, type: 2}
     medium: {fileID: 0}
   - languageCode: ua
     normal: {fileID: 11400000, guid: 2fd922f5db0193e4981190d7e203f4c6, type: 2}
@@ -28,4 +28,20 @@ MonoBehaviour:
   - languageCode: en
     normal: {fileID: 11400000, guid: 967935f90b9b6fa4593955961899ef2f, type: 2}
     bold: {fileID: 11400000, guid: 33d76810acd74374aacae92ae52f7bda, type: 2}
+    medium: {fileID: 0}
+  - languageCode: th
+    normal: {fileID: 11400000, guid: 47c9f07879a083a4dafbd361a9a89527, type: 2}
+    bold: {fileID: 11400000, guid: 2c58d367fefef864ebf16968ca74e90b, type: 2}
+    medium: {fileID: 0}
+  - languageCode: ar
+    normal: {fileID: 11400000, guid: 430843c6fed575a45b4232a6ecffa1b2, type: 2}
+    bold: {fileID: 11400000, guid: 2efc9e21a8dfd5d4198db7d248c3b8f7, type: 2}
+    medium: {fileID: 0}
+  - languageCode: vi
+    normal: {fileID: 11400000, guid: feec723088db4384a89600dab0262d6f, type: 2}
+    bold: {fileID: 11400000, guid: f23cd124d4924cd4f9f1d079d7cd86dd, type: 2}
+    medium: {fileID: 0}
+  - languageCode: el
+    normal: {fileID: 11400000, guid: 47310188b82b81d419920d01db5439dc, type: 2}
+    bold: {fileID: 11400000, guid: b1e0de91dbd98f540af3b950763ce88e, type: 2}
     medium: {fileID: 0}

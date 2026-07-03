@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Text;
 using CsvHelper;
 using TMPro;
 using UnityEngine;
@@ -21,9 +22,34 @@ public class LocalizationManager : MonoBehaviour {
     public static Language                   StaticLanguage;
 
     public void Awake() {
-        if (StaticLanguage == null) StaticLanguage = CurrentLanguage;
-        CurrentLanguage = StaticLanguage;
-        LoadLocalization(CurrentLanguage);
+        CurrentLanguage = ResolveInitialLanguage();
+        StaticLanguage = CurrentLanguage;
+
+        if (CurrentLanguage != null) {
+            LoadLocalization(CurrentLanguage);
+        }
+        else {
+            Debug.LogError("LocalizationManager could not resolve an initial language.");
+        }
+    }
+
+    private Language ResolveInitialLanguage() {
+        if (StaticLanguage != null) {
+            return StaticLanguage;
+        }
+
+        if (CurrentLanguage != null) {
+            return CurrentLanguage;
+        }
+
+        if (languageDatabase == null || languageDatabase.languages == null || languageDatabase.languages.Count == 0) {
+            Debug.LogWarning("LocalizationManager has no languages available in the database.");
+            return null;
+        }
+
+        int safeIndex = Mathf.Clamp(currentLanguageIndex, 0, languageDatabase.languages.Count - 1);
+        var fallbackLanguage = languageDatabase.languages[safeIndex];
+        return fallbackLanguage;
     }
 
 
@@ -37,18 +63,16 @@ public class LocalizationManager : MonoBehaviour {
     } 
     
     public string GetLocalization(LocalizationType type, string key) {
-        switch (type) {
-            case LocalizationType.Script:
-                return scriptLocalization[key];
-            case LocalizationType.Menu:
-                return menusAndExtras[key];
-            case LocalizationType.CharacterName:
-                return characterNames[key];
-            case LocalizationType.CharacterTitle:
-                return characterTitles[key];
-            default:
-                return "";
+        return GetLocalization(type, key, key);
+    }
+
+    public string GetLocalization(LocalizationType type, string key, string englishFallback) {
+        var table = GetLocalizationTable(type);
+        if (table != null && !string.IsNullOrEmpty(key) && table.TryGetValue(key, out string localizedValue) && !string.IsNullOrEmpty(localizedValue)) {
+            return localizedValue;
         }
+
+        return englishFallback ?? "";
     }
     
     public TMP_FontAsset GetFont(bool bold) {
@@ -59,10 +83,40 @@ public class LocalizationManager : MonoBehaviour {
     }
 
 
+    private string DecodeLocalizationText(TextAsset ta, Language language) {
+        if (ta == null) {
+            return string.Empty;
+        }
+
+        byte[] bytes = ta.bytes;
+        if (bytes == null || bytes.Length == 0) {
+            return ta.text ?? string.Empty;
+        }
+
+        try {
+            return SanitizeDecodedLocalizationText(new UTF8Encoding(false, true).GetString(bytes));
+        }
+        catch (DecoderFallbackException) {
+            if (language != null && language.Code == "th") {
+                return SanitizeDecodedLocalizationText(Encoding.GetEncoding(874).GetString(bytes));
+            }
+
+            return SanitizeDecodedLocalizationText(ta.text ?? string.Empty);
+        }
+    }
+
+    private string SanitizeDecodedLocalizationText(string text) {
+        if (string.IsNullOrEmpty(text)) {
+            return string.Empty;
+        }
+
+        return text.TrimStart('\uFEFF');
+    }
+
     // CSV loader utility
-    private Dictionary<string, string> ParseCsvWithHelper(TextAsset ta, string keyColumn, string valueColumn) {
+    private Dictionary<string, string> ParseCsvWithHelper(TextAsset ta, string keyColumn, string valueColumn, Language language) {
         var dict = new Dictionary<string, string>();
-        using (var reader = new StringReader(ta.text))
+        using (var reader = new StringReader(DecodeLocalizationText(ta, language)))
         using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture)) {
             // Reads header: location,source,target
             csv.Read();
@@ -96,8 +150,14 @@ public class LocalizationManager : MonoBehaviour {
     }
 
     public void LoadLocalization(Language language) {
+        if (language == null) {
+            Debug.LogError("LoadLocalization called with null language.");
+            return;
+        }
+
         StaticLanguage = language;
         CurrentLanguage = language;
+        UpdateCurrentLanguageIndex(language);
 
         characterNames = new Dictionary<string, string>();
         menusAndExtras = new Dictionary<string, string>();
@@ -111,16 +171,42 @@ public class LocalizationManager : MonoBehaviour {
         // Find and load each localization file
         var charFile = FindLocalizationFile(language, charSuffix);
         if (charFile != null) {
-            characterNames = ParseCsvWithHelper(charFile, "character name", "translated name");
-            characterTitles = ParseCsvWithHelper(charFile, "character name", "translated title");
+            characterNames = ParseCsvWithHelper(charFile, "character name", "translated name", language);
+            characterTitles = ParseCsvWithHelper(charFile, "character name", "translated title", language);
         }
 
         var menuFile = FindLocalizationFile(language, menuSuffix);
         Debug.Log("Menu File: " + menuFile);
-        if (menuFile != null) menusAndExtras = ParseCsvWithHelper(menuFile, "location", "target");
+        if (menuFile != null) menusAndExtras = ParseCsvWithHelper(menuFile, "location", "target", language);
 
         var scriptFile = FindLocalizationFile(language, scriptSuffix);
-        if (scriptFile != null) scriptLocalization = ParseCsvWithHelper(scriptFile, "location", "target");
+        if (scriptFile != null) scriptLocalization = ParseCsvWithHelper(scriptFile, "location", "target", language);
+    }
+
+    private void UpdateCurrentLanguageIndex(Language language) {
+        if (languageDatabase == null || languageDatabase.languages == null) {
+            return;
+        }
+
+        int index = languageDatabase.languages.FindIndex(l => l.Code == language.Code);
+        if (index >= 0) {
+            currentLanguageIndex = index;
+        }
+    }
+
+    private Dictionary<string, string> GetLocalizationTable(LocalizationType type) {
+        switch (type) {
+            case LocalizationType.Script:
+                return scriptLocalization;
+            case LocalizationType.Menu:
+                return menusAndExtras;
+            case LocalizationType.CharacterName:
+                return characterNames;
+            case LocalizationType.CharacterTitle:
+                return characterTitles;
+            default:
+                return null;
+        }
     }
 
 }
@@ -152,6 +238,7 @@ public class Language {
         Code = code;
     }
     public string Name;
+    public string DisplayName;
     public string Code;
 
     public override string ToString() {

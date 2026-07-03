@@ -14,26 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languages:
   - Name: Arabic
+    DisplayName: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629"
     Code: ar
   - Name: Czech
+    DisplayName: "\u010Ce\u0161tina"
     Code: cs
   - Name: English
+    DisplayName: English
     Code: en
   - Name: French
+    DisplayName: "Fran\xE7ais"
     Code: fr
   - Name: Hungarian
+    DisplayName: Magyar
     Code: hu
   - Name: Japanese
+    DisplayName: "\u65E5\u672C\u8A9E"
     Code: ja
   - Name: Korean
+    DisplayName: "\uD55C\uAD6D\uC5B4"
     Code: ko
   - Name: Romanian
+    DisplayName: "Rom\xE2n\u0103"
     Code: ro
   - Name: Russian
+    DisplayName: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
     Code: ru
   - Name: Thai
+    DisplayName: "\u0E44\u0E17\u0E22"
     Code: th
   - Name: Ukrainian
+    DisplayName: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430"
     Code: ua
   - Name: Vietnamese
+    DisplayName: "Ti\u1EBFng Vi\u1EC7t"
     Code: vi
+  - Name: Brazilian Portuguese
+    DisplayName: "Portugu\xEAs (Brasil)"
+    Code: ptBR
+  - Name: Latin American Spanish
+    DisplayName: "Espa\xF1ol (Latinoam\xE9rica)"
+    Code: esLATAM
+  - Name: Greek
+    DisplayName: "\u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03AC"
+    Code: el
+  - Name: Indonesian
+    DisplayName: Bahasa Indonesia
+    Code: id
