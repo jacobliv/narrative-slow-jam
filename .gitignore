@@ -4,6 +4,10 @@
 
 # Visual Studio Code
 .vscode/
+!.vscode/
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/extensions.json
 .settings/
 *.code-workspace
 

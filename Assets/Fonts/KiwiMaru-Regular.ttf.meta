@@ -3,7 +3,7 @@ guid: 6f25197728c4a5a49af23d99fcbe1fca
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 120
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
@@ -11,7 +11,6 @@ TrueTypeFontImporter:
   fontNames:
   - Kiwi Maru
   fallbackFontReferences:
-  - {fileID: 12800000, guid: eb7b9c3f84a76714ca610ee944068eee, type: 3}
   - {fileID: 12800000, guid: 1d4cf15526688174ebb0171f515b3167, type: 3}
   customCharacters: 
   fontRenderingMode: 0

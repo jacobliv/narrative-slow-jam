@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | {{{ PRODUCT_NAME }}}</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="page-shell">
+      <div id="unity-container">
+        <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
+        </div>
+        <div id="unity-warning"></div>
+        <div id="unity-footer">
+          <div id="unity-webgl-logo"></div>
+          <div id="unity-fullscreen-button"></div>
+          <div id="unity-build-title">{{{ PRODUCT_NAME }}}</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+      var targetWidth = {{{ WIDTH }}};
+      var targetHeight = {{{ HEIGHT }}};
+
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? "block" : "none";
+        }
+
+        var div = document.createElement("div");
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+
+        if (type == "error") {
+          div.className = "banner-error";
+        } else {
+          div.className = "banner-warning";
+          if (type != "warning") {
+            div.className = "banner-info";
+          }
+
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+
+        updateBannerVisibility();
+      }
+
+      function resizeCanvas() {
+        var viewportWidth = window.innerWidth;
+        var viewportHeight = window.innerHeight;
+        var scale = Math.min(viewportWidth / targetWidth, viewportHeight / targetHeight);
+        var displayWidth = Math.floor(targetWidth * scale);
+        var displayHeight = Math.floor(targetHeight * scale);
+
+        container.style.width = displayWidth + "px";
+        container.style.height = displayHeight + "px";
+        canvas.style.width = displayWidth + "px";
+        canvas.style.height = displayHeight + "px";
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+        showBanner: unityShowBanner,
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        config.devicePixelRatio = 1;
+        unityShowBanner("WebGL builds are not supported on mobile devices.", "warning");
+      }
+
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+          resizeCanvas();
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

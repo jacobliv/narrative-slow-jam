@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: LanguageDatabase 1
   m_EditorClassIdentifier: 
   languages:
-  - Name: Arabic
-    DisplayName: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629"
-    Code: ar
   - Name: Czech
     DisplayName: "\u010Ce\u0161tina"
     Code: cs
@@ -37,9 +34,6 @@ MonoBehaviour:
   - Name: Romanian
     DisplayName: "Rom\xE2n\u0103"
     Code: ro
-  - Name: Russian
-    DisplayName: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
-    Code: ru
   - Name: Thai
     DisplayName: "\u0E44\u0E17\u0E22"
     Code: th

@@ -110,6 +110,15 @@ public class NarrativeManager : MonoBehaviour {
         multiDialogueChoice2.font = retriever.GetFont(false);
     }
 
+    private string GetScriptLocalizationWithDebug(string key, string englishFallback) {
+        if (!string.IsNullOrEmpty(key) && key.StartsWith("8D-", StringComparison.Ordinal)) {
+            Debug.Log(
+                $"[8D Localization Lookup] language={LocalizationManager.StaticLanguage?.Code ?? "unknown"} currentItem={currentNarrativeItem?.name ?? "null"} requestedKey={key} fallback={englishFallback}");
+        }
+
+        return retriever.GetLocalization(LocalizationType.Script, key, englishFallback);
+    }
+
     public void AdvanceNarrative(int option = 0) {
         StopPreviousItem();
         if (currentNarrativeItem.next.Count == 0) {
@@ -270,9 +279,8 @@ public class NarrativeManager : MonoBehaviour {
         if(!currentNarrativeItem.phone) return;
         
         if (!currentNarrativeItem.character.name.Equals("Dmi")) {
-            phoneSenderText.text = retriever.GetLocalization(LocalizationType.Script, 
-                                                             currentNarrativeItem.name,
-                                                             currentNarrativeItem.line);
+            phoneSenderText.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name,
+                                                                  currentNarrativeItem.line);
             phoneSenderName.text = retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name);
             responseText.text = "";
             phoneYouName.text = "";
@@ -282,7 +290,7 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.character.name.Equals("Dmi")) {
             phoneChoiceUI.SetActive(false);
             phoneResponseUI.SetActive(true);
-            responseText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line);
+            responseText.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name, currentNarrativeItem.line);
             phoneYouName.text = retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name);
             // phoneYouTime.text = "now";
         }
@@ -296,8 +304,8 @@ public class NarrativeManager : MonoBehaviour {
             phoneSingleBack.SetActive(true);
             phoneChoiceUI.SetActive(true);
             phoneResponseUI.SetActive(false);
-            phoneChoice1Text.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-1",currentNarrativeItem.next[0].shortenedLine);
-            phoneChoice2Text.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-2",currentNarrativeItem.next[1].shortenedLine);
+            phoneChoice1Text.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name+"-Option-1", currentNarrativeItem.next[0].shortenedLine);
+            phoneChoice2Text.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name+"-Option-2", currentNarrativeItem.next[1].shortenedLine);
 
         }
         
@@ -317,7 +325,7 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.physicalInteraction) {
             _dialogueLineText.fontStyle = FontStyles.Bold;
         }
-        _dialogueLineText.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name,currentNarrativeItem.line).Trim();
+        _dialogueLineText.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name, currentNarrativeItem.line).Trim();
         _dialogueAnimateInText.AnimateText();
         dialogueCharacterNameText.text = currentNarrativeItem.character? 
             retriever.GetLocalization(LocalizationType.CharacterName, currentNarrativeItem.character.name,currentNarrativeItem.character.name)
@@ -375,8 +383,8 @@ public class NarrativeManager : MonoBehaviour {
         if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.next[0].button.Equals("Dialogue Choice 1")) {
             multiDialogueChoicePanel.SetActive(true);
             dialogueNavigationButtonPanel.SetActive(false);
-            multiDialogueChoice1.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-1",currentNarrativeItem.next[0].shortenedLine);
-            multiDialogueChoice2.text = retriever.GetLocalization(LocalizationType.Script, currentNarrativeItem.name+"-Option-2",currentNarrativeItem.next[1].shortenedLine);
+            multiDialogueChoice1.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name+"-Option-1", currentNarrativeItem.next[0].shortenedLine);
+            multiDialogueChoice2.text = GetScriptLocalizationWithDebug(currentNarrativeItem.name+"-Option-2", currentNarrativeItem.next[1].shortenedLine);
         } 
         else if (currentNarrativeItem.next.Count > 1 && currentNarrativeItem.shopSelection) {
             nextButton.transform.gameObject.SetActive(false);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using CsvHelper;
 using TMPro;
 using UnityEngine;
@@ -135,18 +136,50 @@ public class LocalizationManager : MonoBehaviour {
     }
 
 
-    // Try to find a localization CSV with a wildcard date
+    private bool TryExtractLocalizationDate(string assetName, string languageCode, string typeSuffix, out DateTime parsedDate) {
+        parsedDate = DateTime.MinValue;
+
+        string pattern = $"^{Regex.Escape(languageCode)}_(\\d{{4}}-\\d{{2}}-\\d{{2}}|\\d{{2}}-\\d{{2}}-\\d{{2}})_{Regex.Escape(typeSuffix)}$";
+        Match match = Regex.Match(assetName, pattern);
+        if (!match.Success) {
+            return false;
+        }
+
+        string rawDate = match.Groups[1].Value;
+        string[] formats = { "yyyy-MM-dd", "yy-MM-dd" };
+        return DateTime.TryParseExact(rawDate, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate);
+    }
+
+    // Try to find the newest localization CSV with a wildcard date
     private TextAsset FindLocalizationFile(Language language, string typeSuffix) {
-        // Load all TextAssets in the language folder
         var allTextAssets = Resources.LoadAll<TextAsset>("language");
+        TextAsset bestMatch = null;
+        DateTime bestDate = DateTime.MinValue;
+
         foreach (var ta in allTextAssets) {
             var name = ta.name;
-            // Check for pattern: {lang}_{any}_typeSuffix.csv
-            if (name.StartsWith(language.Code + "_") && name.EndsWith(typeSuffix)) {
-                return ta;
+            if (!name.StartsWith(language.Code + "_", StringComparison.Ordinal) || !name.EndsWith(typeSuffix, StringComparison.Ordinal)) {
+                continue;
+            }
+
+            if (TryExtractLocalizationDate(name, language.Code, typeSuffix, out DateTime parsedDate)) {
+                if (bestMatch == null || parsedDate > bestDate) {
+                    bestMatch = ta;
+                    bestDate = parsedDate;
+                }
+                continue;
+            }
+
+            if (bestMatch == null) {
+                bestMatch = ta;
             }
         }
-        return null;
+
+        if (bestMatch != null) {
+            Debug.Log($"Selected localization file {{{bestMatch.name}}} for language={language.Code} type={typeSuffix}");
+        }
+
+        return bestMatch;
     }
 
     public void LoadLocalization(Language language) {

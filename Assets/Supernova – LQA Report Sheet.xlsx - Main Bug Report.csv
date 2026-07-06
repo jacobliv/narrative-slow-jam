@@ -1,0 +1,127 @@
+Date,Language,ID,Build,Issue,Severity,Issue Description,Screenshot,Question,Answer,Status,,,
+16/01/26,French,N/A,0.4.3,Display,Minor,"Some sound descriptions appear in italics, while others are in plain text (like the provided screenshot).","https://snipboard.io/TGBeyf.jpg (in this example, the ID is TDP2-5a)","Would it be possible to make it so every sound described in the game appears in italics for consistency? There aren't tags in OmegaT's files, so we can't edit the text's format ourselves. Thank you in advance!","Not with how this is implemented. This was a issue we were trying to fix in this game, but we didn't have a good solution at this time. ",Cannot fix,,,
+16/01/26,French,TPOP-1,0.4.3,Untranslated,Major,"""SUPERNOVA IMMINENT. EVACUATE IMMEDIATELY."" Untranslated in-game (but translated in OmegaT's .po file)",https://snipboard.io/2LelO9.jpg,,"Need to check if there is an updated file, as I dont see it translated in my local files. ",Confirmed fixed,Confirmed fixed for JA.,,
+"16/01/26
+02/07/26",Multiple,N/A,0.4.3,Untranslated,Major,"!!! DEIMOS MOON WARNING !!!' missing in OmegaT's .po file, thus not translated.",https://snipboard.io/2LelO9.jpg,"It seems this specific line wasn't implemented in the .po file, so this issue will probably occur for other language pairs!",next build for HU (written July 3rd),Pending,"Issue still present in Japanese as of June 12th.
+https://prnt.sc/D3WX5fcYiAVi ",Confirmed fixed for FR (July 2nd),Issue still present in Hungarian as of July 2nd: snipboard.io/bnuzZN.jpg  
+16/01/26,Multiple,D2D-45,0.4.3,Other,Major,"Continuity issue with K'Kili's last scene (""The woman offers me a smile and walks out of the Cosmic Fuel with nachos in hand."")",,"Hello! The French team noticed a continuity issue in the source text: K'Kili will leave with the ""nachos in hand"" even if the player chose the wrong article! This will affect all language pairs, so we could either edit the original sentence (for example, just saying ""The woman offers me a smile and walks out of the Cosmic Fuel."") or you'll need to implement an extra line in case the player would suggest the wrong item to K'Kili.
+ 
+Thanks for your help!",,Cannot fix,,,
+16/01/26,French,"DAY 1:
+TDN3-4 // DD1-14 // TDN4-2 // DD1-22 // DD1-27 // TDN5-4 // TDP3-11
+
+DAY 3: T19 // T21 // DD3-1 // DD3-2 // AD-2 // DD3-3 // AD-3 // AD-4 // DD3-4 // TDP10-2 // TDP10-4 // TDP10-4a // TDP10-5 // TDP10-6 // TDP10-8 // TDP10-9 // TDP10-12 // TDP10-15 // TDP10-17 // TDP10-18 // PON-3 // POP-5 // POP-6 // POP-8 // POP-9 // POP-17 // POP-22 // POP-29 // POP-30 // POP-31 // POP-33 // POP-36 // POP-40 // POP-44 // POP-49 // POP-50 // POP-57 // POP-67 // POP-69",0.4.3,Display,Minor,An extra space appears at the beginning of the line in-game (see screenshots); this space is not present in OmegaT's translated file and this issue occurs several times throughout the game.,"https://snipboard.io/3GiUf1.jpg
+https://snipboard.io/V0lALg.jpg
+https://snipboard.io/ynoKQk.jpg
+https://snipboard.io/51aEvn.jpg
+","We aren't sure what's causing this small display issue, as it only seems to affect some lines (although we noticed it especially occurs during DAY 3).","There is actually a space in the current files.. Its also in the english version. I can make sure the lines get trimmed of extra whitespace, and that should fix this. Should be fixed in the next build",Confirmed fixed,,,
+16/01/26,French,N/A,0.4.3,Display,Minor,A space is missing between the character's name and their title (this issue occurs throughout the game),"https://snipboard.io/dnIMey.jpg
+https://snipboard.io/IX3FBT.jpg",,Should be fixed in the next build,Confirmed fixed,,,
+16/01/26,French,"PON-12
+POP-71",0.4.3,Display,Minor,"When the screen goes white with the last quotes, if you try to go back to the previous lines, the white screen remains.",https://snipboard.io/5rSCV1.jpg,"Not sure if this is done in purpose, but we figured it'd still be worth mentionning in case players would want to go back after reaching the last lines of the game.",Should be fixed in the next build,Confirmed fixed,,,
+16/01/26,French,T17-Option-2,0.4.3,Display,Major,"When we choose this specific answer, the choices remain and we can't see Dmi's answer. If we keep clicking on the same choice, we can see Cass' answers, but then the phone and dialogue box overlap on the screen (see provided screenshots).","https://snipboard.io/otuJYh.jpg
+https://snipboard.io/9Md3xo.jpg
+https://snipboard.io/bB154P.jpg
+https://snipboard.io/v81fzj.jpg",This is the only answer option where this issue occurs; we're not quite sure what's causing this. :c,Should be fixed in the next build,Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"""now"" and from ""How do you want to respond?"" downwards the text is in English. ",https://snipboard.io/aj5nO1.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Other,Major,"Last sentence should be changed into ""Nu vrei s-o vezi?""",https://snipboard.io/VyzA8M.jpg,,Should be fixed,Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text is in English, even though it was translated in the file.",https://snipboard.io/bDEL6g.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Display,Major,Name + character description are without a space in between.,https://snipboard.io/vEA3Np.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text boxes that are in the lower parte are in French, not in Romanian.",https://snipboard.io/vEA3Np.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text is in English, even though it was translated in the file.",https://snipboard.io/KHrG8m.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"""Back"", ""Next"", ""now"" still in English.",https://snipboard.io/WKYZE6.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text is in English, even though it was translated in the file.",https://snipboard.io/vcX79y.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text is in English, even though it was translated in the file.",https://snipboard.io/fTroUR.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"The text is in English, even though it was translated in the file.",https://snipboard.io/dVt1za.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Display,Major,"All the characters and their description need a space in between, not just Aiyana. Moreover, the text in the lower part of the screen is in French, not in Romanian.",https://snipboard.io/dmLiBO.jpg,,"Should be fixed
+",Confirmed fixed,,,
+22/01/26,Romanian,N/A,0.4.2,Other,Major,"My mistake, the text should be ""Nimic special"". ",https://snipboard.io/dmLiBO.jpg,,,Duplicate,,,
+22/01/26,Romanian,N/A,0.4.2,Untranslated,Major,"All the characters and their description need a space in between. Moreover, the text in the lower part of the screen is in French, not in Romanian.",https://snipboard.io/VyzA8M.jpg,,"Should be fixed
+",Confirmed fixed,,,
+19/02/2026,Japanese,N/A,0.4.2,Display,Major,Most characters appear as a square and cannot be read. This problem persists throughout the game.,https://snipboard.io/4D63hw.jpg,,"This is because the font does not work. I am using: genjyuu-gothic-regular SDF . Please find a font that works, and I can fix that for you",Confirmed fixed,Confirmed the new font (Kiwi Maru) displays wiht no issue.,,
+10/05/2026,Spanish_LATAM,From: DD1-14 - segment 2918 to: TDP4-1 - segment 2936,,Other,Major,"Dialogues are repeated in several segments, which in turn eliminate future dialogues, even removing the option to choose the item from the store.",https://drive.google.com/file/d/1YwJim89IV-ESCi45SojxWcdnQjYYr6oF/view?usp=sharing,,"This has to do with an edit I asked Ludovic to make to some ids related to the character 8008. Once those are fixed on his end, they should appear.",Pending,,,
+31/05/2026,Portuguese_BR,AP1 and AP2,,Display,Major,"The text isn't visible and we can't move the screen. You get this option when Calder appears, by choosing the shelf on the left.",https://snipboard.io/NuTlgM.jpg,,"Resolution issue, will take a look.",Confirmed fixed,,,
+31/05/2026,Portuguese_BR,From segment 2753 to segment 2758,,Untranslated,Minor,"It appears in English, even though it was translated in the file.",https://snipboard.io/RiItVx.jpg,,,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,From segment 2920 to 2933,,General Bug,Major,"After segment 2918 repeats consecutively, all the text for the character 8008: Arinator Stan doesn't appear on the screen (they just vanish when it was supposed to be their turn to talk), so Dmi just talks by itself.","https://snipboard.io/AGPsl5.jpg 
+
+https://snipboard.io/Ro8Sei.jpg ",,,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,NAV4,,Untranslated,Minor,"It appears in English, even though it was translated in the file.
+
+You don't have to choose any dialogue option to reach it, since it is the first message that appears.",https://snipboard.io/g64w0I.jpg,(Also flagged in other languages),,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,SD1 and SD2,,Display,Major,The text also isn't visible and we can't move the screen.,https://snipboard.io/xGDivF.jpg,,,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,segment 2918 ,,General Bug,Major,There is a bug where the text of segment 2918 repeats three times.,"https://snipboard.io/ujByAs.jpg 
+
+https://snipboard.io/6sN7PM.jpg 
+
+https://snipboard.io/JmCiRT.jpg",,,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,segment 2936,,General Bug,Major,"The text of character 8008: Arinator Stan starts appearing with segment 2936, but the game doesn't let the player choose an option, it goes straight to the correct item.",https://snipboard.io/JyPxnh.jpg,,,Confirmed fixed,,,
+31/05/2026,Portuguese_BR,,,Display,Major,The items on the store appears to be duplicated.,"https://snipboard.io/sEDRdz.jpg
+
+https://snipboard.io/IkdsUJ.jpg",(Also flagged in other languages),,Confirmed fixed,,,
+01/06/2026,Romanian,,,Untranslated,Major,Text still in English and it appears twice.,https://snipboard.io/BoK580.jpg,(Also flagged in other languages),This is likely because the system could not find the ID in the translation file,Pending,,,
+01/06/2026,Romanian,,,Untranslated,Major,"""Resume"" is untranslated and the Romanian string “Salvează” appears split across two lines.",https://snipboard.io/IUrcJy.jpg,(Also flagged in other languages),"This picture isn't on the pause menu with the Resume? I will take a look, but its hard for me to know what to look for",Need More Info,,,
+01/06/2026,Romanian,,,Untranslated,Major,Text on the lower part of the screen still in English. It also did not appear in my file.,https://snipboard.io/KMlczN.jpg,,"[JAKE] This is the options. Ludovic added these later? [LUDO] I just checked and you have the correct translation in the latest version of your files, so that should be fixed next time RO is implemented",Pending,,,
+"01/06/2026
+02/07/26",Multiple,,,Display,Major,"Not sure if it has to do with the laptop I used, but one cannot see the entire text here.
+
+HU: Same issue in Hungarian.",https://snipboard.io/XUHtVm.jpg,,"Yeah, that is a resolution issue. I will work on making so this isnt an issue",Ready For Test,Same issue in Hungarian as of July 2nd: snipboard.io/9LaDvW.jpg,,
+"01/06/2026
+02/07/26",Multiple,,,Display,Major,"Same thing as above.
+
+HU: Same issue in Hungarian.",https://snipboard.io/mGiIdq.jpg,,"Yeah, that is a resolution issue. I will work on making so this isnt an issue",Ready For Test,Same issue in Hungarian as of July 2nd: snipboard.io/QUr6tM.jpg,,
+01/06/2026,Romanian,,,Other,Major,"""NImic"" was corrected to""Nimic"" in the delivered file (2026-03-12_Script.csv) but the word remained the same in the game.",https://snipboard.io/IUrcJy.jpg,[Ludovic] Could reinjecting the latest files for RO fix that issue?,,Pending,,,
+12/06/2026,Portuguese_BR,"8.0D-1, 8.0D-2, 8.0D-3, 8.0D-4, 8.0D-5",,Untranslated,Major,"The previous bug is fixed, but now some 8008 [Arinator Stan] strings appear in English, even though they are translated in the file.","https://snipboard.io/dibmRX.jpg
+
+https://snipboard.io/A0qU6G.jpg
+
+https://snipboard.io/owgpSz.jpg",(Also flagged in other languages),This is because the ids were incorrect in the files. I pointed this out to Ludovic to fix. ,Pending,Same issues still present in French as of July 2nd. (https://snipboard.io/1spEjB.jpg),,
+12/06/2026,Portuguese_BR,8.0D-1a,,Untranslated,Major,"It appears in English, even though it was translated in the file.",https://snipboard.io/Q5EDXK.jpg,(Also flagged in other languages),,Pending,Issue still present in French as of July 2nd. (https://snipboard.io/UNSr5K.jpg),,
+12/06/2026,Portuguese_BR,8.0D-5b,,Untranslated,Major,"It appears in English, even though it was translated in the file.",https://snipboard.io/LZ9sBr.jpg,(Also flagged in other languages),,Pending,,,
+12/06/2026,Japanese,O2,,Display,Minor,"The last line of the translation goes a little too down. It's still readable but doesn't look good.
+It would look a lot better if it could be brought upwards a little. Alternatively, let me know if translation needs shorening.",https://prnt.sc/rnRiG438FBQu ,,"I believe in this case, we may need the translation to be shortened. To move this up, requires moving up the name portion (not visible in the screenshot), which makes the entire dialogue box a bit too big.",Pending,same issue present for this text (ID: TDN4-7) - https://prnt.sc/hY37ZvXllZNI ,,
+12/06/2026,Japanese,REM3,,Display,Major,"Translation for ""Oh did I mess up again? Are we not getting Saturn dogs?"" is repeated.","https://prnt.sc/4K9eSHO56_FN 
+https://prnt.sc/kXYSWjtv-o_4 ",,,Pending,,,
+12/06/2026,Japanese,"TDP5-9
+TDP3-2
+others",,Display,Major,"Characters ""一"" (kanji for ""one"") and ""ー"" (prolonged sound mark) do not seem to display correctly, as they are very thin compared to the other characters. I have checked and Kiwi Maru supports both.","For ""one"" - https://prnt.sc/eGqvIM2M8BuD 
+For sound mark - https://prnt.sc/n2UIvbuPx9EY ",,Will take a look,Pending,,,
+12/06/2026,Portuguese_BR,TPOP-2,,Untranslated,Minor,"It appears in English, even though it was translated in the file.",https://snipboard.io/5Mb6rR.jpg,(Also flagged in other languages),,Confirmed fixed,,,
+13/06/2026,Spanish_LATAM,8.0D-2,,Untranslated,Minor,"Text in English, even thougth it's translated on the file.",https://snipboard.io/7f9Yy6.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,8.0D-3,,Untranslated,Minor,"Text in English, even thougth it's translated on the file.",https://snipboard.io/7ClzUy.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,8.0D-4,,Untranslated,Major,"Text in English, even thougth it's translated on the file.",https://snipboard.io/HvG7ro.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,8.0D-5,,Untranslated,Major,"Text in English, even thougth it's translated on the file.",https://snipboard.io/7Fc3al.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,8.0D-5b,,Untranslated,Minor,"Text in English, even thougth it's translated on the file.",https://snipboard.io/6ns5W8.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,N4V4,,Untranslated,Minor,"Text in English, even thougth it's translated on the file.",https://snipboard.io/xBN9Hh.jpg,(Also flagged in other languages),,Duplicate,,,
+13/06/2026,Spanish_LATAM,TPOP-2,,Untranslated,Minor,"Text in English, even thougth it's translated on the file.",https://snipboard.io/ivp6lm.jpg,(Also flagged in other languages),Should be fixed in new build from June 28th,Ready For Test,Issue fixed in FR as of July 2nd.,,
+13/06/2026,Spanish_LATAM,,,General Bug,Minor,"Store items apper doble, but only while not playing on full screen.","https://snipboard.io/wjXN6O.jpg
+https://snipboard.io/ifW1vR.jpg",(Also flagged in other languages),Resolution issue. Will take a look,Ready For Test,,,
+19/06/2026,Greek,N/A,,Display,Critical,"Some characters are not displaying correctly (mostly capital letters). The text is unreadable as a result. Jugding by how ""μ"" and ""π"" is displaying in a diferent font, I'm guessing it's a compatibility issue.","https://snipboard.io/FNpC8U.jpg
+
+https://snipboard.io/npExw0.jpg",,This is a font issue. I will try to find another one. Please also take a look.,Pending,,,
+19/06/2026,Greek,N/A,,Other,Major,Cannot find the string for this character's name in the source file. This looks like MT.,https://snipboard.io/U6wd8t.jpg,,,Pending,,,
+22/06/2026,Ukrainian,,,Display,Major,"When choosing an item from the store, their sprites are duplicated and slightly shifted to the left. As a result a part of the tooltip on items to the left of the screen is obscured. Unsure if it depends on screen resolution, but it is not language-specific, as the issue persists even in English, and similar issues were reported here by Romanian and Portuguese teams.","https://snipboard.io/RJWybM.jpg
+https://snipboard.io/bk3SDd.jpg",(Also flagged in other languages),Resolution issue. Will take a look,Ready For Test,,,
+"16/01/26
+20/05/26
+02/07/26",Multiple,O5a,0.4.3,Untranslated,Major,"""How do you want to respond?"" Untranslated in-game (but translated in OmegaT's .po file)
+
+JA: Same problem in Japanese.
+HU: Same issue in Hungarian.",https://snipboard.io/hEQXok.jpg,(Also flagged in other languages),Should be fixed in next build for HU (written July 3rd,Pending,"Issue still present in Japanese as of June 12th.
+https://prnt.sc/GjlZzVTzJGm8 
+Issue also present in Hungarian and Ukrainian as of July 2nd. snipboard.io/kUszVu.jpg 　",Issue fixed in FR as of July 2nd.,
+02/07/26,Multiple,,,Display,Major,The top of the end credits is cut off.,snipboard.io/0GrihJ.jpg,"Didn't just notice it in Hungarian, but the English version as well.",Resolution issue. Will take a look,Ready For Test,,,
+02/07/26,Multiple,,,General Bug,Minor,"There's inconsistency in the use of italics/bold/regular text throughout the game. The same string (e.g. -door opens and chimes-) sometimes appears in regular and sometimes in bold. Is there a way to fix this, say Dmi's thoughts would appear in italics, sound effects in bold, and conversations in regular?",For example: snipboard.io/BGH1In.jpg vs. snipboard.io/EcCP4u.jpg  ,"I know this isn't a Hungarian-specific issue, as the English version is also inconsistent in this regard. Just wondering if this is something that can be fixed.",This is to do with how the original system was designed. This is not fixable at this point. 😅 Sorry about that. ,Cannot fix,,,
+02/07/26,Multiple,,,Other,Preferential,"In the case of K'Kili and Aiyana, there are no sound effects at all corresponding to the text talking about how ""K’Kili laughs"" (twice in the game); ""She lets out a hearty laugh""; ""Xey let out a bitter laugh"".",For example: snipboard.io/I1JfXx.jpg and snipboard.io/O9mkEi.jpg  ,"Here too, I know it isn't a Hungarian-specific issue, as the English doesn't have the sound effects either. Just wondering if it's deliberate.",Will take a look. This is likely just me missing it.,Pending,,,
+02/07/26,Japanese,,,Display,Major,The line breaks tag is displayed as \\n in the game. ,"In-game:
+https://prnt.sc/lxrsMUB7oNoo 
+Loc file:
+https://prnt.sc/03OWAxwgC0NN",,,Pending,,,

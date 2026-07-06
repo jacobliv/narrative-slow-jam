@@ -1,4 +1,4 @@
-﻿location,context,source,target
+location,context,source,target
 O1,"No Sc, msc: SupernovaAlt, no sfx, Next: [O2]",The Solar System. We all know it well. Home to an indescribable number of lifeforms across each planet.,ระบบสุริยะ เราทุกคนรู้จักมันดี\nมันเป็นบ้านของสิ่งมีชีวิตมากมายนับไม่ถ้วนที่อาศัยอยู่ในดาวเคราะห์ต่าง ๆ
 O2,"No Sc, msc: SupernovaAlt, no sfx, Next: [O3]",That doesn’t matter much anymore. The Solar System is reaching its end and our Sun is reaching the end of its days. From Mercury to Uranus (Justice for Pluto) people are evacuating to escape the incoming supernova.,แต่นั่นมันไม่สำคัญอีกต่อไปแล้ว\nจุดจบของระบบสุริยะกำลังจะมาถึงเพราะดวงอาทิตย์ของเราก็ใกล้จะสิ้นอายุขัยแล้ว\nผู้คนตั้งแต่ดาวพุธไปจนถึงดาวยูเรนัส (รวมถึงดาวเคราะห์แคระอย่างดาวพลูโตด้วย)\nต่างก็พากันอพยพหนีซูเปอร์โนวาที่กำลังจะเกิดขึ้นในอีกไม่นาน
 O3,"No Sc, msc: SupernovaAlt, no sfx, Next: [O4]",and I’m clocking in.,ส่วนฉันก็มาทำงาน
@@ -111,21 +111,21 @@ D1D-17,"No Sc, msc: SupernovaAlt, sfx: Flubber_Burp, Next: [D1D-18]",Flubber flo
 D1D-18,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-19]",She looks proud of herself.,ฟลับเบอร์ดูภูมิใจในตัวเอง
 D1D-19,"No Sc, msc: SupernovaAlt, sfx: Boom_2, Next: [DD1-14]",I jump up from my seat as I hear a boom come from outside.,ฉันสะดุ้งขึ้นมาจากเก้าอี้ตอนที่ได้ยินเสียงดังตู้มมาจากข้างนอก
 DD1-14,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-1a]", What the hell--!?, อะไรวะนั่น--!?
-8.0D-1a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [8D-1]",-door opens and chimes-,-ประตูเปิดพร้อมเสียงกระดิ่ง-
-8.0D-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-15]",Sup.,ไง
+8D-1a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [8D-1]",-door opens and chimes-,-ประตูเปิดพร้อมเสียงกระดิ่ง-
+8D-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-15]",Sup.,ไง
 DD1-15,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-20]","Uh, sup? What was that?",เอ่อ ไง? นั่นมันอะไร?
 D1D-20,"No Sc, msc: SupernovaAlt, no sfx, Next: [8D-2]",He ignores me and his eyes- er...screen look up.,เขาเมินที่ฉันถามไป แล้วตาของ-เอ่อ... หน้าจอของเขามันมองไปข้างบน
-8.0D-2,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [DD1-16]",What was what?,อะไรมันอะไร?
+8D-2,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [DD1-16]",What was what?,อะไรมันอะไร?
 DD1-16,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-3]",The boom?,เสียงตู้มมั้ง?
-8.0D-3,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-17]",What boom?,เสียงตู้มอะไร?
+8D-3,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-17]",What boom?,เสียงตู้มอะไร?
 DD1-17,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-18]",The-- okay.,สะ-- โอเค
 DD1-18,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-21]",Do you need something?,คุณหาอะไรอยู่รึเปล่า?
 D1D-21,"No Sc, msc: SupernovaAlt, sfx: 80008_hum2, Next: [8D-4]",A low hum comes from his circuits. He’s thinking.,เสียงหึ่งเบา ๆ ดังมาจากวงจรของเขา เขากำลังคิดอยู่
-8.0D-4,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [D1D-22]",You sell any Arinator brand stuff here? That one made by that smoking cyborg from outta the solar system?,ที่นี่มีของแบรนด์แอริเนเตอร์อะไรขายมั่งไหม?\nของที่ผลิตโดยไซบอร์กสุดฮ็อตจากนอกระบบสุริยะอะไรแบบนั้นน่ะ?
+8D-4,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [D1D-22]",You sell any Arinator brand stuff here? That one made by that smoking cyborg from outta the solar system?,ที่นี่มีของแบรนด์แอริเนเตอร์อะไรขายมั่งไหม?\nของที่ผลิตโดยไซบอร์กสุดฮ็อตจากนอกระบบสุริยะอะไรแบบนั้นน่ะ?
 D1D-22,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-19]",I’ve heard of Arinator probably. Cassiopeia’s a big fan of singers. Though something was kind of funny about this guy’s desperation. ,ฉันน่าจะเคยได้ยินเกี่ยวกับแอริเนเตอร์มาบ้าง แคสซิโอเปียเป็นแฟนตัวยงของนักร้องหลาย ๆ คน\nแต่ตาหุ่นยนต์นี่เขาดูกระเหี้ยนกระหือรือแปลก ๆ ยังไงไม่รู้ 
 DD1-19,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-5]","I mean, I can check to see what we got.",ฉันหมายถึงว่า เดี๋ยวฉันไปดูมาให้นะว่าเรามีอะไรบ้าง
-8.0D-5,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [8D-5b]",Sweet! I’ll also be putting 700 luncos on pump 2.,เยี่ยมเลย! ผมขอเติมน้ำมัน 700 เหรียญดวงจันทร์ที่ปั๊ม 2 ด้วยนะ
-8.0D-5b,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",Select an item in the shop,เลือกของในร้าน
+8D-5,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [8D-5b]",Sweet! I’ll also be putting 700 luncos on pump 2.,เยี่ยมเลย! ผมขอเติมน้ำมัน 700 เหรียญดวงจันทร์ที่ปั๊ม 2 ด้วยนะ
+8D-5b,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",Select an item in the shop,เลือกของในร้าน
 8D-5b-Option-1,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",,
 8D-5b-Option-2,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",,
 TDP4-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [TDP4-5]",Yes! Arinator’s limited edition Mint choco paste? I thought this was sold out everywhere!,เยส! ยาสีฟันแอริเนเตอร์กลิ่นช็อกมินต์รุ่นลิมิเต็ดเหรอเนี่ย?\nผมนึกว่ามีคนซื้อไปจนไม่เหลือสักที่แล้วซะอีก!
