@@ -1,0 +1,600 @@
+location,context,source,target
+O1,"No Sc, msc: SupernovaAlt, no sfx, Next: [O2]",The Solar System. We all know it well. Home to an indescribable number of lifeforms across each planet.,"Kita semua kenal dengan Tata Surya, rumah untuk banyak makhluk hidup dalam setiap planetnya."
+O2,"No Sc, msc: SupernovaAlt, no sfx, Next: [O3]",That doesn’t matter much anymore. The Solar System is reaching its end and our Sun is reaching the end of its days. From Mercury to Uranus (Justice for Pluto) people are evacuating to escape the incoming supernova.,Tapi itu sudah tidak penting lagi. Matahari akan tutup usia dan memusnahkan Tata Surya. Semua orang dari Merkurius hingga Uranus (keadilan untuk Pluto!) berevakuasi untuk kabur dari supernova yang akan terjadi.
+O3,"No Sc, msc: SupernovaAlt, no sfx, Next: [O4]",and I’m clocking in.,"Sementara itu, aku mulai bekerja."
+O4,"No Sc, msc: SupernovaAlt, no sfx, Next: [O5a]","It's a slow day. Not that it wasn’t expected or anything. A lot of people have evacuated already, or they just want to spend their money elsewhere besides our dingy gas station. ","Ini hari yang terasa lambat. Aku tidak mengharapkan apa pun. Banyak yang sudah pergi, atau mereka hanya mau menghabiskan uang di tempat lain selain pom bensin kumal ini. "
+O5a,"No Sc, msc: SupernovaAlt, sfx: Text_1, Next: [O5b]",-phone chimes-,(HP berdering)
+O5b,"No Sc, msc: SupernovaAlt, sfx: , Next: [T1]",Crap.,Sial.
+T1,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Pocket_Swoosh_1, Next: [TDN1-1,TDP1-1]","Hey, did you finish packing?","Hei, udah selesai berkemas?"
+T1-Option-1,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Pocket_Swoosh_1, Next: [TDN1-1,TDP1-1]",Yeah. (Lie),Sudah. (Bohong)
+T1-Option-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Pocket_Swoosh_1, Next: [TDN1-1,TDP1-1]","No, I’m at work right now.","Belum, aku sedang bekerja."
+TDN1-1,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDN1-2]",Yeah. Just handling some things right now.,Sudah. Cuman lg ada urusan dikit.
+TDN1-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDN1-3]",Are you home? I can swing by your place to help.,"Kamu di rumah? Aku bisa mampir, nih."
+TDN1-3,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [ROD1-1]","No, its fine. I’m at work. The grind doesn’t stop.","Gausah. Aku di tempat kerja, gada makan yg gratis."
+TDP1-1,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDP1-2]",I’m on the grind right now. I’ll see about that later.,"Lg kerja, liat nanti aja."
+TDP1-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP1-3]",Dmi the SUN is gonna explode!?!?!?!,"Dmi, MATAHARI bakal meledak, lho!?!?!?!"
+TDP1-3,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [ROD1-1]","Yeah, and my account is gonna overdraft.","Iya, tp aku masih butuh makan."
+ROD1-1,"Sc: Rob, msc: SupernovaAlt, sfx: Rob_Short, Next: [D1D-1]",Dmi!,Dmi!
+D1D-1,"No Sc, msc: SupernovaAlt, sfx: PhoneHangUp, Next: [DD1-1]",I jump from my seat and slam my phone onto the side of the counter.,Aku terlompat dari kursi dan membanting HP ke meja sisi kasir.
+DD1-1,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-2]",I wasn’t on my phone!,Aku enggak main HP!
+D1D-2,"No Sc, msc: SupernovaAlt, sfx: RobHuff2, Next: [ROD1-2]",Rob huffs.,Rob mendengus.
+ROD1-2,"Sc: Rob, msc: SupernovaAlt, sfx: ROB2, Next: [FOD1-1]","I’m not your mother. I’m heading out, but I’m gonna leave Flubber with you.","Emang aku ibumu? Aku ada urusan dulu. Jaga Flubber, ya."
+FOD1-1,"No Sc, msc: SupernovaAlt, sfx: FLUBBER1, Next: [DD1-2]",Flubber meows,Flubber mengeong.
+DD1-2,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [ROD1-3]","Come on, Rob. What am I? A cat-sitter? and on company time?","Ayolah, Rob. Kenapa aku harus jaga kucing pas lagi kerja?"
+ROD1-3,"Sc: Rob, msc: SupernovaAlt, sfx: ROB3, Next: [DD1-3]","Well, I’ll dock your pay if you don’t!","Kalau enggak, gajimu kupotong!"
+DD1-3,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [ROD1-4]",Don’t you do that already?,Emang sebelumnya enggak pernah dipotong?
+ROD1-4,"Sc: Rob, msc: SupernovaAlt, no sfx, Next: [DD1-4]",...,…
+DD1-4,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [ROD1-5]",...,…
+ROD1-5,"Sc: Rob, msc: SupernovaAlt, sfx: Rob_Short, Next: [ROD1-6]",...anyways.,… Balik lagi ke poin utamanya.
+ROD1-6,"Sc: Rob, msc: SupernovaAlt, sfx: ROB3, Next: [ROD1-7]","I gotta help my mom pack, and Flubber likes to play in boxes.",Aku harus bantu ibuku berkemas dan Flubber juga suka main kardus.
+ROD1-7,"Sc: Rob, msc: SupernovaAlt, sfx: ROB2, Next: [FD1-1]","Besides, she likes you anyway!","Lagian, dia kan sayang kamu!"
+FD1-1,"Sc: Flubber, msc: SupernovaAlt, sfx: FLUBBER2, Next: [ROD1-8]",Meow,Meong
+ROD1-8,"Sc: Rob, msc: SupernovaAlt, sfx: Rob_Short, Next: [DD1-5]",See?,"Tuh, kan?"
+DD1-5,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [ROD1-9]",Fine...,"Iya, deh…"
+ROD1-9,"Sc: Rob, msc: SupernovaAlt, sfx: ROB1, Next: [ROD1-10]",Thanks! Thats why I always tell people we need more Dmis at Cosmic Fuel!,Makasih! Inilah kenapa aku butuh lebih banyak Dmi kerja di Bensin Kosmik!
+ROD1-10,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [D1D-3]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+D1D-3,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-4]","Ugh, Rob’s always piling stuff on me like this.","Ugh, lagi-lagi Rob nambahin kerjaan."
+D1D-4,"No Sc, msc: SupernovaAlt, no sfx, Next: [CalderEnter]",I stare at my phone. I shouldn’t leave Cassie hanging…,Aku kembali menatap layar HP. Sebaiknya aku tidak mengabaikan Cassie terlalu lama…
+CalderEnter,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [D1D-5]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+D1D-5,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-6]",Cassiopeia’s got to wait.,"Sayangnya, Cassiopeia harus menunggu lebih lama lagi."
+D1D-6,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-6]",The customer before me nods her head to the beat coming from her headphones. He sizes up the shelves. Almost looks like he has the intention of cleaning out our stock.,Pengunjung dihadapanku mengangguk-anggukkan kepala mengikuti irama musik dari headphone-nya. Ia mengamati rak seolah ingin memborong apa yang ada.
+DD1-6,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CAD-1]","Uh, do you need anything?","Uh, apa Anda butuh sesuatu?"
+CAD-1,"Sc: Calder, msc: SupernovaAlt, sfx: Calder_Short, Next: [D1D-7]",What!?,Apa!?
+D1D-7,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-7]",What type of music is that? R&B? Retro R&B?,Musik apa yang didengarnya? R&B? Atau versi retronya?
+DD1-7,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CAD-2]",DO YOU NEED ANYTHING?,APA ANDA BUTUH SESUATU?
+CAD-2,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER2, Next: [DD1-8]",DO I WHAT? I’M NOT GOOD AT READING LIPS!,"HAH, APA? AKU ENGGAK BISA BACA BIBIR!"
+DD1-8,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CAD-3]",TURN IT DOWN!,KECILIN VOLUMENYA!
+CAD-3,"Sc: Calder, msc: SupernovaAlt, sfx: Calder_Short, Next: [D1D-8]",Oh!,Oh!
+D1D-8,"No Sc, msc: SupernovaAlt, no sfx, Next: [CAD-4]",She adjusts the volume of her headphones.,Pengunjung itu mengubah volume headphone-nya.
+CAD-4,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [CAD-5]","Sorry, I sometimes forget to just turn off the music.","Maaf, kadang aku lupa matiin lagunya."
+CAD-5,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER3, Next: [DD1-9a,DD1-11a]",Do you have a Doomsday sale going on?,Apa lagi ada diskon kiamat?
+CAD-5-Option-1,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER3, Next: [DD1-9a,DD1-11a]",Doomsday Sale?,Diskon kiamat?
+CAD-5-Option-2,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER3, Next: [DD1-9a,DD1-11a]","Sure, if you just take it.","Tentu, jika Anda membelinya."
+DD1-9a,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-9b]",Doomsday Sale?,Diskon kiamat?
+DD1-9b,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CAD-6]",We’re supposed to have one?,Anda mengharapkan itu dari kami?
+CAD-6,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER2, Next: [D1D-9]","Well, why not? I looked it up on Froogle.",Kenapa enggak? Aku udah searching di Froogle.
+D1D-9,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-10]",I sigh. She’s one of those customers.,Aku mendesah. Orang ini adalah tipe pengunjung yang seperti itu.
+DD1-10,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CAD-9]","Sorry, there are no Doomsday promotions going on. If you cash in with your Cosmic membership that’ll take a few luncos off.","Maaf, kami tidak mengadakan promosi kiamat untuk saat ini. Tapi jika Anda membayar dengan membership Kosmik, Anda bisa menghemat beberapa lunco."
+DD1-11a,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-11b]","Sure, if you just take it.","Tentu, jika Anda membelinya."
+DD1-11b,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-10]",It’ll be 100% off then.,Kami akan memberikan diskon 100%.
+D1D-10,"No Sc, msc: SupernovaAlt, no sfx, Next: [CAD-7]",Calder’s eyes widen.,Mata Calder terbeliak.
+CAD-7,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [D1D-11]",Really? I can just take it?,"Serius? Aku ambil aja, nih?"
+D1D-11,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-12]",Excitement spreads across his face.,Senyum lebar mekar di wajahnya.
+DD1-12,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-12]",No.,Tidak.
+D1D-12,"No Sc, msc: SupernovaAlt, no sfx, Next: [CAD-8]",Her smile fades.,Senyumnya memudar.
+CAD-8,"Sc: Calder, msc: SupernovaAlt, sfx: Calder_Short, Next: [D1D-13]",Aww man.,Yah…
+D1D-13,"No Sc, msc: SupernovaAlt, sfx: Calder_Grunt3, Next: [CAD-9]",He huffs.,Ia mendengus.
+CAD-9,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [DD1-13]","Alright then, can I put 400 Luncos on pump 2, and what type of fizzy drinks do you have? You’ve gotta have a 2-for-1 deal here.","Baiklah, aku mau 400 lunco buat pompa 2. Ada minuman bersoda apa saja di sini? Kalian punya promosi beli 2 gratis 1, kan?"
+DD1-13,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CalderShopChoice]","Hold on, I think I have something in mind.","Sebentar, mungkin kami memiliki sesuatu."
+CalderShopChoice,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]",Select an item in the shop,Pilih item di toko.
+CalderShopChoice-Option-1,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]",,
+CalderShopChoice-Option-2,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]CalderShopChoice-Option-2",,
+TDP2-1,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-2]",Her eyes light up from the soda in my hand.,Matanya berbinar melihat soda di tanganku.
+TDP2-2,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [TDP2-3]",You guys carry Deia Deia Soda!? I have a coupon for those!,Kalian punya Soda Deia Deia!? Aku punya kuponnya!
+TDP2-3,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-4]",He pulls out a comically large coupon book and flips through the pages. She passes a coupon with a picture of Deia Deia Soda.,"Ia mengeluarkan buku kupon yang besarnya hampir terbilang konyol dan membolak-balikkan halamannya. Akhirnya, ia menemukan kupon bergambar Soda Deia Deia."
+TDP2-4,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP2-5a]",Huh. I guess you do. I’ll ring you up.,"Oh, beneran. Akan saya hitung dulu."
+TDP2-5a,"No Sc, msc: SupernovaAlt, sfx: CashRegister, Next: [TDP2-5]",-register chimes-,(Mesin kasir berdenting)
+TDP2-5,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER3, Next: [TDP2-6a]",Thanks!,Makasih!
+TDP2-6a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [TDP2-6]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+TDP2-6,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-14a]",The candle-headed alien makes his way out of the gas station. I catch a glimpse of a snazzy-looking ship outside. She’s got good taste.,"Si alien berkepala lilin beranjak dari pom bensin. Sekilas, aku melihat kapal yang keren. Ternyata seleranya bagus juga."
+D1D-14a,"No Sc, msc: SupernovaAlt, sfx: FLUBBER1, Next: [D1D-14]",Flubber meows,Flubber mengeong.
+TDN2-1,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [TDN2-2]","Uh, this isn’t what I was really looking for.","Uh, ini bukan benda yang kucari."
+TDN2-2,"Sc: Calder, msc: SupernovaAlt, sfx: CALDER3, Next: [TDN2-3]",I’ve gotta go! I almost forgot there is a sale on 5D glasses on Uranus!,Aku harus pergi! Hampir kelupaan di Uranus ada kacamata 5D lagi diskon!
+TDN2-3,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [D1D-14]",He bolts out of the gas station.,Ia beranjak lari dari pom bensin.
+D1D-14,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-15]","Flubber stares, unblinking.",Flubber terus menatap tak berkedip.
+D1D-15,"No Sc, msc: SupernovaAlt, no sfx, Next: [ZD1a]",She usually does that when she’s happy!,Ia selalu melakukan itu ketika sedang senang!
+ZD1a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [D1D-16]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+D1D-16,"No Sc, msc: SupernovaAlt, no sfx, Next: [ZD1]",The cloudy person who enters the gas station yawns loudly. Her badge twinkles under the industrial lights.,Pengunjung yang memasuki pom bensin terlihat suram dan menguap lebar. Lencananya berkilau di bawah cahaya lampu.
+ZD1,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_SLEEPY1, Next: [ZD1b]",I’m starting a new job outside of the solar system. Do you have Zolkan Coffee perchance?,Aku baru mulai kerjaan baru di luar Tata Surya. Apa di sini ada Kopi Zolkan?
+ZD1b,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]",Select an item in the shop,Pilih item di toko.
+ZD1b-Option-1,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]",,
+ZD1b-Option-2,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]ZD1b-Option-2",,
+TDP3-1,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_SLEEPY2, Next: [TDP3-2]","Oh, my stars! Thank you!","Oh, demi bintang-bintang! Terima kasih!"
+TDP3-2,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-3]","Before the drink sits for more than a nanosecond, it takes a long sip. I don’t think I’ve ever seen anyone down hot coffee that fast before…","Seakan tidak ingin menghamburkan setiap nanodetik, ia segera menyesapnya. Rasanya aku belum pernah melihat ada yang meneguk kopi panas secepat itu…"
+TDP3-3,"Sc: Zerua, msc: SupernovaAlt, sfx: Zerua_Short, Next: [TDP3-4]","Ah, that's better.","Ah, baru mendingan."
+TDP3-4,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-5]",I eye their badge and rattle my brain for a topic of conversation.,Aku memperhatikan lencananya dan memutar otak untuk memulai percakapan.
+TDP3-5,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP3-6]",Are you a clouditech? I think I’ve seen a badge like that before.,"Rasanya saya pernah melihat lencana itu, apa Anda clouditech?"
+TDP3-6,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-7]",It lets out a big smile. It's as if they’ve been waiting for anyone to ask them all day.,Ia tersenyum lebar seakan telah menunggu pertanyaan itu.
+TDP3-7,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_AWAKE2, Next: [TDP3-8]",Yes! I’m starting a new job architecting artificial clouds! I’ve been looking for a job forever.,Benar! Aku memulai pekerjaan baru sebagai perancang awan buatan! Akhirnya aku dapat kerjaan setelah banyak ngelamar.
+TDP3-8,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-9]",She waves her finger above her to-go cup. A mini cloud forms above their cup. Bits of snow sprinkle down. She smiles proudly.,Ia mengayunkan jari di atas cangkir kertasnya dan terbentuklah awan kecil. Sedikit salju turun ke cangkirnya dan ia pun tersenyum bangga.
+TDP3-9,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-10]",I smile too.,Aku jadi ikut tersenyum.
+TDP3-10,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP3-11]",I hope your first day is all you want it to be.,Semoga hari pertama Anda lancar.
+TDP3-11,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_AWAKE1,CashRegister, Next: [TDP3-11b]", Thank you! Please stay safe leaving the solar system soon! Tallyho!," Terima kasih! Kamu juga hati-hati dan segera pergi dari Tata Surya, ya! Dadah!"
+TDP3-11b,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [D1D-17a]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+TDN3-1,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_SLEEPY1, Next: [TDN3-2]",This isn’t quite what I’m looking for…,Bukan ini yang kucari…
+TDN3-2,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDN3-3]","They pull out their phone and notice the time. It seems to wake her up a little, but not much.","Ia mengeluarkan HP dan menyadari waktu saat ini. Kelihatannya itu membuatnya lebih melek, walau sedikit."
+TDN3-3,"Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_AWAKE3, Next: [TDN3-4]","Oh! Look at the time. I’ll just figure out a way to stay up when I get there! Tallyho, gas station employee!","Oh, sudah jam segini! Aku akal-akalin aja deh biar tetep melek. Dadah, petugas pom bensin!"
+TDN3-4,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDN3-4b]", I have a nametag--, Saya punya nametag--
+TDN3-4b,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [D1D-17a]TDN3-4b",-door chimes and closes-,(Pintu berdenting dan tertutup)
+D1D-17a,"No Sc, msc: SupernovaAlt, sfx: FLUBBER2, Next: [D1D-17]",Flubber meows,Flubber mengeong.
+D1D-17,"No Sc, msc: SupernovaAlt, sfx: Flubber_Burp, Next: [D1D-18]",Flubber floats and burps. I smile and give her a pat on the head.,Flubber melayang dan sendawa. Aku tersenyum dan mengelus kepalanya.
+D1D-18,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-19]",She looks proud of herself.,Ia terlihat bangga pada dirinya sendiri.
+D1D-19,"No Sc, msc: SupernovaAlt, sfx: Boom_2, Next: [DD1-14]",I jump up from my seat as I hear a boom come from outside.,Aku terperanjat dari kursi begitu mendengar suara ledakan dari luar.
+DD1-14,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-1a]", What the hell--!?, Apa yang--!?
+8D-1a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [8D-1]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+8D-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-15]",Sup.,Hai.
+DD1-15,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-20]","Uh, sup? What was that?","Uh, hai? Ada apa barusan?"
+D1D-20,"No Sc, msc: SupernovaAlt, no sfx, Next: [8D-2]",He ignores me and his eyes- er...screen look up.,"Ia mengabaikanku dan mata- ah, maksudku layarnya menengadah."
+8D-2,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [DD1-16]",What was what?,Ada apa barusan?
+DD1-16,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-3]",The boom?,Maksudnya ledakan tadi?
+8D-3,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-17]",What boom?,Ledakan apa?
+DD1-17,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-18]",The-- okay.,Yang-- ya sudahlah.
+DD1-18,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-21]",Do you need something?,Apa yang Anda butuhkan?
+D1D-21,"No Sc, msc: SupernovaAlt, sfx: 80008_hum2, Next: [8D-4]",A low hum comes from his circuits. He’s thinking.,"Dengungan rendah keluar dari sirkuitnya, ia sedang berpikir."
+8D-4,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [D1D-22]",You sell any Arinator brand stuff here? That one made by that smoking cyborg from outta the solar system?,Ada barang merk Arinator? Yang dibuat oleh cyborg bohay dari luar Tata Surya itu.
+D1D-22,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-19]",I’ve heard of Arinator probably. Cassiopeia’s a big fan of singers. Though something was kind of funny about this guy’s desperation. ,Mungkin aku pernah mendengar Arinator karena Cassiopeia suka dengan para penyanyi. Entah kenapa rasanya sedikit lucu melihat pengunjung yang berusaha mati-matian ini. 
+DD1-19,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-5]","I mean, I can check to see what we got.","Yah, saya bisa memastikan dulu apa yang kami miliki."
+8D-5,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [8D-5b]",Sweet! I’ll also be putting 700 luncos on pump 2.,Mantap! Aku juga mau 700 lunco buat pompa 2.
+8D-5b,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",Select an item in the shop,Pilih item di toko.
+8D-5b-Option-1,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",,
+8D-5b-Option-2,"No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]8D-5b-Option-2",,
+TDP4-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [TDP4-5]",Yes! Arinator’s limited edition Mint choco paste? I thought this was sold out everywhere!,Wah! Pasta choco mint Arinator edisi terbatas? Kukira ini sudah habis terjual!
+TDP4-5,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP4-6]","I mean, it's mint chocolate toothpaste isn’t it?","Soalnya, yah. Tahu lah kalau itu pasta choco mint."
+TDP4-6,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP4-7]",I don’t think anyone is in a rush to buy that.,Tidak ada yang akan buru-buru untuk membeli itu.
+TDP4-7,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_2,CashRegister, Next: [TDP4-7b]",You just don’t understand the intricacies of something like this! Anything she endorses is a godsend!,Kamu hanya tidak mengerti betapa berharganya ini! Apa pun yang dia promosikan adalah anugerah!
+TDP4-7b,"No Sc, msc: SupernovaAlt, sfx: Door_Close,Door_Chime, Next: [TDP4-8]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+TDP4-8,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP4-9]",He wipes his face (screen?). Then blasts off with his bang of Arinator branded toothpaste in hand.,Ia mengusap wajah (layar?) dan meluncur pergi dengan pasta gigi merk Arinator di genggamannya.
+TDP4-9,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-24a]",Glad he found what he wanted.,Syukurlah ia menemukan apa yang dicarinya.
+TDN4-1,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [TDN4-2]",Bro.,Hei.
+TDN4-2,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [TDN4-3]", This is NOT Arinator. She only has her face on the cover of all her products dude., Ini BUKAN Arinator! Dia selalu pasang wajahnya di semua produknya!
+TDN4-3,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDN4-4]",His facial screen switches to a video of a cyborg woman performing a song on stage. Her fans are screaming their lungs out.,Layar ekspresinya berubah menjadi video cyborg wanita yang menyanyikan lagu di panggung dan para fans yang berteriak lantang.
+TDN4-4,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [TDN4-5]",See? You don’t recognize her?,"Nih, yang ini. Kamu enggak kenal?"
+TDN4-5,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDN4-6]","Oh, well...I don’t think I really know her stuff.","Oh, ya… saya tidak begitu mengenalnya."
+TDN4-6,"Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [TDN4-6b]",Fine...I’ll just get gas.,Ya sudahlah… aku beli bensin aja.
+TDN4-6b,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [TDN4-7]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+TDN4-7,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDN4-8]",I stare out the window and watch as 8008 picks up a gas pump and guzzles it straight from the nozzle. His screen shows a sad face with a tear. He then blasts off into space.,Aku memandang ke luar jendela. 8008 nosel pompa bensin dan langsung meneguknya. Layarnya berwajah sedih dengan setetes air mata sebelum meluncur ke luar angkasa.
+TDN4-8,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-24a]",Poor guy.,Kasihan sekali.
+D1D-24a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [D1D-24]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+D1D-24,"No Sc, msc: SupernovaAlt, no sfx, Next: [CRD1]",An old man enters the gas station. He seems to have some kind of air of caution around him. The way he whips his head around makes him look like he is expecting an attack at any moment.,Pria tua memasuki pom bensin. Ia terlihat sedang waspada. Kepalanya yang celingukan seolah sedang menunggu serangan yang akan datang kapan saja.
+CRD1,"Sc: Crust, msc: SupernovaAlt, sfx: Crust_Short, Next: [DD1-20]","Salutations, Martian.","Salam, warga Mars."
+DD1-20,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CRD2]","Uh, hello? Do you need something, sir?","Uh, halo? Apa Anda membutuhkan sesuatu?"
+CRD2,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [D1D-25]","Yes, I actually have a list here…","Iya, aku punya daftarnya…"
+D1D-25,"No Sc, msc: SupernovaAlt, no sfx, Next: [CRD3]",He pulls out a tiny holosheet and starts to read off of it.,Ia mengeluarkan kertas holografik kecil dan mulai membacanya.
+CRD3,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST3, Next: [DD1-21]","I’m looking for duct tape, five laser blasters, a medkit, a flaming katana--","Aku mencari lakban, lima senjata laser, kotak P3K, katana berapi--"
+DD1-21,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-26]","Sir, this is a gas station.","Maaf, tapi ini pom bensin."
+D1D-26,"No Sc, msc: SupernovaAlt, no sfx, Next: [CRD4]",He stares blankly at me.,Ia menatapku dengan pandangan kosong.
+CRD4,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [DD1-22]",...Can I at least get the katana?,…Apa setidaknya aku bisa beli katana?
+DD1-22,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-27]", What do you even need a Katana for?!, Kenapa Anda perlu katana?!
+D1D-27,"No Sc, msc: SupernovaAlt, sfx: Crust_Laugh, Next: [CRD5]",The man lets out a hearty laugh. He slaps his rocky chest. Pebbles fall off him.,Pria itu tertawa lantang sambil menepuk dadanya yang berbatu hingga kerikil berjatuhan.
+CRD5,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [CRD6]",Doomsday is in just three days! While you’re in here wasting away working MINIMUM wage!,Tiga hari lagi kiamat! Tapi kamu malah menghabiskan waktu bekerja untuk upah KECIL!
+CRD6,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [DD1-23]","I, Crust, from Mercury, will look at this burning ball of hell gas, and say…","Aku Crust, asal Merkurius. Aku akan terus memperhatikan bola api gas itu dan berkata…"
+DD1-23,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CRD7]",…,…
+CRD7,"Sc: Crust, msc: SupernovaAlt, sfx: Crust_Short, Next: [D1D-28]",No.,Tidak.
+D1D-28,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-24]",He smiles widely.,Ia tersenyum lebar.
+DD1-24,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CRD8]","Sir, I don’t think you will survive a supernova.",Saya rasa Anda tidak akan bertahan menghadapi supernova.
+CRD8,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [CRD9]","I will. Born from the crust of Mercury, I can survive anything.","Bisa, kok. Aku bisa bertahan menghadapi apa pun karena aku lahir dari kerak Merkurius."
+CRD9,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [D1D-29]",Besides didn’t you hear? The supernova is a cover-up by the intergalactic association--,"Lagian, apa kamu dengar? Supernova cuman berita pengalihan buatan Asosiasi Antar Galaksi--"
+D1D-29,"No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-25]","Oh, brother. ","Baiklah, cukup. "
+DD1-25,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CRD10]",How about this Crust? I can help you get something that can help you out in your…,"Bagaimana kalau begini, Saya akan membantu menyiapkan sesuatu untuk…"
+CRD10,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [DD1-26]",My supernova bunker.,Persediaan markas supernova-ku?
+DD1-26,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-27]",Your supernova bunker.,"Ya, persediaan markas supernova Anda!"
+DD1-27,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-27b]", Alright... a nonperishable snack will be good., Benar juga… bukankah lebih baik jika memiliki makanan tahan lama?
+DD1-27b,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]",Select an item in the shop,Pilih item di toko.
+DD1-27b-Option-1,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]",,
+DD1-27b-Option-2,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]DD1-27b-Option-2",,
+TDP5-1,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST3, Next: [TDP5-2]",Jerky! You’re thinking like a true survivor kid! This is great!,"Dendeng! Naluri bertahanmu hebat, ya! Ini bagus sekali!"
+TDP5-2,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP5-3]","Heh, thanks. I just remembered it from a TV show called Survivorz.","Heh, terima kasih. Saya ingat ini berkat acara TV Survivorz."
+TDP5-3,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-4]",Before you could even ring it up the man opens the bag and starts eating the jerky.,"Sebelum sempat dihitung kasir, pria itu membuka bungkusnya dan memakan dendeng tersebut."
+TDP5-4,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [TDP5-5]","Hm, you got somewhere to go kid? I can formally invite you to my bunker if ya want.","Hm, apa kamu sudah tahu mau evakuasi ke mana, Nak? Aku bisa mengajakmu ke markasku."
+TDP5-5,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP5-6]","Oh, nah. I’ll be here.","Oh, tidak perlu. Saya akan terus di sini."
+TDP5-6,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-7]",Crust chokes on a piece of jerky and coughs. He bumps his chest a few times.,Crust tersedak dendeng dan terbatuk hingga perlu menepuk-nepuk dadanya.
+TDP5-7,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [TDP5-8]",Why? Don’t you got someone special to go home to?,Kenapa? Apa kamu tidak punya seseorang yang bisa dianggap rumah?
+TDP5-8,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [TDP5-9]",I’d expect you young’uns to hightail it outta here.,Kukira anak-anak muda sudah akan lari terbirit-birit.
+TDP5-9,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-10]",A familiar face flashes in my mind. My normal bored expression cracks.,"Wajah seseorang yang kukenal terbesit dalam benakku, ekspresi biasaku yang terlihat bosan mulai goyah."
+TDP5-10,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP5-11]","She’ll be fine without me. Besides, I like to be kept busy.","Dia akan baik-baik saja tanpa saya. Lagi pula, saya lebih suka sibuk."
+TDP5-11,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-11b]",Crust doesn’t speak. I listen to his chewing. He rummages in his pocket to give me his luncos.,"Crust tidak mengatakan apa pun, sedangkan aku mendengarnya terus mengunyah. Ia pun merogoh sakunya untuk memberikanku lunco."
+TDP5-11b,"No Sc, msc: SupernovaAlt, sfx: CashRegister, Next: [TDP5-12]",-cash register chime-,(Mesin kasir berdenting)
+TDP5-12,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [TDP5-13]",Don’t be too sure about that kid. Don’t choose for others how important you are to them.,"Jangan terlalu yakin, Nak. Jangan seenaknya mengira perasaan orang itu."
+TDP5-13,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [TDP5-14]","I’m gonna be fine when things go down, but you won’t. Talk to who you’re thinking bout.","Aku akan baik-baik saja jika sesuatu terjadi, tapi kamu tidak. Coba bicara dengan orang yang kamu pikirkan itu."
+TDP5-14,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-15]",I don’t answer. It's a bit surprising I feel I am getting life advice from this apocalyptic junkie of some sort.,Aku tidak menjawab. Tidak ada yang menyangka kalau aku akan mendapatkan nasihat hidup dari semacam pecandu kiamat ini.
+TDP5-15,"No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-16]",He smiles and waves at me before leaving. I watch the small bits of rock fall to the ground.,Ia tersenyum dan melambaikan tangan sebelum pergi. Aku terus memperhatikan batu kecil dari tubuhnya yang jatuh ke lantai.
+TDP5-16,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-30a]",I’ll be cleaning that up.,Aku harus membersihkannya.
+TDN5-1,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [TDN5-2]","Sorry kid, but I don’t really think something like this is going to be much use in my bunker.","Maaf Nak, tapi aku tidak merasa ini akan berguna untuk markasku."
+TDN5-2,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST1, Next: [TDN5-3]",You sure you don’t have blasters in the back?,Kamu yakin kalian tidak punya senjata di gudang?
+TDN5-3,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDN5-4]","We’re still just a gas station, sir.","Maaf, tapi kami hanya pom bensin biasa."
+TDN5-4,"Sc: Crust, msc: SupernovaAlt, sfx: Crust_Short, Next: [TDN5-5]", Alright., Baiklah…
+TDN5-5,"Sc: Crust, msc: SupernovaAlt, sfx: CRUST2, Next: [D1D-30a]","Stay safe, kid. I gotta go prep my bunker some more.","Hati-hati ya, Nak. Aku akan pergi untuk menyiapkan markasku lagi."
+D1D-30a,"No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Close, Next: [D1D-30]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+D1D-30,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-31]",It's almost closing time…,Sudah hampir waktunya tutup…
+D1D-31,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-31b]",Flubber lounges in her usual spot. I smile and scratch under her chin.,Flubber rebahan di tempatnya yang biasa. Aku tersenyum dan menggaruk dagunya.
+D1D-31b,"No Sc, msc: SupernovaAlt, sfx: FLUBBER2, Next: [DD1-28]",Flubber Meows,Flubber mengeong.
+DD1-28,"Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-28b]",We had a good day didn’t we?,"Hari ini cukup memuaskan, ya?"
+DD1-28b,"No Sc, msc: SupernovaAlt, sfx: Text_1, Next: [D1D-32]",-phone chimes-,(HP berdering)
+D1D-32,"No Sc, msc: SupernovaAlt, no sfx, Next: [T2]",I facepalm as I remember I never messaged Cassiopeia back.,Aku menepuk jidat begitu ingat masih belum membalas pesan Cassiopeia.
+T2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Pocket_Swoosh_1, Next: [T3]",Dmi? Are u ghosting me?,Dmi? Aku dikacangin nih?
+T3,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP6-1,TDN6-1]",Not cool! im worried about u!,Jahat ih! Pdhl aku khawatir!
+T3-Option-1,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP6-1,TDN6-1]","Sorry, got caught up.","Maaf, aku sibuk."
+T3-Option-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP6-1,TDN6-1]",You don’t need to keep messaging.,Kamu tidak perlu menghubungiku terus-terusan.
+TDP6-1,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDP6-2]",Lot more customers on this route than i thought we would ,Di rute ini msh ada lebih banyak pengunjung dr yg kukira 
+TDP6-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP6-3]",its a good time to roadtrip when the solar system is getting wiped ya know??,Emg ada yg jalan2 waktu Tata Surya mw meledak??
+TDP6-3,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDP6-4]",More like I met a rock dude named Crust who wanted to buy a katana to defend himself from the imminent supernova. ,Aku ketemu org batu yg namanya Crust. Dia mw beli katana buat jaga diri dr supernova nanti 
+TDP6-4,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDP6-5]",What? Stop lying to me. xD Ur job isn’t that interesting,Seriusan? Bkn ngibul? Kerjaanmu ga mungkin semenarik itu xD
+TDP6-5,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDP6-6]","U know how Mars is, we’re weirdo central.","Taulah gmn Mars, ini pusat org aneh"
+TDP6-6,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [D1D-33]",thats true. U live there,"Bener sih, kamu aja tinggal di sana"
+D1D-33,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-34]",I chuckle. That was a good one actually.,"Aku terkekeh, kenyataan itu tidak bisa dielak."
+D1D-34,"No Sc, msc: SupernovaAlt, no sfx, Next: [T4]",We chat with each other and for a second it feels like the world isn’t coming to an end soon.,"Saat mengobrol bersama, aku tidak lagi ingat dengan dunia yang hampir berakhir ini."
+TDN6-1,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDN6-2]",I’ll just get back to u when i get back to u.,"Mbb, baru senggang"
+TDN6-2,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [TDN6-3]","Ouch, remind me to never be worried about u again :/","Auw, hrsnya aku gawsa khawatir :/"
+TDN6-3,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [TDN6-4]","Nah, I didn’t mean it like that. I’m just busy.","Maaf, sampe barusan aku sibuk"
+TDN6-4,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [D1D-35]","Yeah, yeah I get it.","Iya, iya. Ngerti kok"
+D1D-35,"No Sc, msc: SupernovaAlt, no sfx, Next: [T4]",I could’ve handled that a bit better.,Sepertinya ucapanku terlalu kasar.
+T4,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [T5]",Are u sure ur not calling off tomorrow? I know the money isn’t good enough at Cosmic Fuel where u need to work a day before Doomsday. :/,Yakin bsk gmw libur aja? Gaji di Bensin Kosmik kn ga segitunya bagus sampe kamu perlu kerja sampe sehari sblm kiamat :/
+T5,"Sc: Dmi, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [T6]",Maybe I LIKE working for a megacorp.,Mungkin aja aku SUKA jd budak korporat
+T6,"Sc: Cassiopeia, on phone, msc: SupernovaAlt, sfx: Text_4_vibrate, Next: [T7]",shut up,Bacot
+T7,"Sc: Dmi, on phone, msc: SupernovaAlt, no sfx, Next: [D1D-36]",ok ,Emg 
+D1D-36,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-37]",I should clock out for the day,Sudah waktunya aku selesai bekerja.
+D1D-37,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-38]",I say goodbye to Flubber. She for some reason is a lot better at closing than I am. I never know what she does when we leave her alone.,Aku mengucapkan selamat tinggal kepada Flubber. Entah bagaimana bisa ia lebih jago menutup toko daripada aku. Tidak ada yang tahu apa yang dilakukan kucing itu saat ditinggalkan sendirian.
+D1D-38,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-39]",I don’t really know why I’m coming back in tomorrow. I should be packing with Cassie. We may not be able to do anything fancy like a space jump but…,"Aku tidak tahu kenapa aku akan kerja lagi besok. Seharusnya aku berkemas bersama Cassie. Kami memang tidak akan mampu untuk membayar lompatan antariksa, tapi..."
+D1D-39,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-40]",…,…
+D1D-40,"No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-40b]",I need some sleep for tomorrow.,Aku perlu tidur untuk hari ini.
+D1D-40b,"No Sc, msc: SupernovaAlt, sfx: Door_Open,Door_Chime,Door_Close, Next: [Day2Transition]",-door opens and closes with a chime-,(Pintu terbuka dan tertutup dengan suara dentingan)
+Day2Transition,"No Sc, msc: SupernovaAlt, no sfx, Next: [D2D-1]",DAY 2,HARI KE-2
+D2D-1,"No Sc, msc: Supernova, no sfx, Next: [ROD2-1]",I jab my fingers against the screen of my phone the little avatar hops up and down in an effort to dodge the man-eating kale.,Aku menekan layar HP dan karakter kecil itu melompat atau menunduk untuk menghindari kubis pemakan manusia.
+ROD2-1,"Sc: Rob, msc: Supernova, sfx: Rob_Short, Next: [D2D-2]",Dmi!,Dmi!
+D2D-2,"No Sc, msc: Supernova, no sfx, Next: [DD2-1]",I yelp and nearly drop my phone. I catch it just before it slips out of my fingers and glare at the slime man in front of me.,Aku berteriak terkejut dan nyaris menjatuhkan HP. Untungnya aku berhasil menangkapnya sebelum HP-ku tergelincir dari jariku. Aku pun melotot ke arah manusia slime di depanku.
+DD2-1,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-3]",You’ve seriously got to stop doing that!,Tolong berhenti mengejutkanku!
+D2D-3,"No Sc, msc: Supernova, sfx: Rob_Laugh, Next: [ROD2-2]",Rob bursts into laughter.,Rob tertawa terbahak-bahak.
+ROD2-2,"Sc: Rob, msc: Supernova, sfx: ROB3, Next: [DD2-2]",It’s just too funny. Look you got goosebumps on your goosebumps! ,"Lagian ngakak, sih. Liat tuh, bulu kudukmu berdiri semua! "
+DD2-2,"Sc: Dmi, msc: Supernova, no sfx, Next: [ROD2-3]",whatever how’s packing? ,"Terserah, deh. Gimana kemas-kemasnya? "
+ROD2-3,"Sc: Rob, msc: Supernova, sfx: ROB2, Next: [D2D-4]",We’ll be done by tonight. Then we leave tomorrow morning in time for our space jump outta here.,Akan beres malam ini. Setelah itu kami akan pergi besok pagi agar sempat melakukan lompatan antariksa untuk evakuasi.
+D2D-4,"No Sc, msc: Supernova, no sfx, Next: [D2D-5]",Ah a space jump. That's everyone’s ticket outta the solar system to go wherever they’re going next. ,"Ah, lompatan antariksa. Itu adalah cara agar siapa pun bisa kabur dari Tata Surya menuju entah ke mana tujuan mereka. "
+D2D-5,"No Sc, msc: Supernova, no sfx, Next: [D2D-6]",They are ways outta here without one but the trip is pretty grueling.,"Sebenarnya ada cara lain, tapi perjalanannya akan sangat melelahkan."
+D2D-6,"No Sc, msc: Supernova, no sfx, Next: [ROD2-4]",Not to mention the luncos to afford a space jump is insane.,"Selain itu, lunco yang dibutuhkan juga amat sangat mahal."
+ROD2-4,"Sc: Rob, msc: Supernova, sfx: ROB1, Next: [ROD2-5]",I’ll come pick up Flubber at the end of the day.,Aku akan menjemput Flubber saat toko tutup.
+ROD2-5,"Sc: Rob, msc: Supernova, sfx: ROB3, Next: [D2D-7]",Also smile a little today! Use that slogan of ours to brighten their days. ,Lalu jangan lupa senyumnya! Pake slogan kita untuk menghibur pengunjung. 
+D2D-7,"No Sc, msc: Supernova, no sfx, Next: [DD2-3]",Ugh.,Ugh.
+DD2-3,"Sc: Dmi, msc: Supernova, no sfx, Next: [ROD2-6]",I’ll try.,Akan kucoba.
+ROD2-6,"Sc: Rob, msc: Supernova, sfx: ROB2, Next: [FD2-1]",Great! I’ll see you later. Be nice to Flubber!,Bagus! Sampai nanti. Baik-baik ya sama Flubber!
+FD2-1,"Sc: Flubber, msc: Supernova, sfx: FLUBBER1, Next: [DD2-4]",Mreoww…,Meooong…
+DD2-4,"Sc: Dmi, msc: Supernova, no sfx, Next: [DD2-4b]",We’re pals aren’t we Flubber? ,"Kita bestie kan, Flubber? "
+DD2-4b,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Close, Next: [D2D-8]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+D2D-8,"No Sc, msc: Supernova, no sfx, Next: [D2D-9a]",Flubber gives me a slow blink.,Flubber menatapku dan mengedipkan mata dengan perlahan.
+D2D-9a,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Open, Next: [D2D-9]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+D2D-9,"No Sc, msc: Supernova, no sfx, Next: [DD2-5]",A two-headed beastman enters. They don’t say a word. I yawn and start spouting the “Cosmic Fuel welcome”.,"Manusia serigala berkepala dua memasuki toko. Mereka tidak mengatakan apa pun. Setelah menguap, aku menyambut mereka."
+DD2-5,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-10]",Welcome to Cosmic Fuel. Fill to your heart’s content that’s the Cosmic Fuel way. ,"Selamat datang di Bensin Kosmik, silahkan belanja hingga puas. "
+D2D-10,"No Sc, msc: Supernova, no sfx, Next: [D2D-11]",The beastmen frantically grab items and stuff them into a bag.,Mereka buru-buru mengambil barang dan memasukkannya ke dalam kantung belanja hingga puas.
+D2D-11,"No Sc, msc: Supernova, no sfx, Next: [DD2-6]",Well that’s not at all what I meant. ,"Yah, maksudku tidak segitunya juga, sih. "
+DD2-6,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-12]",You guys using cash or credit?,Apa Anda akan menggunakan cash atau kredit?
+D2D-12,"No Sc, msc: Supernova, no sfx, Next: [ROM1]",The more dimwitted looking one whispers to the sharper one and they stalk forward.,Manusia serigala yang terlihat lugu membisikkan sesuatu kepada manusia serigala yang terlihat lebih pintar ketika berjalan mendekat.
+ROM1,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [D2D-13]",This is a stick up! Open the register!,Lihat tongkat ini? Sekarang buka laci kasirnya!
+D2D-13,"No Sc, msc: Supernova, no sfx, Next: [REM1]",The dimwitted-looking beast-man pulls out a stick from his pocket and points at me.,Manusia serigala yang terlihat lugu mengeluarkan tongkat dari saku dan mengarahkannya kepadaku.
+REM1,"Sc: Remus, msc: Supernova, sfx: REMUS1, Next: [ROM2]",and give us those Saturn dogs behind you!,Dan serahkan Saturn dog yang ada di belakangmu!
+ROM2,"Sc: Romulus, msc: Supernova, sfx: Romulus_Short, Next: [D2D-14]",Yeah! And--,Iya! Lalu--
+D2D-14,"No Sc, msc: Supernova, no sfx, Next: [REM2]",The sharp-eyed beastman glares at his brother.,Manusia serigala yang tatapannya tajam melotot pada saudaranya.
+REM2,"Sc: Remus, msc: Supernova, sfx: REMUS2, Next: [ROM3]",Sorry Romulus stickups make me hungry. ,"Maaf, ide Romulus membuatku lapar. "
+ROM3,"Sc: Romulus, msc: Supernova, sfx: ROMULUS3, Next: [REM3]",You’re worse than a chihuahua. When I said we’re doing a stickup I didn’t mean to put a literal stickup! ,"Kamu lebih parah daripada chihuahua. Aku memang bilang kita bakal ngejarah, tapi kamu enggak perlu lakuin itu! "
+REM3,"Sc: Remus, msc: Supernova, sfx: REMUS2, Next: [ROM4]",Oh did I mess up again? Are we not getting Saturn dogs? ,"Oh, apa aku mengacaukannya? Apa kita tidak akan makan Saturn dog? "
+ROM4,"Sc: Romulus, msc: Supernova, sfx: ROMULUS2, Next: [D2D-15]",No you didn’t mess up Remus. Let’s get you that hot dog. No no let’s get you two of them. How about that? ,"Enggak, kamu enggak ngacauin. Kamu boleh makan hotdog. Bahkan boleh deh makan dua, gimana? "
+D2D-15,"No Sc, msc: Supernova, sfx: Remus_Howl, Next: [D2D-15b]",Remus howls with excitement.,Remus melolong gembira.
+D2D-15b,"No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]",Select an item in the shop,Pilih item di toko.
+D2D-15b-Option-1,"No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]",,
+D2D-15b-Option-2,"No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]D2D-15b-Option-2",,
+TDP7-1,"No Sc, msc: Supernova, no sfx, Next: [TDP7-2]",I slide two Saturn dogs to the pair. Remus helps himself and scarfs it down.,Aku memberikan dua Saturn dog kepada mereka. Remus segera melahapnya dengan rakus.
+TDP7-2,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [TDP7-3]",and now the register--,"Sekarang, laci kasirnya--"
+TDP7-3,"Sc: Remus, msc: Supernova, sfx: REMUS1, Next: [TDP7-4]",Rom… they were so nice and gave us a Saturn dog. Do we have to?,Rom… dia begitu baik pada kita dan bahkan memberikan Saturn dog. Apa harus?
+TDP7-4,"Sc: Romulus, msc: Supernova, sfx: ROMULUS3, Next: [TDP7-5]",Of course! We came all this way just to--,Tentu saja! Kita sudah jauh-jauh datang hanya untuk--
+TDP7-5,"Sc: Remus, msc: Supernova, sfx: Remus_Short, Next: [TDP7-6]",To steal?,Mencuri?
+TDP7-6,"No Sc, msc: Supernova, no sfx, Next: [TDP7-7]",Romulus stutters in shock.,Romulus tercengang.
+TDP7-7,"No Sc, msc: Supernova, no sfx, Next: [TDP7-8]",Remus doesn’t look too different from a kicked puppy.,Remus juga terlihat seperti anak anjing yang baru saja ditendang.
+TDP7-8,"Sc: Remus, msc: Supernova, sfx: REMUS1, Next: [TDP7-9]",Mom always told us stealing was bad. We should pay!,Ibu selalu bilang kalau mencuri itu tidak baik. Kita harus bayar!
+TDP7-9,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP7-10]",I don’t really care either way to be honest… ,Sebenarnya saya tidak terlalu peduli dengan apa yang Anda berdua lakukan… 
+TDP7-10,"No Sc, msc: Supernova, no sfx, Next: [TDP7-11]",The two ignore me. I can practically hear the galaxy’s smallest violin play for the two.,Mereka mengabaikanku. Rasanya aku dipaksa menonton sinetron galaksi.
+TDP7-11,"Sc: Romulus, msc: Supernova, sfx: ROMULUS2, Next: [TDP7-12]",You’re right Rem… I can’t do it. I wanted to be the tough guy so bad… everything is going to get blown to smithereens!,"Kamu benar, Rem… Aku enggak bisa lakuin ini. Aku ingin jadi orang yang lebih kuat… karena semuanya akan meledak hancur!"
+TDP7-12,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [TDP7-13]",I just wanted to do something cool!,Aku hanya mau lakuin sesuatu yang keren!
+TDP7-13,"Sc: Romulus, msc: Supernova, sfx: ROMULUS3, Next: [TDP7-14]",Will you ever forgive me?,"Maafin aku, ya?"
+TDP7-14,"Sc: Remus, msc: Supernova, sfx: REMUS2, Next: [TDP7-15]",You’re the best big brother ever! Of course I will! ,"Kamu kakak yang terbaik, tentu saja akan kumaafkan! "
+TDP7-15,"No Sc, msc: Supernova, no sfx, Next: [TDP7-16]",The two beastmen burst into tears.,Kedua manusia serigala itu mulai menangis tersedu-sedu.
+TDP7-16,"No Sc, msc: Supernova, no sfx, Next: [TDP7-17]",I just stand there watching the two go through a whole movie scene together.,"Aku hanya bisa berdiri, terpaksa menonton sinetron sampai tamat."
+TDP7-17,"No Sc, msc: Supernova, no sfx, Next: [TDP7-18]",Romulus sets a pile of luncos on the counter.,Romulus menaruh tumpukan lunco di meja kasir.
+TDP7-18,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [D2D-16a]",Keep the change. We’re sorry for bothering you.,"Simpan saja kembaliannya, maaf telah mengganggumu."
+TDN7-1,"No Sc, msc: Supernova, no sfx, Next: [TDN7-2]",Romulus grits his teeth.,Romulus menggertakkan gigi.
+TDN7-2,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [TDN7-3]",Is this some kind of joke? We asked for Saturn dogs!,Kamu bercanda? Kami minta Saturn dog!
+TDN7-3,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN7-4]",I know.,Saya tahu.
+TDN7-4,"Sc: Romulus, msc: Supernova, sfx: ROMULUS2, Next: [TDN7-5]",Why give us this?,Lalu kenapa ngasih ini?
+TDN7-5,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN7-6]",You’re already helping yourself to the shelves. Why don’t you get them yourself?,"Kalian kan sudah seenaknya ambil barang di rak, kenapa tidak sekalian saja ambil sendiri?"
+TDN7-6,"Sc: Romulus, msc: Supernova, sfx: Romulus_Short, Next: [TDN7-7]",I--,AKU--
+TDN7-7,"Sc: Remus, msc: Supernova, sfx: REMUS1, Next: [TDN7-8]",Aww…I think they’re mad at us Rom. ,"Oh… Rom, kayaknya dia marah pada kita. "
+TDN7-8,"Sc: Remus, msc: Supernova, sfx: REMUS2, Next: [TDN7-9]",I told you we shouldn’t steal.,"Aku sudah bilang, kita tidak boleh mencuri."
+TDN7-9,"Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [TDN7-10]",STOP TAKING ME AS A FOOL REM!,KAMU PIKIR AKU BODOH?
+TDN7-10,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN7-11]",Hey! He’s not taking you as a fool.,Hey! Itu tidak benar!
+TDN7-11,"No Sc, msc: Supernova, no sfx, Next: [TDN7-12]",Romulus’ eyes shine with a hopeful look.,Mata Romulus berbinar penuh harapan.
+TDN7-12,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN7-13]",I’m taking you as a fool too.,Karena saya JUGA pikir Anda bodoh.
+TDN7-13,"No Sc, msc: Supernova, no sfx, Next: [TDN7-14]",Romulus drops the bag on the ground. He looks close to tears.,Romulus menjatuhkan tasnya ke lantai dengan mata berkaca-kaca hampir menangis.
+TDN7-14,"Sc: Romulus, msc: Supernova, sfx: ROMULUS2, Next: [D2D-16a]",Remus…lets just go.,Remus… sudahlah.
+D2D-16a,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Close, Next: [D2D-16]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+D2D-16,"No Sc, msc: Supernova, no sfx, Next: [T8]",I reach for my phone. Cassiopeia’s not going to believe this.,Aku mengambil HP-ku. Cassiopeia pasti tidak akan percaya dengan kejadian ini.
+T8,"Sc: Dmi, on phone, msc: Supernova, sfx: Pocket_Swoosh_2, Next: [T9]",Sorry i didnt get to you yet. I was getting robbed.,"Maaf baru ngabarin, aku habis dirampok."
+T9,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [T10]",WHAT?,HAH?
+T10,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [T11]",chill they didnt take anything. They were two beastmen but they didnt seem to be following their own plan. ,"Santuy, akhirnya gajadi. Td ada manusia serigala berkepala dua, kyknya mereka ga bener2 rencanain perampokan tadi. "
+T11,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [T12]",I didnt care much it's not like it's my gas station. i Think i hurt their feelings.,"Aku sih bomat, toh bukan tokoku. Tp kyknya aku nyakitin perasaan mereka."
+T12,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [T13]",u could say they were all bark and no bite.,Bisa dibilang mereka kyk tong kosong yg nyaring bunyinya.
+T13,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [T14]",did u just…ugh.,Kamu… argh.
+T14,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [T15]",im going to ignore that for my own sanity.,Yg tadi gakan kuanggap demi kewarasanku.
+T15,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [D2D-17]",like holy stars im so glad nothing happened. I dont even understand why u have to work there so close to doomsday…,"Gila, untung gajadi knp2. Aku bahkan ga ngerti knp kamu msh kerja menjelang kiamat…"
+D2D-17,"No Sc, msc: Supernova, no sfx, Next: [D2D-18]",I could tell where she was getting at. A day before the supernova and I still had no means of getting any tickets for a space jump.,Aku mulai mengerti perasaannya. Hanya ada sehari sebelum supernova dan aku tidak akan mungkin bisa mendapatkan tiket lompatan antariksa.
+D2D-18,"No Sc, msc: Supernova, no sfx, Next: [T16]",I drum my fingers on the desk and think of my next reply.,Aku mengetukkan jari ke meja sambil memikirkan apa yang harus kujawab.
+T16,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [T17]",Weird question but what if we just couldn’t talk anymore? ,"Ini pertanyaan aneh, tp gmn klo kita gakan bisa ngobrol lg? "
+T17,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-1,TDN8-1]",what type of question is that :(,Pertanyaan macam apa itu? :(
+T17-Option-1,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-1,TDN8-1]",Just curious…,Penasaran aja...
+T17-Option-2,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-1,TDN8-1]",You ask me dumb questions all the time.,Kamu kan juga sering tanya yang aneh-aneh.
+TDP8-1,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDP8-2]",its not every day people leave their planet in droves for the impending death of the sun.,Kn jarang2 org panik kabur dr planetnya karna bentar lg matahari musnah.
+TDP8-2,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-3]",Well I’d miss the hell out of you. ,"Yah, yg jelas aku bakal kangen kamu. "
+TDP8-3,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDP8-4]",…Really?,…Serius?
+TDP8-4,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-5]",Duh? What makes you think I check up on you all the time?,Ya iyalah. Klo ga ngapain aku cerewet kyk ibumu?
+TDP8-5,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDP8-6]",…I don’t know.,…Entahlah.
+TDP8-6,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDP8-7]",I kind of feel like I’ve been dragging you down… with me being sad all the time.,Kadang ngerasa aku ngalangin kamu… apalagi karna aku sedih melulu.
+TDP8-7,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-8]",what? We all get sad. We’re together till the end. Nothing will ever change that.,Trus? Kita semua kn boleh sedih. Kita bakal bareng sampe akhir dan gakan ada yg bisa ubah itu.
+TDP8-8,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDP8-9]",Thank you. For always caring.,"Makasih ya, karna udh terus peduli."
+TDP8-9,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDP8-10a]",Of course. I have to go :( I’m getting called away but I always have your back! ,"Masama. Harus cabut dulu :( Walau sibuk, aku akan terus dukung kamu! "
+TDP8-10a,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Open, Next: [TDP8-10]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+TDP8-10,"No Sc, msc: Supernova, no sfx, Next: [TDP8-11]",I find myself smiling at my phone. I could’ve reread this line a couple hundred times.,Aku tersenyum sembari menatap layar HP. Mungkin jawaban itu bisa kubaca ulang ratusan kali.
+TDP8-11,"No Sc, msc: Supernova, sfx: KKILI1, Next: [DD2-7]",That must be someone special you’re talking to.,Kamu pasti sedang mengobrol dengan seseorang yang spesial.
+TDN8-1,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-2]",...,…
+TDN8-2,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-3]",Wow that was harsh…,"Wau, kejamnya…"
+TDN8-3,"No Sc, msc: Supernova, no sfx, Next: [TDN8-4]",I panic. Crap would it be bad to backtrack? ,"Aku panik. Sial, apa akan semakin gawat kalau kutarik kata-kataku? "
+TDN8-4,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDN8-5]","Sorry, i didn’t mean that","Maaf, bukan itu maksudku."
+TDN8-5,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDN8-6]",i don’t think ur questions are stupid.,Aku ga mikir klo pertanyaanmu konyol kok.
+TDN8-6,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-7]",:/ you’re a jerk sometimes. u know that?,Kamu sadar diri kn klo kadang kamu ini bebal? :/
+TDN8-7,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDN8-8]",Yeah…I can see that right now. I’m really sorry.,Ya… skrg sadar banget. Maaf ya.
+TDN8-8,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-9]",Well to answer your question. Even though you’re a grade A jerk sometimes.,"Baiklah, akan tetap kujawab walau kadang kamu bebal banget segalaksi."
+TDN8-9,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-10]",I’d still miss seeing you.,Aku bakal kangen ketemu kamu.
+TDN8-10,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-11]",I just wish you were a bit more honest with me.,Aku bakal berharap kalo kamu mau lebih jujur ke aku.
+TDN8-11,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [TDN8-12]",What do you mean honest?,Maksudnya jujur?
+TDN8-12,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-13]",I know thats not the real reason why you’re asking me that.,Misalnya aku tahu itu bkn knp kamu nanya gini ke aku.
+TDN8-13,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [TDN8-14]",I gotta go. I’ll talk to you later. Just stop acting so weird with me.,Perlu cabut dulu. Ngobrolnya nanti lagi. Jangan aneh2 lg ya.
+TDN8-14,"No Sc, msc: Supernova, no sfx, Next: [TDN8-14a]",I groan to myself.,Aku mengerang.
+TDN8-14a,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Open, Next: [TDN8-15]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+TDN8-15,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN8-16]",Why did I say that? Out of every reason I could have given her?,"Dari banyak alasan, kenapa aku malah mengatakan itu?"
+TDN8-16,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN8-17]",Stupid! Stupid! Stupid!,Dasar bodoh! Bodoh! Bodoh!
+TDN8-17,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [DD2-7]",It couldn’t be that stupid to be doing all that.,"Aku yakin sebodoh apa pun itu, kamu seharusnya tidak melakukan itu."
+DD2-7,"Sc: Dmi, msc: Supernova, no sfx, Next: [DD2-8]",Whoa!,Wah!
+DD2-8,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-19]",Sorry it’s slow today. So uh I’ve been on my phone a bit more. ,"Maaf, hari ini tidak begitu ada banyak pengunjung. Jadi ya… saya jadi lebih fokus pada HP. "
+D2D-19,"No Sc, msc: Supernova, no sfx, Next: [D2D-20]",I take in the woman. From the ringlets across her body she seems to be a shapeshifter. ,"Aku mengamati wanita itu. Dilihat dari lingkaran di sekujur tubuhnya, sepertinya ia adalah shapeshifter. "
+D2D-20,"No Sc, msc: Supernova, no sfx, Next: [D2D-21]",Something feels awfully familiar about her like I’ve seen her somewhere before.,"Rasanya aku mengenalnya, mungkin aku sudah pernah melihatnya entah di mana."
+D2D-21,"No Sc, msc: Supernova, no sfx, Next: [KD1]",She doesn’t seem to notice the interest she has a knowing smile as her attention still seems on me and my phone. ,Wanita itu sepertinya tidak menyadari apa yang kuperhatikan. Ia tersenyum seakan tahu segalanya dan fokusnya masih tertuju padaku dan HP-ku.
+KD1,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [DD2-9]",They must sound important to you. Just relax I’m sure you’re lovely to speak to. ,"Siapa pun itu, kayaknya dia penting bagimu, ya. Santai saja, kelihatannya kamu asyik diajak ngobrol. "
+DD2-9,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-22]",It depends on the day.,Itu tergantung suasana hati saya.
+D2D-22,"No Sc, msc: Supernova, no sfx, Next: [KD2]",She laughs.,Ia tertawa.
+KD2,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [D2D-23]",Hit me with it. What’s got you stressed?,Kamu boleh curhat padaku. Jadi ada apa?
+D2D-23,"No Sc, msc: Supernova, no sfx, Next: [D2D-24]",I think for a second. Do I actually want to just spill my guts out to this complete stranger?,Aku merenung sejenak. Apa aku mau jujur pada orang asing ini?
+D2D-24,"No Sc, msc: Supernova, no sfx, Next: [D2D-25]",…,…
+D2D-25,"No Sc, msc: Supernova, no sfx, Next: [DD2-10]",Actually yeah. I can’t pay for a therapist anyways. Why not. ,"Baiklah, lagi pula aku tidak punya uang untuk ke psikolog. Tidak ada salahnya, kan? "
+DD2-10,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-26]",I don’t know how to tell her I don’t qualify for a space jump so I’m going to be stuck here.,Saya tidak tahu bagaimana akan memberitahunya kalau saya tidak memenuhi syarat untuk melakukan lompatan antariksa dan saya akan terus berada di sini.
+D2D-26,"No Sc, msc: Supernova, no sfx, Next: [DD2-11]",The not-therapist nods as she listens to me.,Si psikolog abal-abalan itu mengangguk dan terus mendengarkanku.
+DD2-11,"Sc: Dmi, msc: Supernova, no sfx, Next: [KD3]",I’ve been trying to just carry on but I think she knows something is wrong. ,"Saya berusaha untuk bersikap biasa saja, tapi sepertinya dia mulai sadar. "
+KD3,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [D2D-27]",Well you’re going to traumatize the stars outta her when she finds out you’re gonna be space dust and you never warned her. ,"Yah, dia pasti akan histeris begitu tahu kamu akan jadi debu angkasa dan kamu tidak pernah memberitahunya sama sekali. "
+D2D-27,"No Sc, msc: Supernova, no sfx, Next: [D2D-28]",I choke. When she puts it that way…,Aku tersedak. Setelah ia mengatakannya seperti itu…
+D2D-28,"No Sc, msc: Supernova, no sfx, Next: [DD2-12]",I try to search for a way to back out despite this being my fault we’re having this very personal conversation at a gas station counter.,Aku berusaha mengalihkan topik. Awalnya memang ini salahku karena memulai percakapan pribadi di kasir pom bensin.
+DD2-12,"Sc: Dmi, msc: Supernova, no sfx, Next: [KD4]",Is there something in particular you’re looking for or…? ,"Apa ada sesuatu yang sedang Anda cari, atau…? "
+KD4,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [D2D-29]",I see what you’re doing here.,Aku mengerti apa yang kamu mau.
+D2D-29,"No Sc, msc: Supernova, no sfx, Next: [KD5]",She plays along though.,Ia peka dan mengalah.
+KD5,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [KD6]",I’ll put 900 luncos on pump 5.,"900 lunco untuk pompa 5, ya."
+KD6,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [D2D-30]",And are any of those behind you good? Looking to get something for my wife back on our ship.,Dan boleh sekalian yang ada di belakangmu itu? Aku sedang mencari sesuatu untuk istriku di kapal kami.
+D2D-30,"No Sc, msc: Supernova, no sfx, Next: [DD2-13]",She points to the hot food machines behind me and I shrug.,Ia menunjuk ke arah mesin penghangat makanan yang ada di belakangku. Aku pun mengangkat bahu.
+DD2-13,"Sc: Dmi, msc: Supernova, no sfx, Next: [DD2-14]",Nothing to write home about but I think they’re pretty good. ,"Tidak ada yang spesial, tapi menurut saya cukup enak. "
+DD2-14,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-31]",Especially if you’re hungry.,Apalagi jika Anda lapar.
+D2D-31,"No Sc, msc: Supernova, no sfx, Next: [KD7]",She lets out a hearty laugh.,Ia tertawa terbahak-bahak.
+KD7,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [KD8]",Oh man. I know that feeling when food is good just cuz you haven’t had anything. ,"Yah, aku tahu betapa enaknya makanan saat perut kosong. "
+KD8,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [KD8b]",Something with a good crunch to it seems like something my wife would like.,Yang kelihatannya renyah itu kayaknya istriku bakal suka.
+KD8b,"No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]",Select an item in the shop,Pilih item di toko.
+KD8b-Option-1,"No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]",,
+KD8b-Option-2,"No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]KD8b-Option-2",,
+TDP9-1,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [TDP9-2]",What are these called again? M’Ghooni Nachos?,Apa ini namanya? Nachos M’Ghooni?
+TDP9-2,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP9-3]",It's got a little kick to it. If your wife likes spice I’m sure she’d be into it.,Rasanya sedikit pedas. Saya yakin istri Anda akan suka jika tahan pedas.
+TDP9-3,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [TDP9-4]",I’m Martian. I can handle more than a little kick.,"Aku ini orang Mars, sedikit pedas saja bukan apa-apa."
+TDP9-4,"No Sc, msc: Supernova, no sfx, Next: [TDP9-5]",The alleged shapeshifter lifts up a chip and chomps down on it.,Orang yang mungkin shapeshifter itu mengambil sebuah nachos dan melahapnya.
+TDP9-5,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [TDP9-6]",Oh! That's a pretty solid nacho.,Oh! Nachos ini lumayan enak.
+TDP9-6,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP9-7]",Yeah my friend would usually call me to bring some back with me back when we were roommates. ,"Iya, teman saya biasa menelpon untuk memintaku membawakannya saat kami masih tinggal sekamar. "
+TDP9-7,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [TDP9-8]",They’ve got good taste. Can you get one for me too?,Seleranya bagus. Aku mau beli satu lagi untukku juga.
+TDP9-8,"No Sc, msc: Supernova, no sfx, Next: [D2D-32]",I nod as I go over to the machine and get out a second batch of M’Ghooni Nachos.,Aku mengangguk dan mengambil porsi Nachos M’Ghooni kedua dari mesin.
+TDN9-1,"No Sc, msc: Supernova, no sfx, Next: [TDN9-2]",K’Kili inspects the food presented to her.,K’Kili memperhatikan makanan yang kuserahkan padanya.
+TDN9-2,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [TDN9-3]",Hmm I don’t mean to be rude kid but I don’t think she’s going to like this. ,"Hmm, maaf ya. Tapi kayaknya dia tidak akan suka ini. "
+TDN9-3,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [TDN9-4]",I wouldn’t really call this crunchy either.,Aku juga tidak bisa menyebut ini renyah.
+TDN9-4,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN9-5]",You sure she might not like this better?,Apa Anda yakin dia tidak akan lebih suka ini?
+TDN9-5,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [TDN9-6]",Pretty sure I’d know what she likes best.,"Tentu saja, aku paling tahu apa yang dia suka."
+TDN9-6,"No Sc, msc: Supernova, no sfx, Next: [TDN9-7]",I sigh. Seems my gas station munchies intuition failed me today.,Aku mendesah. Sepertinya intuisi cemilan pom bensinku tidak peka hari ini.
+TDN9-7,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDN9-8]",Sorry bout that.,Saya mohon maaf.
+TDN9-8,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [D2D-32]",It's fine. I’ll take the gas at least.,Tidak masalah. Aku akan tetap beli bensinnya.
+D2D-32,"No Sc, msc: Supernova, no sfx, Next: [KD9]",The woman grabs her wallet in her pocket.,Wanita itu mengambil dompet dari sakunya.
+KD9,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [DD2-15]",You take cards don’t you? Or did that stop for Doomsday?,Bisa pakai kredit? Atau sudah tidak bisa karena kiamat?
+DD2-15,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-33]",Nothing stops at Cosmic Fuel for Doomsday.,Kiamat pun tidak akan bisa menghentikan Bensin Kosmik.
+D2D-33,"No Sc, msc: Supernova, no sfx, Next: [D2D-34]",The woman cooly passes a card to me. I grab for it and freeze as I realize she passed me an ID.,Wanita itu memberikan kartunya dengan santai. Aku menerimanya dan tertegun begitu menyadari ia malah memberiku KTP.
+D2D-34,"No Sc, msc: Supernova, no sfx, Next: [D2D-35]",The name is one I remember very well as it was all over the Martian news. ,Aku sangat mengingat nama yang tertulis di KTP itu karena sering muncul di berita Mars. 
+D2D-35,"No Sc, msc: Supernova, no sfx, Next: [KD10]",Holy crap. This woman is like… an urban legend on Mars.,Gila! Wanita ini… adalah seorang legenda di planet Mars.
+KD10,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKili_Short, Next: [D2D-36]",Did my card decline?,Apa kartuku ditolak?
+D2D-36,"No Sc, msc: Supernova, no sfx, Next: [KD11]",All six of her eyes widen as she realizes her debit card isn’t in my hand and she snatches it.,Keenam matanya terbelalak begitu menyadari bukan kartu kredit yang ada di tanganku. Ia segera mengambil KTPnya kembali.
+KD11,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKili_Short, Next: [D2D-37]",Wrong card! Wrong card!,"Salah, salah!"
+D2D-37,"No Sc, msc: Supernova, no sfx, Next: [D2D-38]",K’Kili passes me the right card.,K’Kili memberiku kartu yang benar.
+D2D-38,"No Sc, msc: Supernova, no sfx, Next: [KD12]",We sit in awkward silence.,Kami terdiam canggung.
+KD12,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [KD12b]",Are you going to ring me up or…?,"Apa kamu akan menghitungnya, atau…?"
+KD12b,"No Sc, msc: Supernova, sfx: CashRegister, Next: [DD2-16]",-cash register noise-,(Mesin kasir berdenting)
+DD2-16,"Sc: Dmi, msc: Supernova, no sfx, Next: [DD2-17]",Eh I work at a gas station. I’m sure I’ve probably served someone with jaded pasts tons of times before. ,"Yah, saya ini bekerja di pom bensin. Mungkin saja sebenarnya saya sudah banyak melayani pengunjung bermasa lalu kelam sebelumnya. "
+DD2-17,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-39]",You’re not going to throw me in the nearest black hole and take my place aren’t you?,"Anda tidak akan melempar saya ke black hole terdekat dan menggantikan saya, kan?"
+D2D-39,"No Sc, msc: Supernova, no sfx, Next: [KD13]",K’Kili laughs.,K’Kili tertawa.
+KD13,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [DD2-18]",Not at all. I didn’t really use my powers like that. I can’t really shapeshift anymore anyways.,"Tidak. Aku tidak menggunakan kekuatanku seperti itu. Lagi pula, aku sudah tidak bisa mengubah penampilan."
+DD2-18,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-40]",Oh?,Oh?
+D2D-40,"No Sc, msc: Supernova, no sfx, Next: [KD14]",She points to her antenna.,Ia menunjuk ke arah antenanya.
+KD14,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [KD15]",My antenna is a little bent. So I can’t really do that anymore. ,"Antenaku sedikit bengkok, makanya aku sudah tidak begitu bisa melakukannya. "
+KD15,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [D2D-41]",I felt like my world was falling apart when it first happened but my wife has been so supportive. I mean I got injured trying to help her in the first place. ,"Awalnya duniaku serasa hancur, tapi untungnya istriku banyak membantu. Yah, aku memang terluka karena mencoba menolongnya, sih. "
+D2D-41,"No Sc, msc: Supernova, no sfx, Next: [KD16]",K’Kili lifts up her hand to show her ring. I can see the admiration and pride coming from her.,K’Kili mengangkat tangan untuk menunjukkan cincinnya. Aku bisa merasakan rasa kagum dan bangga yang ia pancarkan.
+KD16,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [DD2-19]",My wife means everything to me. A part of me is happy we can get away and start new somewhere else.,"Istriku adalah segalanya bagiku. Di satu sisi, aku senang bisa kabur dan memulai hidup baru di tempat lain."
+DD2-19,"Sc: Dmi, msc: Supernova, no sfx, Next: [KD17]",Wow…she sounds so lucky to have you.,Wow… kedengarannya dia beruntung bisa mendapatkan Anda.
+KD17,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKili_Short, Next: [D2D-42]",I’m the lucky one.,Justru aku yang beruntung.
+D2D-42,"No Sc, msc: Supernova, no sfx, Next: [KD18]",K’Kili reaches over and places a hand on my shoulder. She has a strong grip. She probably could pull me over the counter like this.,"K’Kili menjulurkan tangannya untuk memegang bahuku. Genggamannya begitu kuat, mungkin saja ia bisa langsung menarikku dari meja kasir."
+KD18,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [KD19]",Listen kid. You don’t know me and I don’t know you too well but I feel like I should tell you… ,"Dengar baik-baik. Kita memang tidak saling kenal, tapi sepertinya aku harus memberitahumu… "
+KD19,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [KD20]",I don’t really know what your baggage is with whoever you’re talking to but be honest. I can tell they mean a lot to you. ,"Aku tidak tahu bagaimana pandangan orang yang kamu bicarakan itu terhadapmu, tapi aku mengerti kalau orang itu berharga bagimu. "
+KD20,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [DD2-20]",I need you to really think about what they mean to you. Don’t you want to see them?,Coba kamu pikirkan baik-baik siapa dia bagimu. Apa kamu ingin bertemu dengannya?
+DD2-20,"Sc: Dmi, msc: Supernova, no sfx, Next: [D2D-43]",I…can’t anyways… It's too late.,Saya… sudah tidak bisa… sudah terlambat.
+D2D-43,"No Sc, msc: Supernova, no sfx, Next: [KD21]",K’Kili lets go of my shoulder.,K’Kili melepas bahuku.
+KD21,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [DD2-21]",I know… Just talk to them.,Aku tahu… setidaknya coba bicara dengannya.
+DD2-21,"Sc: Dmi, msc: Supernova, no sfx, Next: [KD22]",…I’ll try.,…Akan saya coba.
+KD22,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [D2D-44]",It's all you can do right?,Hanya itu kan yang bisa kamu lakukan?
+D2D-44,"No Sc, msc: Supernova, no sfx, Next: [KD23]",She squints at my name tag.,Ia menyipitkan mata untuk melihat nametag-ku.
+KD23,"Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [D2D-45]",You seem like a good kid. I’ll leave a nice review for you on Welp.,Kamu anak baik. Aku akan meninggalkan ulasan yang baik di Welp.
+D2D-45,"No Sc, msc: Supernova, no sfx, Next: [D2D-45b]",The woman offers me a smile and walks out of the Cosmic Fuel with nachos in hand.,Wanita itu memberiku senyuman dan berjalan pergi dari Bensin Kosmik dengan nachos di tangannya.
+D2D-45b,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Close, Next: [D2D-46]",-door chimes and closes-,(Pintu berdenting dan tertutup)
+D2D-46,"No Sc, msc: Supernova, no sfx, Next: [D2D-47]",I don’t move. Never in my life did I think I would be getting a pep talk about relationships with a customer who just wanted to buy snacks.,Aku tidak berkutik. Siapa sangka aku akan mendapatkan nasihat hidup dari pengunjung yang hanya mau jajan cemilan.
+D2D-47,"No Sc, msc: Supernova, no sfx, Next: [D2D-48]",I should be on my way out of here. Maybe catching a ride outta here on a new planet but here I am. ,"Seharusnya aku sudah mulai pergi. Mungkin harusnya aku sedang melewati planet lain untuk kabur, tapi aku masih di sini. "
+D2D-48,"No Sc, msc: Supernova, no sfx, Next: [D2D-49]",Doomed.,Habislah aku.
+D2D-49,"No Sc, msc: Supernova, no sfx, Next: [D2D-50]",…,…
+D2D-50,"No Sc, msc: Supernova, no sfx, Next: [D2D-51]",Some time passes. I don’t get any more customers and I try to busy myself with the monotony of cleaning.,Waktu terus berlalu dan tidak ada pengunjung yang datang. Aku berusaha menyibukkan diri dengan bersih-bersih yang monoton.
+D2D-51,"No Sc, msc: Supernova, no sfx, Next: [D2D-52]",I think Flubber notices something is wrong cuz I find her wanting to brush up against me more as she tries to move off of her usual lounging spot.,Sepertinya Flubber menyadari ada sesuatu yang salah. Kucing itu terus pergi dari tempat tidurannya yang biasa dan menyentuhku.
+D2D-52,"No Sc, msc: Supernova, no sfx, Next: [D2D-53]",Rob eventually comes by. His usual cheery disposition fades as he picks up Flubber.,Akhirnya Rob datang. Sifatnya yang ceria memudar ketika ia menggendong Flubber.
+D2D-53,"No Sc, msc: Supernova, no sfx, Next: [D2D-54]",I think it finally hit him about what was going to happen.,Mungkin ia semakin menyadari dengan apa yang akan terjadi.
+D2D-54,"No Sc, msc: Supernova, no sfx, Next: [D2D-55]",…,…
+D2D-55,"No Sc, msc: Supernova, no sfx, Next: [D2D-55b]",I need to rest before tomorrow.,Aku perlu istirahat untuk esok.
+D2D-55b,"No Sc, msc: Supernova, sfx: Door_Open,Door_Chime,Door_Close, Next: [Day3Transition]",-door opens and closes with a chime-,(Pintu terbuka dan tertutup dengan suara dentingan)
+Day3Transition,"No Sc, msc: Supernova, no sfx, Next: [D3D-1]",DAY 3,HARI KE-3
+D3D-1,"No Sc, msc: Supernova, no sfx, Next: [D3D-2]",Doomsday.,Kiamat.
+D3D-2,"No Sc, msc: Supernova, no sfx, Next: [D3D-3]",Feels a lot quieter than how I’d imagined it.,Rasanya lebih sunyi daripada yang kubayangkan.
+D3D-3,"No Sc, msc: Supernova, no sfx, Next: [D3D-4]",Well most people evacuated… it makes sense it's this quiet. ,Kebanyakan orang sudah evakuasi… tentu saja akan sunyi. 
+D3D-4,"No Sc, msc: Supernova, no sfx, Next: [D3D-4b]",There’s no Flubber no Rob just me. ,"Tidak ada Flubber atau Rob, hanya ada aku. "
+D3D-4b,"No Sc, msc: Supernova, sfx: Text_1, Next: [T18]",-phone chimes-,(HP berdering)
+T18,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Pocket_Swoosh_2, Next: [T19]",Dmi did you get my message about where to meet me at the Space Port? You haven’t been answering me since last night. ,"Dmi, kamu dpt pesanku soal info bakal ketemuan dmn di Bandara Antariksa? Dr semalem kamu ga bales mulu. "
+T19,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [T20]", Sorry just been so busy. You know how it is. ," Maaf, akhir2 ini sibuk. Tau lah gmn. "
+T20,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [D3D-5]",What’s wrong with you? I would think this is a pretty big time to answer your messages! I mean we got the last space jumps of the day! ,Kamu knp sih? Bknnya ini waktu yg tepat buat bales? Kita cuma punya kesempatan lompatan antariksa terakhir utk hari ini! 
+D3D-5,"No Sc, msc: Supernova, no sfx, Next: [D3D-6]",For once I feel tears threaten to fall from my face as I stare at my phone.,Jarang-jarang aku merasa air mata nyaris jatuh saat menatap HP.
+D3D-6,"No Sc, msc: Supernova, no sfx, Next: [T21]",I wipe my face. Why am I such a loser? I don’t wanna weigh her down. I’m doing her a favor by not telling her!,Aku mengusap wajahku. Kenapa aku pengecut? Aku tidak ingin membebaninya. Justru aku menolongnya karena tidak memberitahunya!
+T21,"Sc: Cassiopeia, on phone, msc: Supernova, no sfx, Next: [DD3-1a]", Dmi?, Dmi?
+DD3-1a,"No Sc, msc: Supernova, sfx: Smoke_Detector_Beep_2, Next: [DD3-1]",-smoke alarm chirps-,(Alarm asap berbunyi)
+DD3-1,"Sc: Dmi, msc: Supernova, no sfx, Next: [D3D-7]", Really? Today of all days?, Serius? Kenapa harus hari ini?
+D3D-7,"No Sc, msc: Supernova, no sfx, Next: [D3D-8]",You’d think after all this time smoke alarms wouldn’t work the same way as they did hundreds of years ago.,Memangnya alarm asap jadi tidak akan bekerja? Padahal fungsinya masih sama setelah ratusan tahun berlalu.
+D3D-8,"No Sc, msc: Supernova, no sfx, Next: [AD1a]",I tune it out as I busy myself with my normal routine. Cleaning waiting more cleaning and more waiting. ,"Aku mengabaikannya dan menyibukkan diri dengan rutinitas yang biasa. Bersih-bersih, menunggu, dan terus bergantian berulang kali. "
+AD1a,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Open, Next: [AD1]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+AD1,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [D3D-9]",Oh wow. You’re actually open. ,"Wah, beneran buka. "
+D3D-9,"No Sc, msc: Supernova, no sfx, Next: [D3D-10]",My head whips up from where I was brooming from the already pristine floors.,Aku yang sedang menyapu lantai yang sudah bersih segera mengangkat kepala.
+D3D-10,"No Sc, msc: Supernova, no sfx, Next: [DD3-2]",Xey holds a phone in xeir hand.,Ia menggenggam HP di tangannya.
+DD3-2,"Sc: Dmi, msc: Supernova, no sfx, Next: [D3D-11]", Oh hey. Uh what are you doing here? ," Oh, hai. Apa yang Anda lakukan di sini? "
+D3D-11,"No Sc, msc: Supernova, no sfx, Next: [D3D-12]",The person walks towards the counter. I walk behind it just as I usually would.,Orang itu berjalan ke arah kasir. Aku segera menuju ke meja kasir seperti biasa.
+D3D-12,"No Sc, msc: Supernova, sfx: Smoke_Detector_Beep_2, Next: [AD2]",Xey pause as xey look up at the chirping smoke alarm. I watch the gears turn as xey decide to ignore it.,"Orang itu terhenti dan menengadah menuju alarm asap yang berbunyi. Aku memperhatikannya berpikir, sedangkan ia mengabaikanku."
+AD2,"Sc: Aiyana, msc: Supernova, sfx: ALYANA2, Next: [DD3-3]", I wanted to see if I can get a snack or something. My phone said this place was open. I wanted to grab something before going back home to Earth. ," Aku penasaran apa aku bisa beli cemilan atau semacamnya. Dilihat dari HP-ku, kelihatannya tempat ini masih buka. Aku mau beli sesuatu sebelum pulang ke Bumi. "
+DD3-3,"Sc: Dmi, msc: Supernova, no sfx, Next: [D3D-13]", Earth?, Bumi?
+D3D-13,"No Sc, msc: Supernova, no sfx, Next: [AD3]","Earth isn’t a planet you hear too often when it came to human inhabitants. Despite the supernova, Earth has already been deemed unfavorable for living compared to anywhere else.","Itu bukan nama planet yang sering didengar kalau bicara soal hunian manusia. Walau tidak ada supernova, Bumi sudah dinilai tidak layak huni dibandingkan planet lain."
+AD3,"Sc: Aiyana, msc: Supernova, sfx: ALYANA3, Next: [AD4]", Yeah some people actually still live there. ," Yah, masih ada yang tinggal di sana. "
+AD4,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [D3D-14]", and by some people I mean me.," Dan yang kumaksud, hanya aku."
+D3D-14,"No Sc, msc: Supernova, no sfx, Next: [DD3-4]",I chuckle.,Aku terkekeh.
+DD3-4,"Sc: Dmi, msc: Supernova, no sfx, Next: [AD5]", Well what are you looking for? I can help you pick out something. , Apa yang Anda cari? Saya bisa bantu memilih sesuatu. 
+AD5,"Sc: Aiyana, msc: Supernova, sfx: ALYANA3, Next: [AD6]",Well to be honest…I don’t really care. What do you think is good? ,Sejujurnya… aku tidak begitu peduli. Menurutmu apa yang enak? 
+AD6,"Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [AD6b]",I’ll take anything.,Aku akan beli apa pun itu.
+AD6b,"No Sc, msc: Supernova, no sfx, Next: [TDP10-1]",Select an item in the shop,Pilih item di toko.
+AD6b-Option-1,"No Sc, msc: Supernova, no sfx, Next: [TDP10-1]",,
+AD6b-Option-2,"No Sc, msc: Supernova, no sfx, Next: [TDP10-1]AD6b-Option-2",,
+TDP10-1,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [TDP10-2]",Hmm don’t think I’ve tried this before. ,"Hmm, kayaknya aku belum pernah coba ini. "
+TDP10-2,"Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [TDP10-3]", How many luncos is it?, Harganya berapa lunco?
+TDP10-3,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-4]",I’d be crazy to make this company richer by charging you.,Saya tidak cukup gila untuk membuat perusahaan ini semakin kaya dengan menerima uang Anda.
+TDP10-4,"Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [TDP10-4a]", Just checking., Hanya memastikan.
+TDP10-4a,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [TDP10-5]", So what possessed you to clock in when you could be at home or better yet at the Space Port on your way out of here? , Lalu kenapa kamu sendiri malah bekerja? Bukannya bisa saja tetap di rumah? Atau bukannya lebih baik kamu sedang berada di Bandara Antariksa untuk pergi dari sini? 
+TDP10-5,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-6]", Just a coward who thinks working at a gas station is more comfortable than confronting my problems head-on., Saya hanya pengecut yang merasa bekerja di pom bensin lebih nyaman daripada menghadapi masalahnya sendiri.
+TDP10-6,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-7]", What about you?, Bagaimana dengan Anda?
+TDP10-7,"No Sc, msc: Supernova, no sfx, Next: [TDP10-8]",Xey let out a bitter laugh.,Ia tertawa pahit.
+TDP10-8,"Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [TDP10-9]", I stayed behind., Aku akan terus menetap.
+TDP10-9,"Sc: Aiyana, msc: Supernova, sfx: ALYANA2, Next: [TDP10-10]", You might think it's stupid but I want to stay with the Earth in its final moments. ," Mungkin terdengar konyol, tapi aku ingin bersama Bumi hingga detik terakhir. "
+TDP10-10,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [TDP10-11]",Everyone left it behind and I just don’t want to do the same. I did too much for that floating rock in space. I tried my best. ,Semua orang sudah meninggalkannya dan aku tidak ingin melakukan hal yang sama. Aku sudah melakukan banyak hal demi batu melayang di angkasa itu. Aku sudah melakukan yang terbaik. 
+TDP10-11,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-12]",You’re just going to get sent to hell with it?,Anda berniat musnah bersamanya?
+TDP10-12,"Sc: Aiyana, msc: Supernova, sfx: ALYANA2, Next: [TDP10-13]", That does make it sound cooler when you say it like that.," Setelah kamu mengatakannya seperti itu, rasanya jadi terdengar lebih keren."
+TDP10-13,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-14]",I don’t really think it's stupid.,Saya tidak merasa itu konyol.
+TDP10-14,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-15]",What's your name? Might as well ask while we’re here.,Siapa nama Anda? Sekalian saja saya tanya sebelum berakhir.
+TDP10-15,"Sc: Aiyana, msc: Supernova, sfx: ALYANA3, Next: [TDP10-16]", It's Aiyana. Nothing special to it.," Aiyana, tidak ada yang spesial."
+TDP10-16,"No Sc, msc: Supernova, no sfx, Next: [TDP10-17]",Xey look at my name tag. I see as xeir eyes look back down to double check.,Ia melihat nametag-ku. Aku bisa melihat matanya kembali melihat turun untuk memastikan.
+TDP10-17,"Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [TDP10-18]", Thanks for the free stuff Dmi. ," Terima kasih untuk jajan gratisnya, Dmi. "
+TDP10-18,"Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-19]", It's no problem. Just enjoy it. Thanks for being my last customer.," Sama-sama, semoga Anda menyukainya. Terima kasih sudah menjadi pengunjung terakhir saya."
+TDP10-19,"Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [TDP10-20]",For what it's worth I think they deserve to know. There isn’t much time left. ,"Kalau jujur, kupikir dia berhak tahu. Kita sudah tidak punya banyak waktu. "
+TDP10-20,"Sc: Aiyana, msc: Supernova, sfx: ALYANA3, Next: [TDP10-21]",I don’t think anyone should go out with regrets.,Tidak ada yang berhak pergi dengan penyesalan.
+TDP10-21,"No Sc, msc: Supernova, no sfx, Next: [TDP10-22]",Xey go over to the door.,Ia berjalan menuju pintu.
+TDP10-22,"Sc: Aiyana, msc: Supernova, sfx: ALYANA2, Next: [TDP10-22b]",Also take out the batteries in that smoke alarm. You don’t have to be in hell already jeez. ,"Lalu, cabut saja baterai dari alarmnya. Kamu tidak perlu menyiksa diri di saat-saat terakhir. "
+TDP10-22b,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Close, Next: [D3D-15a]",-door opens and closes with a chime-,(Pintu terbuka dan tertutup dengan suara dentingan)
+D3D-15a,"No Sc, msc: Supernova, no sfx, Next: [D3D-15]",I grab my broom and give the smoke alarm a solid SMACK.,Aku menggenggam sapu dan menggunakannya untuk menghancurkan alarm asap.
+D3D-15,"No Sc, msc: Supernova, no sfx, Next: [D3D-16]",The thing falls to the ground. Aiyana was right about how annoying the noise is when you’re not ignoring it.,"Alarm itu jatuh ke lantai. Aiyana benar, benda ini menjengkelkan jika dibiarkan begitu saja."
+D3D-16,"No Sc, msc: Supernova, no sfx, Next: [D3D-16b]",Time passes.,Waktu terus berlalu.
+D3D-16b,"No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]",-phone chimes-,(HP berdering)
+D3D-16b-Option-1,"No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]",,
+D3D-16b-Option-2,"No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]D3D-16b-Option-2",,
+PON-1,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-2]",It's Cassiopeia.,Cassiopeia.
+PON-2,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-3]",I pick up my phone but put it back down.,Aku menggenggam HP dan meletakkannya kembali.
+PON-3,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [PON-4]", Sorry Cassie. Just focus on getting out of here.," Maaf, Cassie. Tetaplah fokus untuk pergi dari sini."
+PON-4,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-5]",A sinking feeling forms in my stomach as I realize she stopped because its time for her to make her space jump.,Perasaan tidak enak muncul dalam perutku begitu menyadari ia berhenti karena ini sudah waktunya untuk lompatan antariksa.
+PON-5,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-6]",She gave up.,Ia menyerah.
+PON-6,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-7]",I thought I could handle this.,Kukira aku bisa menghadapi ini.
+PON-7,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-8]",I thought I would be fine.,Kukira aku akan baik-baik saja.
+PON-8,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-9]",Maybe it would have been better to just tell her. She must have cared if she wanted to speak to me so badly.,Mungkin seharusnya aku memberi tahunya. Ia pasti akan peduli karena ia benar-benar ingin berbicara denganku.
+PON-9,"No Sc, msc: BracingForImpact, no sfx, Next: [PON-10]",I pull up a chair next to the window and take a seat.,Aku menarik kursi menuju sisi jendela dan duduk.
+PON-10,"No Sc, msc: Supernova, no sfx, Next: [PON-11]",Cosmic Fuel the place to fill to your heart’s content… ,Bensin Kosmik akan melayani pengunjungnya hingga puas… 
+PON-11,"No Sc, msc: Supernova, no sfx, Next: [PON-12]",Now it is the place where my heart feels the most empty. ,"Namun kini, ini adalah tempat yang membuatku merasa hampa. "
+PON-12,"No Sc, msc: BracingForImpact, no sfx",I’m an idiot.,Aku benar-benar bodoh.
+POP-1,"No Sc, msc: Supernova, no sfx, Next: [POP-2]",It's time to stop beating around the bush.,Waktunya bagiku untuk berhenti beralasan.
+POP-2,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [POP-3]",Dmi you’re actually scaring me. Why aren’t you answering? ,"Dmi, kamu bikin takut ih. Knp ga bales? "
+POP-3,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [POP-4]",I can’t go to the Space Port.,Aku gabisa pergi ke Bandara Antariksa.
+POP-4,"No Sc, msc: Supernova, no sfx, Next: [POP-5]",Silence.,Lagi-lagi sunyi.
+POP-5,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [POP-6]", Are u at home?, Kamu di rumah?
+POP-6,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [POP-7]", No., Tidak.
+POP-7,"No Sc, msc: Supernova, no sfx, Next: [POP-8]",Silence.,Dan lagi-lagi sunyi.
+POP-8,"Sc: Cassiopeia, on phone, msc: Supernova, sfx: Text_4_vibrate, Next: [POP-9]", Give me a few minutes., Tunggu beberapa menit.
+POP-9,"Sc: Dmi, on phone, msc: Supernova, no sfx, Next: [POP-10]", What, Hah?
+POP-10,"No Sc, msc: Supernova, no sfx, Next: [POP-11]",Cassiopeia stops replying.,Cassiopeia berhenti menjawab.
+POP-11,"No Sc, msc: Supernova, no sfx, Next: [POP-12]",I stare at my phone before typing a few more replies.,Aku terus menatap HP sebelum mengetik beberapa jawaban.
+POP-12,"No Sc, msc: Supernova, no sfx, Next: [POP-13]",Nothing.,Masih tidak ada jawaban.
+POP-13,"No Sc, msc: Supernova, no sfx, Next: [POP-14]",Is she mad at me? I know this has gotta take the prize for one of the worst things to ever tell someone.,Dia marah padaku? Ini pasti karma karena sudah mengatakan kabar terburuk pada seseorang.
+POP-14,"No Sc, msc: Supernova, no sfx, Next: [POP-15]",Crap.,Sial.
+POP-15,"No Sc, msc: Supernova, no sfx, Next: [POP-16]",I should have just come clean earlier. Of course she’s not going to take this well. WHO WOULD? ,"Seharusnya aku jujur sejak awal. Tentu saja ia akan marah, SIAPA YANG TIDAK AKAN MARAH? "
+POP-16,"No Sc, msc: Supernova, no sfx, Next: [POP-16b]",I place my face in my hands and groan. For some reason the entire universe has been shooting me signs to just come clean and here I am a few hours from Doomsday and I just-- ,"Aku menutupi wajah dengan tangan dan mengerang. Padahal semesta sudah memberiku tanda agar aku jujur sejak awal. Tapi beberapa jam sebelum kiamat, aku malah-- "
+POP-16b,"No Sc, msc: Supernova, sfx: Door_Chime,Door_Open, Next: [POP-17]",-door opens and chimes-,(Pintu terbuka dan berdenting)
+POP-17,"Sc: Dmi, msc: Supernova, no sfx, Next: [POP-18]", Huh?, Hah?
+POP-18,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-19]",Every atom in my body freezes as I look at the panting figure standing in the doorway.,Seluruh atom tubuhku membeku begitu melihat sosok yang terengah-engah di pintu.
+POP-19,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-20]",C-Cassiopeia…?,C-Cassiopeia…?
+POP-20,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS1, Next: [POP-21]",You don’t know how hard it was for me to get here in the time I had left.,Kamu enggak akan bisa bayangin susahnya aku ke sini hanya dengan waktu yang tersisa.
+POP-21,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-22]",She punches me immediately.,Ia segera memukulku.
+POP-22,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-23]", Ow! Cassie!, Aw! Cassie!
+POP-23,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-24]",She punches me again.,Ia kembali memukulku.
+POP-24,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS2, Next: [POP-25]",Don’t “Ow” me! YOU WOULD PICK NOW OUT OF ALL TIMES TO TELL ME YOU WEREN’T ABLE TO GET CLEARED FOR A SPACE JUMP?,"""Aw"" apanya? BARU SEKARANG KAMU BILANG KAMU ENGGAK AKAN BISA IKUT LOMPATAN ANTARIKSA?"
+POP-25,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-26]",She’s fuming understandably so. ,"Ia marah, dan itu wajar. "
+POP-26,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-27]",I’m sorry! I didn’t want you to worry about me!,Maaf! Aku enggak mau bikin kamu khawatir!
+POP-27,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-28]",Also things just weren’t the best. I…didn’t see how things would get better even if I found a way to go. ,"Lalu, keadaannya juga tidak baik. Aku… tidak merasa keadaan akan jadi lebih baik walau aku pergi. "
+POP-28,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-29]",Cassiopeia relaxes.,Cassiopeia menjadi lebih tenang.
+POP-29,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-30]", Is anyone else here?, Apa ada orang lain di sini?
+POP-30,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-31]", It's just me., Hanya ada aku.
+POP-31,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS4, Next: [POP-32]", Do you guys sell Chai here?, Apa di sini jual chai?
+POP-32,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-33a]",Chai has always been Cassiopeia’s choice for an end-of-the-world drink. We’ve had too many late-night “What-if?” conversations for me to not remember.,Cassiopeia pasti akan selalu memilih chai untuk minumannya walau dunia akan berakhir. Kami sudah sering berbincang mengenai berbagai kemungkinan di masa depan hingga larut malam hingga sulit untuk kulupakan.
+POP-33a,"Sc: Dmi, msc: BracingForImpact, sfx: , Next: [POP-33]",I’ll get that for you.,Akan kuambilkan.
+POP-33,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-34]", Thanks Dmi.," Makasih, Dmi."
+POP-34,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-35]",I change the settings of the hot drink machine to Chai and watch as the warm drink pours into the cup.,Aku mengubah pengaturan mesin minuman panas menjadi chai dan memperhatikan minuman hangat yang tertuang ke dalam cangkir.
+POP-35,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-36]",I place the cup down on the counter in front of me and push it toward her.,Aku menaruh cangkir di meja kasir dan mendorongnya ke arahnya.
+POP-36,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-37]", Dmi come. ," Sini, Dmi. "
+POP-37,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-38]",She moves over to the window with her Chai in hand. I grab my chair and an extra from behind the counter and drag them over to her.,Ia berjalan menuju sisi jendela dengan chai di tangan. Aku menggenggam dua kursi dan menggesernya ke arahnya.
+POP-38,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-38b]",She takes a long sip of her drink before sitting down.,Ia menyeruput lama minumannya sebelum duduk.
+POP-38b,"No Sc, msc: BracingForImpact, sfx: Smoke_Detector_Beep_2, Next: [POP-39]",-smoke alarm chirps-,(Alarm asap berbunyi)
+POP-39,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-40]",Cassiopeia searches for the sound. I grab a nearby broom.,"Cassiopeia mencari arah asal suara, sedangkan aku menggenggam sapu yang ada di dekatku."
+POP-40,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-41]", Give me a second.," Sebentar, ya."
+POP-41,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-42]",I land a solid SMACK at the smoke alarm and watch as it falls to pieces.,Aku memukul alarm asap dan melihatnya jatuh berkeping-keping.
+POP-42,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-43]",Cassiopeia doesn’t say a word as I bring myself next to her.,Cassiopeia tidak mengatakan apa-apa begitu aku mendekatinya.
+POP-43,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-44]",As I was saying…,Jadi…
+POP-44,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS4, Next: [POP-45]", Did you ever think about what happens after the supernova if you never told me?, Apa kamu pernah kebayang apa yang akan terjadi setelah supernova kalau tidak pernah memberitahuku?
+POP-45,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-46]",You’d carry on without me. Probably. Cassie you’re not even going to make it back in time! ,"Mungkin kamu akan terus hidup tanpaku. Cassie, kamu sudah enggak akan bisa kembali tepat waktu! "
+POP-46,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-47]",Cassiopeia doesn’t answer. She takes another sip of her cheap gas station Chai.,Cassiopeia tidak menjawab. Ia kembali menyeruput chai murahan pom bensin.
+POP-47,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS3, Next: [POP-48]",Nice try. Dmi you’re one of the most important people to me. ,"Usaha bagus. Dmi, kamu adalah salah satu orang yang paling penting bagiku. "
+POP-48,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS1, Next: [POP-49]",I’m here because I want to be here with you!,Aku di sini karena aku ingin bersamamu!
+POP-49,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-50]", Cass--, Cass--
+POP-50,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS2, Next: [POP-51]", You have been giving me the slip for days and I knew something was up!, Akhir-akhir ini kamu berusaha mengatakan sesuatu dan aku sadar ada sesuatu yang janggal!
+POP-51,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-52]",Tears well up in my eyes. I can’t help it.,"Mataku mulai berkaca-kaca, aku tidak tahan."
+POP-52,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-53]",Dmi? Come on…,Dmi? Ayolah…
+POP-53,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-54]",She takes me into her arms before she wipes at my tears. She holds my face in her hands. I can’t pinpoint the emotion I see in her face.,Ia memelukku sebelum menyeka air mataku. Kedua tangannya memegang wajahku. Aku tidak bisa melihat dengan jelas ekspresi di wajahnya.
+POP-54,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-55]",Was it pity?,Apa karena kasihan?
+POP-55,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS1, Next: [POP-56]",I want to be here with you. Don’t cry.,"Aku ingin berada di sini bersamamu. Jangan nangis, ya."
+POP-56,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-57]",…love? Was that it?,…Atau karena cinta?
+POP-57,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-58]", I wish we had more time. I wish we could have done more things together or had a chance to just live in another galaxy. Or at least you should be able to leave-- , Aku harap kita punya lebih banyak waktu. Aku harap bisa melakukan lebih banyak hal denganmu atau memiliki kesempatan untuk hidup di galaksi lain. Atau setidaknya kamu akan bisa pergi-- 
+POP-58,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-59]",Cassiopeia wipes at my tears some more. I see her own tears threaten to fall.,Cassiopeia kembali menyeka air mataku. Aku bisa melihat air matanya yang nyaris jatuh.
+POP-59,"Sc: Cassiopeia, msc: BracingForImpact, sfx: CASS3, Next: [POP-60]",I don’t want to leave without you.,Aku tidak ingin pergi tanpamu.
+POP-60,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-60b]",I wipe at my own tears.,Aku menyeka air mataku.
+POP-60b,"No Sc, msc: BracingForImpact, sfx: Text_1, Next: [TPOP-1]",-phone chimes-,(HP berdering)
+TPOP-1,"No Sc, on phone, msc: BracingForImpact, no sfx, Next: [POP-61]",SUPERNOVA IMMINENT. EVACUATE IMMEDIATELY.,SUPERNOVA AKAN TIBA. SEGERA EVAKUASI.
+TPOP-2," ""added missing string""",!!! DEIMOS MOON WARNING !!!,!!! PERINGATAN BULAN DEIMOS !!!
+POP-61,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-62]",A little late for that isn’t it?,Bukannya pemberitahuan ini sudah terlambat?
+POP-62,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-63]",I scoot my chair closer to Cassiopeia. She’s a beacon in this time where I thought I would be alone.,"Aku menggeser kursiku agar lebih dekat dengan Cassiopeia. Di saat seperti ini, ialah cahayaku ketika aku merasa sendirian."
+POP-63,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-64]",I didn’t think I would be ready for this. I still don’t think I am.,"Aku tidak merasa siap untuk ini, mungkin tidak akan pernah."
+POP-64,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-65]",Cassiopeia takes my hand and smiles as she gives it a squeeze.,Cassiopeia menyentuh tanganku. Ia memberiku senyuman sembari menggenggam tanganku dengan erat.
+POP-65,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-66]",Okay…,Yah…
+POP-66,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-67]",Alright…,Baiklah…
+POP-67,"Sc: Dmi, msc: BracingForImpact, no sfx, Next: [POP-68]",Thank you Cassie. ,"Terima kasih, Cassie. "
+POP-68,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-69]",She chuckles somehow she’s still smug even now. ,"Ia terkekeh, entah bagaimana ia masih bisa merasa bangga di saat seperti ini. "
+POP-69,"Sc: Cassiopeia, msc: BracingForImpact, sfx: Cassie_Short, Next: [POP-70]", I love you too Dmi. ," Aku juga sayang kamu, Dmi. "
+POP-70,"No Sc, msc: BracingForImpact, no sfx, Next: [POP-71]",I return her laugh as our world goes white.,Aku membalas tawanya dan dunia kami menjadi putih.
+POP-71,"No Sc, msc: BracingForImpact, no sfx",I was never really alone.,Aku tidak pernah sendirian.

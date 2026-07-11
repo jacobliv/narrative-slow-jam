@@ -69,7 +69,8 @@ public class LocalizationManager : MonoBehaviour {
 
     public string GetLocalization(LocalizationType type, string key, string englishFallback) {
         var table = GetLocalizationTable(type);
-        if (table != null && !string.IsNullOrEmpty(key) && table.TryGetValue(key, out string localizedValue) && !string.IsNullOrEmpty(localizedValue)) {
+        string normalizedKey = NormalizeLocalizationKey(key);
+        if (table != null && !string.IsNullOrEmpty(normalizedKey) && table.TryGetValue(normalizedKey, out string localizedValue) && !string.IsNullOrEmpty(localizedValue)) {
             return localizedValue;
         }
 
@@ -114,6 +115,38 @@ public class LocalizationManager : MonoBehaviour {
         return text.TrimStart('\uFEFF');
     }
 
+    private string NormalizeLocalizedValue(string value) {
+        if (string.IsNullOrEmpty(value)) {
+            return value;
+        }
+
+        // Some localized SFX-style narrator lines were exported with an extra leading apostrophe, e.g. "'-phone chimes-".
+        if (value.Length > 2 && value[0] == '\'' && value[1] == '-') {
+            value = value.Substring(1);
+        }
+
+        // Localization deliveries sometimes contain escaped line breaks instead of actual newlines.
+        value = value.Replace("\\n", "\n");
+
+        return value;
+    }
+
+    private string NormalizeLocalizationKey(string key) {
+        if (string.IsNullOrEmpty(key)) {
+            return key;
+        }
+
+        if (key.StartsWith("8.D-", StringComparison.Ordinal)) {
+            return "8D-" + key.Substring("8.D-".Length);
+        }
+
+        if (key.StartsWith("8DD-", StringComparison.Ordinal)) {
+            return "8D-" + key.Substring("8DD-".Length);
+        }
+
+        return key;
+    }
+
     // CSV loader utility
     private Dictionary<string, string> ParseCsvWithHelper(TextAsset ta, string keyColumn, string valueColumn, Language language) {
         var dict = new Dictionary<string, string>();
@@ -124,8 +157,8 @@ public class LocalizationManager : MonoBehaviour {
             csv.ReadHeader();
 
             while (csv.Read()) {
-                string location = csv.GetField(keyColumn);
-                string target = csv.GetField(valueColumn);
+                string location = NormalizeLocalizationKey(csv.GetField(keyColumn));
+                string target = NormalizeLocalizedValue(csv.GetField(valueColumn));
                 if (!string.IsNullOrEmpty(location))
                     dict[location] = target;
             }

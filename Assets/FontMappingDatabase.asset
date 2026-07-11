@@ -30,8 +30,8 @@ MonoBehaviour:
     bold: {fileID: 11400000, guid: 33d76810acd74374aacae92ae52f7bda, type: 2}
     medium: {fileID: 0}
   - languageCode: th
-    normal: {fileID: 11400000, guid: 47c9f07879a083a4dafbd361a9a89527, type: 2}
-    bold: {fileID: 11400000, guid: 2c58d367fefef864ebf16968ca74e90b, type: 2}
+    normal: {fileID: 11400000, guid: 812027537434e6f4b8929805f422ebfa, type: 2}
+    bold: {fileID: 11400000, guid: eb79edc3930d830479aa57b307798f37, type: 2}
     medium: {fileID: 0}
   - languageCode: ar
     normal: {fileID: 11400000, guid: 430843c6fed575a45b4232a6ecffa1b2, type: 2}
