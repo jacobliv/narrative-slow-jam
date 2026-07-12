@@ -4,11 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TextChoiceHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class TextChoiceHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
     public TextMeshProUGUI text;
-    public int             smallFontSize;
-    public int             largeFontSize;
-    public GameObject      image;
+    public int smallFontSize;
+    public int largeFontSize;
+    public GameObject image;
 
     private Coroutine fontSizeChangeCoroutine;
 
@@ -21,7 +22,7 @@ public class TextChoiceHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
 
         // Start the coroutine to smoothly increase font size
-        fontSizeChangeCoroutine = StartCoroutine(LerpFontSize(text.fontSize, largeFontSize, 0.1f));
+        // fontSizeChangeCoroutine = StartCoroutine(LerpFontSize(text.fontSize, largeFontSize, 0.1f));
         image.SetActive(true);
     }
 
@@ -34,14 +35,16 @@ public class TextChoiceHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
 
         // Start the coroutine to smoothly decrease font size
-        fontSizeChangeCoroutine = StartCoroutine(LerpFontSize(text.fontSize, smallFontSize, 0.1f));
+        // fontSizeChangeCoroutine = StartCoroutine(LerpFontSize(text.fontSize, smallFontSize, 0.1f));
         image.SetActive(false);
     }
 
-    private IEnumerator LerpFontSize(float startSize, float endSize, float duration) {
+    private IEnumerator LerpFontSize(float startSize, float endSize, float duration)
+    {
         float time = 0f;
 
-        while (time < duration) {
+        while (time < duration)
+        {
             float t = time / duration;
             text.fontSize = Mathf.Lerp(startSize, endSize, t);
             time += Time.deltaTime;
