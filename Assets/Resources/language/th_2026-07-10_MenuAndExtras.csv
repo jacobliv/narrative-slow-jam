@@ -20,7 +20,7 @@
 "OPT4","Options Menu","Sound Effects Volume","เสียงเอฟเฟกต์"
 "OPT5","Options Menu","Cancel","ยกเลิก"
 "OPT6","Options Menu","Save","บันทึก"
-"NUM","This is the values for the slider bar, for localizing numbers. We need all the numbers between 0 and 100","0","0"
+"NUM","This is the values for the slider bar, for localizing numbers. We need all the numbers between 0 and 100",0,0
 "PM1","Pause Menu","Game Paused","หยุดเกม"
 "PM2","Pause Menu","Save","บันทึก"
 "PM3","Pause Menu","Load","โหลด"

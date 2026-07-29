@@ -67,8 +67,8 @@
 "CAD-9","Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [DD1-13]","Alright then, can I put 400 Luncos on pump 2, and what type of fizzy drinks do you have? You’ve gotta have a 2-for-1 deal here.","โอเค งั้นเราขอเติมน้ำมัน 400 เหรียญดวงจันทร์ที่ปั๊ม 2\nแล้วเธอมีน้ำอัดลมอะไรขายมั่งล่ะ? ที่นี่มันต้องมีโปรซื้อ 2 แถม 1 มั่งแหละนะ"
 "DD1-13","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [CalderShopChoice]","Hold on, I think I have something in mind.","รอก่อนนะ ฉันคิดว่าฉันคิดอะไรบางอย่างได้"
 "CalderShopChoice","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]","Select an item in the shop","เลือกของในร้าน"
-"CalderShopChoice-Option-1","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]"
-"CalderShopChoice-Option-2","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]"
+"CalderShopChoice-Option-1","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]",,
+"CalderShopChoice-Option-2","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-1,TDN2-1]",,
 "TDP2-1","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-2]","Her eyes light up from the soda in my hand.","ตาของคาลเดอร์เปล่งประกายหลังจากที่เห็นเดอา เดอาในมือของฉัน"
 "TDP2-2","Sc: Calder, msc: SupernovaAlt, sfx: CALDER1, Next: [TDP2-3]","You guys carry Deia Deia Soda!? I have a coupon for those!","พวกเธอขายเดอา เดอาด้วยเหรอ!? เรามีคูปองที่ใช้ซื้อมันได้!"
 "TDP2-3","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP2-4]","He pulls out a comically large coupon book and flips through the pages. She passes a coupon with a picture of Deia Deia Soda.","คาลเดอร์หยิบสมุดคูปองเล่มใหญ่เว่อร์วังออกมาแล้วเปิดหาคูปอง\nเขายื่นคูปองที่มีรูปน้ำอัดลมเดอา เดอามาให้"
@@ -87,8 +87,8 @@
 "D1D-16","No Sc, msc: SupernovaAlt, no sfx, Next: [ZD1]","The cloudy person who enters the gas station yawns loudly. Her badge twinkles under the industrial lights.","มนุษย์ปุยเมฆเดินเข้าปั๊มน้ำมันมาพร้อมกับหาวเสียงดัง\nบัตรพนักงานของเขาเปล่งประกายระยิบระยับใต้แสงไฟ"
 "ZD1","Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_SLEEPY1, Next: [ZD1b]","I’m starting a new job outside of the solar system. Do you have Zolkan Coffee perchance?","ฉันกำลังจะเริ่มงานใหม่นอกระบบสุริยะ\nคุณพอจะมีกาแฟโซลคานขายบ้างไหมคะ?"
 "ZD1b","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]","Select an item in the shop","เลือกของในร้าน"
-"ZD1b-Option-1","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]"
-"ZD1b-Option-2","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]"
+"ZD1b-Option-1","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]",,
+"ZD1b-Option-2","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP3-1,TDN3-1]",,
 "TDP3-1","Sc: Zerua, msc: SupernovaAlt, sfx: ZERUA_SLEEPY2, Next: [TDP3-2]","Oh, my stars! Thank you!","โอ้ เหล่าดวงดารา! ขอบคุณนะคะ!"
 "TDP3-2","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP3-3]","Before the drink sits for more than a nanosecond, it takes a long sip. I don’t think I’ve ever seen anyone down hot coffee that fast before…","หลังจากได้กาแฟมายังไม่ทันจะเกิน 1 นาโนวินาที\nเขาก็จิบไปแล้วอึกนึง ฉันไม่เคยเห็นใครซดกาแฟร้อน ๆ ได้เร็วขนาดนั้นมาก่อนเลย..."
 "TDP3-3","Sc: Zerua, msc: SupernovaAlt, sfx: Zerua_Short, Next: [TDP3-4]","Ah, that's better.","อ่าาา ค่อยดีขึ้นหน่อย"
@@ -111,23 +111,23 @@
 "D1D-18","No Sc, msc: SupernovaAlt, no sfx, Next: [D1D-19]","She looks proud of herself.","ฟลับเบอร์ดูภูมิใจในตัวเอง"
 "D1D-19","No Sc, msc: SupernovaAlt, sfx: Boom_2, Next: [DD1-14]","I jump up from my seat as I hear a boom come from outside.","ฉันสะดุ้งขึ้นมาจากเก้าอี้ตอนที่ได้ยินเสียงดังตู้มมาจากข้างนอก"
 "DD1-14","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-1a]"," What the hell--!?"," อะไรวะนั่น--!?"
-"8.0D-1a","No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [8D-1]","-door opens and chimes-","-ประตูเปิดพร้อมเสียงกระดิ่ง-"
-"8.0D-1","Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-15]","Sup.","ไง"
+"8D-1a","No Sc, msc: SupernovaAlt, sfx: Door_Chime,Door_Open, Next: [8D-1]","-door opens and chimes-","-ประตูเปิดพร้อมเสียงกระดิ่ง-"
+"8D-1","Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-15]","Sup.","ไง"
 "DD1-15","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-20]","Uh, sup? What was that?","เอ่อ ไง? นั่นมันอะไร?"
 "D1D-20","No Sc, msc: SupernovaAlt, no sfx, Next: [8D-2]","He ignores me and his eyes- er...screen look up.","เขาเมินที่ฉันถามไป แล้วตาของ-เอ่อ... หน้าจอของเขามันมองไปข้างบน"
-"8.0D-2","Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [DD1-16]","What was what?","อะไรมันอะไร?"
+"8D-2","Sc: 8008, msc: SupernovaAlt, sfx: 80008_2, Next: [DD1-16]","What was what?","อะไรมันอะไร?"
 "DD1-16","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-3]","The boom?","เสียงตู้มมั้ง?"
-"8.0D-3","Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-17]","What boom?","เสียงตู้มอะไร?"
+"8D-3","Sc: 8008, msc: SupernovaAlt, sfx: 80008_Short, Next: [DD1-17]","What boom?","เสียงตู้มอะไร?"
 "DD1-17","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-18]","The-- okay.","สะ-- โอเค"
 "DD1-18","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [D1D-21]","Do you need something?","คุณหาอะไรอยู่รึเปล่า?"
 "D1D-21","No Sc, msc: SupernovaAlt, sfx: 80008_hum2, Next: [8D-4]","A low hum comes from his circuits. He’s thinking.","เสียงหึ่งเบา ๆ ดังมาจากวงจรของเขา เขากำลังคิดอยู่"
-"8.0D-4","Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [D1D-22]","You sell any Arinator brand stuff here? That one made by that smoking cyborg from outta the solar system?","ที่นี่มีของแบรนด์แอริเนเตอร์อะไรขายมั่งไหม?\nของที่ผลิตโดยไซบอร์กสุดฮ็อตจากนอกระบบสุริยะอะไรแบบนั้นน่ะ?"
+"8D-4","Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [D1D-22]","You sell any Arinator brand stuff here? That one made by that smoking cyborg from outta the solar system?","ที่นี่มีของแบรนด์แอริเนเตอร์อะไรขายมั่งไหม?\nของที่ผลิตโดยไซบอร์กสุดฮ็อตจากนอกระบบสุริยะอะไรแบบนั้นน่ะ?"
 "D1D-22","No Sc, msc: SupernovaAlt, no sfx, Next: [DD1-19]","I’ve heard of Arinator probably. Cassiopeia’s a big fan of singers. Though something was kind of funny about this guy’s desperation. ","ฉันน่าจะเคยได้ยินเกี่ยวกับแอริเนเตอร์มาบ้าง แคสซิโอเปียเป็นแฟนตัวยงของนักร้องหลาย ๆ คน\nแต่ตาหุ่นยนต์นี่เขาดูกระเหี้ยนกระหือรือแปลก ๆ ยังไงไม่รู้ "
 "DD1-19","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [8D-5]","I mean, I can check to see what we got.","ฉันหมายถึงว่า เดี๋ยวฉันไปดูมาให้นะว่าเรามีอะไรบ้าง"
-"8.0D-5","Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [8D-5b]","Sweet! I’ll also be putting 700 luncos on pump 2.","เยี่ยมเลย! ผมขอเติมน้ำมัน 700 เหรียญดวงจันทร์ที่ปั๊ม 2 ด้วยนะ"
-"8.0D-5b","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]","Select an item in the shop","เลือกของในร้าน"
-"8D-5b-Option-1","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]"
-"8D-5b-Option-2","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]"
+"8D-5","Sc: 8008, msc: SupernovaAlt, sfx: 80008_3, Next: [8D-5b]","Sweet! I’ll also be putting 700 luncos on pump 2.","เยี่ยมเลย! ผมขอเติมน้ำมัน 700 เหรียญดวงจันทร์ที่ปั๊ม 2 ด้วยนะ"
+"8D-5b","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]","Select an item in the shop","เลือกของในร้าน"
+"8D-5b-Option-1","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",,
+"8D-5b-Option-2","No Sc, msc: SupernovaAlt, sfx: , Next: [TDP4-1,TDN4-1]",,
 "TDP4-1","Sc: 8008, msc: SupernovaAlt, sfx: 80008_1, Next: [TDP4-5]","Yes! Arinator’s limited edition Mint choco paste? I thought this was sold out everywhere!","เยส! ยาสีฟันแอริเนเตอร์กลิ่นช็อกมินต์รุ่นลิมิเต็ดเหรอเนี่ย?\nผมนึกว่ามีคนซื้อไปจนไม่เหลือสักที่แล้วซะอีก!"
 "TDP4-5","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP4-6]","I mean, it's mint chocolate toothpaste isn’t it?","ที่จริง มันก็เป็นยาสีฟันช็อกโกแล็ตมินต์ไม่ใช่เหรอ?"
 "TDP4-6","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP4-7]","I don’t think anyone is in a rush to buy that.","ไม่คิดว่าจะมีใครรีบซื้อมันนะ"
@@ -170,8 +170,8 @@
 "DD1-26","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-27]","Your supernova bunker.","บังเกอร์ซูเปอร์โนวาของคุณ"
 "DD1-27","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [DD1-27b]"," Alright... a nonperishable snack will be good."," ก็ได้... ขนมขบเคี้ยวที่เก็บไว้ได้นาน ๆ ก็ดี"
 "DD1-27b","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]","Select an item in the shop","เลือกของในร้าน"
-"DD1-27b-Option-1","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]"
-"DD1-27b-Option-2","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]"
+"DD1-27b-Option-1","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]",,
+"DD1-27b-Option-2","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-1,TDN5-1]",,
 "TDP5-1","Sc: Crust, msc: SupernovaAlt, sfx: CRUST3, Next: [TDP5-2]","Jerky! You’re thinking like a true survivor kid! This is great!","เนื้อแดดเดียว! เอ็งนี่คิดเหมือนกับคนที่รู้จักเอาตัวรอดจริง ๆ เลยนะ เจ้าหนู!\nนี่มันเยี่ยมไปเลย!"
 "TDP5-2","Sc: Dmi, msc: SupernovaAlt, no sfx, Next: [TDP5-3]","Heh, thanks. I just remembered it from a TV show called Survivorz.","เหอะ ๆ ขอบคุณนะ\nฉันแค่จำมันมาจากรายการทีวีที่ชื่อว่าเซอร์ไวเวอร์ซน่ะ"
 "TDP5-3","No Sc, msc: SupernovaAlt, no sfx, Next: [TDP5-4]","Before you could even ring it up the man opens the bag and starts eating the jerky.","คุณยังไม่ทันจะได้คิดเงิน\nชายแก่ก็แกะถุงแล้วก็เริ่มกินเนื้อแดดเดียวไปก่อนแล้ว"
@@ -267,8 +267,8 @@
 "ROM4","Sc: Romulus, msc: Supernova, sfx: ROMULUS2, Next: [D2D-15]","No you didn’t mess up Remus. Let’s get you that hot dog. No no let’s get you two of them. How about that? ","ไม่ แกไม่ได้ทำพลาดเลยเรมุส เราเอาฮอตดอกนั่นมาให้แกสักอัน\nไม่สิ ไม่ เอามาสองอันไปเลยเป็นไง? "
 "D2D-15","No Sc, msc: Supernova, sfx: Remus_Howl, Next: [D2D-15b]","Remus howls with excitement.","เรมุสหอนด้วยความตื่นเต้น"
 "D2D-15b","No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]","Select an item in the shop","เลือกของในร้าน"
-"D2D-15b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]"
-"D2D-15b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]"
+"D2D-15b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]",,
+"D2D-15b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP7-1,TDN7-1]",,
 "TDP7-1","No Sc, msc: Supernova, no sfx, Next: [TDP7-2]","I slide two Saturn dogs to the pair. Remus helps himself and scarfs it down.","ฉันสไลด์ซาเทิร์นดอกไปให้สองพี่น้อง\nเรมุสหยิบมันมาแล้วก็กินมันอย่างมูมมาม"
 "TDP7-2","Sc: Romulus, msc: Supernova, sfx: ROMULUS1, Next: [TDP7-3]","and now the register--","แล้วที่นี้ก็เปิดลิ้นชัก--"
 "TDP7-3","Sc: Remus, msc: Supernova, sfx: REMUS1, Next: [TDP7-4]","Rom… they were so nice and gave us a Saturn dog. Do we have to?","โรม... เขาใจดีกับเราแถมยังให้ซาเทิร์นดอกกับเราอีกนะ\nเราต้องทำแบบนั้นจริงเหรอ?"
@@ -377,8 +377,8 @@
 "KD7","Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI1, Next: [KD8]","Oh man. I know that feeling when food is good just cuz you haven’t had anything. ","นั่นสินะ ฉันรู้นะว่าการที่อาหารมันอร่อยเพราะว่าเราแค่ยังไม่ได้กินอะไรมาเลยมันเป็นยังไง "
 "KD8","Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [KD8b]","Something with a good crunch to it seems like something my wife would like.","ภรรยาของฉันน่าจะชอบอะไรที่มันกรอบ ๆ"
 "KD8b","No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]","Select an item in the shop","เลือกของในร้าน"
-"KD8b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]"
-"KD8b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]"
+"KD8b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]",,
+"KD8b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP9-1,TDN9-1]",,
 "TDP9-1","Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI2, Next: [TDP9-2]","What are these called again? M’Ghooni Nachos?","พวกนี้มันเรียกว่าอะไรนะ? มกูนี่ นาโช่เหรอ?"
 "TDP9-2","Sc: Dmi, msc: Supernova, no sfx, Next: [TDP9-3]","It's got a little kick to it. If your wife likes spice I’m sure she’d be into it.","มันจะเผ็ดหน่อย ๆ นะ ถ้าภรรยาของคุณชอบอะไรเผ็ด ๆ ฉันว่าเขาต้องชอบมันแน่"
 "TDP9-3","Sc: K'Kili the Destroyer, msc: Supernova, sfx: KKILI3, Next: [TDP9-4]","I’m Martian. I can handle more than a little kick.","ฉันเป็นมนุษย์ดาวอังคารนะ เผ็ดกว่านี้ฉันก็กินได้"
@@ -477,8 +477,8 @@
 "AD5","Sc: Aiyana, msc: Supernova, sfx: ALYANA3, Next: [AD6]","Well to be honest…I don’t really care. What do you think is good? ","อืม จริง ๆ แล้ว...ฉันก็ไม่ได้แคร์อะไรเท่าไร คุณมีอะไรแนะนำมั่ง? "
 "AD6","Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [AD6b]","I’ll take anything.","ฉันเอาอะไรก็ได้"
 "AD6b","No Sc, msc: Supernova, no sfx, Next: [TDP10-1]","Select an item in the shop","เลือกของในร้าน"
-"AD6b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP10-1]"
-"AD6b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP10-1]"
+"AD6b-Option-1","No Sc, msc: Supernova, no sfx, Next: [TDP10-1]",,
+"AD6b-Option-2","No Sc, msc: Supernova, no sfx, Next: [TDP10-1]",,
 "TDP10-1","Sc: Aiyana, msc: Supernova, sfx: ALYANA1, Next: [TDP10-2]","Hmm don’t think I’ve tried this before. ","หืม ฉันคิดว่าฉันไม่เคยลองกินมันมาก่อนเลยนะ "
 "TDP10-2","Sc: Aiyana, msc: Supernova, sfx: Alyana_Short, Next: [TDP10-3]"," How many luncos is it?","มันราคาเท่าไรเหรอ?"
 "TDP10-3","Sc: Dmi, msc: Supernova, no sfx, Next: [TDP10-4]","I’d be crazy to make this company richer by charging you.","ฉันต้องบ้าไปแล้วแน่ ๆ ถ้าจะคิดเงินคุณแล้วทำให้บริษัทนี้รวยขึ้นไปอีก"
@@ -507,8 +507,8 @@
 "D3D-15","No Sc, msc: Supernova, no sfx, Next: [D3D-16]","The thing falls to the ground. Aiyana was right about how annoying the noise is when you’re not ignoring it.","มันตกลงมาบนพื้น\nไอยาน่าพูดถูก เสียงมันน่ารำคาญจริง ๆ แหละพอเราไม่ได้เมินมัน"
 "D3D-16","No Sc, msc: Supernova, no sfx, Next: [D3D-16b]","Time passes.","เวลาผ่านไป"
 "D3D-16b","No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]","-phone chimes-","-มือถือดัง-"
-"D3D-16b-Option-1","No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]"
-"D3D-16b-Option-2","No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]"
+"D3D-16b-Option-1","No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]",,
+"D3D-16b-Option-2","No Sc, msc: Supernova, sfx: Text_1, Next: [PON-1,POP-1]",,
 "PON-1","No Sc, msc: BracingForImpact, no sfx, Next: [PON-2]","It's Cassiopeia.","แคสซิโอเปียส่งข้อความมา"
 "PON-2","No Sc, msc: BracingForImpact, no sfx, Next: [PON-3]","I pick up my phone but put it back down.","ฉันหยิบมือถือขึ้นมาแล้วก็วางมันลงไป"
 "PON-3","Sc: Dmi, msc: BracingForImpact, no sfx, Next: [PON-4]"," Sorry Cassie. Just focus on getting out of here.","ขอโทษนะแคสซี่ คิดถึงแค่เรื่องการออกไปจากที่นี่ก็พอ"
